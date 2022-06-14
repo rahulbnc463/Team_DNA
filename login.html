@@ -102,7 +102,7 @@
 
     if (checksignin(data.email, data.password) === true) {
       localStorage.setItem("signin", JSON.stringify(data));
-      alert("Sign in Successful");
+      window.location.href = "homepage.html";
     } else {
       alert("Wrong Username or Password");
     }
