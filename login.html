@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Visitor_Sign UP page</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Open Sans", sans-serif;
+      }
+      body {
+        background-color: #cbcbcb75;
+      }
+      #main {
+        background-color: #8548c9;
+        /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -4px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 30%;
+        margin: 5% auto 10% auto;
+        padding-bottom: 4%;
+      }
+      #main > h1 {
+        color: white;
+        font-weight: 100;
+        margin-top: 7%;
+        margin-bottom: 7%;
+      }
+      #main > form {
+        width: 80%;
+        margin: auto;
+      }
+      #main > form > input {
+        width: 90%;
+        height: 50px;
+        margin: 2%;
+        border: none;
+        padding: 2%;
+        padding-left: 6%;
+        font-size: 18px;
+        background-color: rgb(234, 234, 234);
+      }
+      #main > form > button {
+        width: 98%;
+        height: 50px;
+        margin: 2%;
+        border: none;
+        padding: 2%;
+        font-size: 18px;
+        background-color: #6a17a5;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      p {
+        color: white;
+        display: flex;
+        justify-content: center;
+      }
+      p > a {
+        text-decoration: none;
+        font-weight: bold;
+        margin-left: 2%;
+        color: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>- Visitor -</h1>
+      <form>
+        <input type="email" id="mail" placeholder="Email" />
+        <input type="password" id="pass" placeholder="Enter password" />
+        <!-- <input type="number" placeholder="Number" /> -->
+        <button id="login">LOG IN</button>
+        <p>Don't have a account? <a href="Signup.html">SIGN UP</a></p>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  let form = document.querySelector("form");
+  let userData = JSON.parse(localStorage.getItem("userdata")) || [];
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let data = {
+      email: form.mail.value,
+      password: form.pass.value,
+    };
+
+    if (checksignin(data.email, data.password) === true) {
+      localStorage.setItem("signin", JSON.stringify(data));
+      alert("Sign in Successful");
+    } else {
+      alert("Wrong Username or Password");
+    }
+  });
+
+  function checksignin(email, password) {
+    let filter = userData.filter(function (element) {
+      return element.email === email && element.password === password;
+    });
+    if (filter.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+</script>
