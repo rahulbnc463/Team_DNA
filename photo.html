@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Latest Online Photo Gallery</title>
+
+    <style>
+     *{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+body{ background-color: #f5f5f5;}
+header{
+     height: 70px;
+     margin-top: 10px;
+     background-color: #ffde2f;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+}
+
+nav{
+     display: flex;
+     width: 90%;
+     margin: auto;
+     justify-content: space-between;
+     align-items: center;
+
+}
+nav > #left {
+     width: 15%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+nav > #left > div:first-child{ width: 45%; }
+nav > #left > div:first-child > img{ width: 100%; }
+nav > #left > div:last-child > button{
+     padding: 7px 12px;
+     background: transparent;
+     border: 1px solid #000;
+     border-radius: 30px;
+     cursor: pointer;
+     font-weight: 600;
+}
+nav > #left > div:last-child > button:hover{
+     background-color: rgb(24, 24, 24);
+     color: #fff;}
+nav > #right > div{ text-align: right; cursor: pointer; }
+nav > #right > div > img{ width: 10%; }
+
+
+#sliderNav{
+     width: 90%;
+     margin: auto;
+     height: 50px;
+     background-color: #4c4c4c;
+     margin-top: 20px;
+     display: flex;
+     align-items: center;
+}
+
+#sliderNav >div:nth-child(1){
+     width: 11%;
+     background-color: #aaa;
+     height: 50px;
+     color: #313131;
+     font-size: 15px;
+     text-align: center;
+     font-weight: 800;
+     border-radius: 0px 7px 7px 0px;
+     padding-top: 15px;
+}
+#sliderNav >div:nth-child(2){
+     width: 60%;
+     font-size: 18px;
+     margin-left: 20px;
+     color: #fff;
+     margin-right: 70px;
+}
+#sliderNav >div:nth-child(3){width: 20%; text-align: right;}
+#sliderNav >div:nth-child(3) button{
+    background-color: transparent;
+    border: none;
+    color: grey;
+    margin: 0px 4px;
+}
+
+#side-navbar{ width: 25%; margin-right: 20px; }
+#left-nav{ position: sticky;top: 80px; cursor: pointer;}
+#side-navbar > #left-nav > .active{background-color: #ffde2f;}
+
+#left-nav > div{display: flex; align-items: center; padding: 2px 4px; }
+#left-nav > div:hover{ background-color: #ffde2f;}
+#left-nav > div > div > img{ margin-right: 13px;}
+#left-nav > div > div + div{ font-size: 17px; font-weight: 500;}
+
+#main-container{ width: 90%; margin: auto; display: flex; }
+
+#news-section{
+     display: flex;
+     position: relative;
+     width: 80%;
+     justify-content: space-between;
+}
+
+#middle-main, #left-nav{ margin-top: 30px; }
+
+#news-section > #middle-main{ width: 64%; }
+
+#news-section > #middle-main > h2{
+     border-bottom: 2px solid #ffde2f;
+     display: inline;
+     font-size: 25px;
+     text-transform: uppercase;
+     padding-bottom: 4px;
+ }
+
+#news-section > #middle-main > div > img{ width: 100%; }
+
+#news-section > #middle-main > div > p{ 
+     color: #36363c; 
+     font-size: 20px; 
+     font-weight: 600; }
+#news-section > #middle-main > button:hover{color: #ffde2f;}
+#news-section > #middle-main > button{
+     display: block;
+     margin: 30px auto;
+     padding: 10px 0px;
+     width: 90%;
+     border-radius: 10px;
+     font-size: 18px;
+     font-weight: bold;
+     border: 1px solid black;
+     cursor: pointer;
+}
+#news-section > #middle-main > div:first-child{ margin-bottom: 15px; }
+
+#news-section > #middle-main > div:first-child a{
+    text-decoration: none;
+    color: #4c4c4c;
+    margin-right: 10px;
+}
+
+#news-section > #middle-main >h2 + div{
+     margin-top: 25px;
+     background-color: #fff;
+     padding: 10px;
+}
+
+#news-section > #middle-main > div + div{
+margin-top: 25px;
+background-color: #fff;
+padding: 10px;
+}
+
+#news-section > #right-adds{ width: 34%; margin-top: 15px; }
+
+#news-section > #right-adds > div > img{ width: 100%;}
+    </style>
+    
+</head>
+
+<body>
+
+
+     <header>
+          <nav>
+               <div id="left">
+                    <div><img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png" alt=""></div>
+                    <div> <button>हिंदी में पढ़ें</button></div>
+               </div>
+
+               <div id="right">
+                    <div><img src="/magnifying-glass-solid.svg" alt=""></div>
+               </div>
+          </nav>
+     </header>
+
+     <div id="sliderNav">
+          <div>Top News</div>
+          <div>Rahul Gandhi to appear again before ED today, timeline of yesterday's events</div>
+          <div>
+               <button>◀️</button>
+               <button>⏹️</button>
+               <button>▶️</button>
+          </div>
+     </div>
+
+     <div id="main-container">
+
+          <div id="side-navbar">
+               <div id="left-nav">
+                    
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-latestnews.svg" alt=""></div>
+                         <div>Latest News</div>
+                    </div>
+     
+                    <div class="active">
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-photos.svg" alt=""></div>
+                         <div>Photos</div>
+                    </div>
+     
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-latestnews.svg" alt=""></div>
+                         <div>Videos</div>
+                    </div>
+     
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg" alt=""></div>
+                         <div>Explainers</div>
+                    </div>
+     
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-india.svg" alt=""></div>
+                         <div>India</div>
+                    </div>
+     
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-entertainment.svg" alt=""></div>
+                         <div>Entertainment</div>
+                    </div>
+     
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-sports.svg" alt=""></div>
+                         <div>Sports</div>
+                    </div>
+     
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-viralNews.svg" alt=""></div>
+                         <div>Viral News</div>
+                    </div>
+     
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-lifestyle.svg" alt=""></div>
+                         <div>Lifestyle</div>
+                    </div>
+     
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-business.svg" alt=""></div>
+                         <div><a href="/business.html">Business</a></div>
+                    </div>
+     
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-world.svg" alt=""></div>
+                         <div>World</div>
+                    </div>
+     
+                    <div>
+                         <div><img src="https://english.cdn.zeenews.com/static/public/icons/ezmall-icon1.png" alt=""></div>
+                         <div>Ezmall</div>
+                    </div>
+                    
+               </div>
+          </div>
+<!-- =================================== -->
+          <div id="news-section">
+               <div id="middle-main">
+                    <div>
+                         <a href="#">Home</a>
+                         <a href="#">Photo</a>
+                    </div>
+                    <h2>PHOTOS</h2>
+                  
+                    <div>
+                         <img src="https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/06/14/2302303-fotojet-3.jpg" alt="">
+                         <p>IND vs SA: Check out the hottest wives and girlfriends of South African players</p>
+                    </div>
+                  
+                    <div>
+                         <img src="https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/06/14/2302199-thumbnail.jpg" alt="">
+                         <p>Anushka Sharma, Alia Bhatt, Priyanka Chopra: Know whopping fees B-town divas charge per Instagram post</p>
+                    </div>
+                  
+                    <div>
+                         <img src="https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/06/14/2300433-fotojet-2.jpg" alt="">
+                         <p>M. Muralitharan, James Anderson to Anil Kumble: Top 5 bowlers with most wickets in Test cricket</p>
+                    </div>
+     
+                    <div>
+                         <img src="https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/06/14/2300587-strawberry-supermoon8-nasa.jpg" alt="">
+                         <p>Strawberry Supermoon 2022: What is special about the celestial event, when and how to watch</p>
+                    </div>
+                    
+                    <div>
+                         <img src="https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/06/14/2300071-shooting-dna.png" alt="">
+                         <p>After Texas school shooting, what steps are being taken by US to reduce gun violence?</p>
+                    </div>
+     
+                    <div>
+                         <img src="https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/06/14/2299559-mahindra-scorpio-n.jpg" alt="">
+                         <p>2022 Mahindra Scorpio-N interior revealed: Check what’s new in the upcoming SUV</p>
+                    </div>
+     
+                    <div>
+                         <img src="https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/06/14/2298677-pritam-final.jpg" alt="">
+                         <p>Pritam birthday: Brahmastra, Laal Singh Chaddha, Tiger 3, most awaited albums of the composer</p>
+                    </div>
+     
+                    <div>
+                         <img src="https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/06/14/2297977-sushant-final.jpg" alt="">
+                         <p>Sushant Singh Rajput death anniversary: Chaar Kadam, Qaafirana, famous songs of late actor</p>
+                    </div>
+     
+                    <div>
+                         <img src="https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/06/14/2290758-blood.jpg" alt="">
+                         <p>World Blood Donor Day 2022: 5 health benefits of donating blood</p>
+                    </div>
+     
+                    <div>
+                         <img src="https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/06/13/2289915-fotojet-67-1.jpg" alt="">
+                         <p>Viral Photos of the Day: Kiara Advani, Shamita Shetty, Aditya Roy Kapoor pose for paps</p>
+                    </div>
+     
+                    <button>see more</button>
+               </div>
+
+               <div id="right-adds">
+                    <div>
+                         <img src="https://images.unsplash.com/photo-1644982654131-79f434ac0c6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+               </div>
+
+          </div>
+         
+
+
+     </div>
+
+</body>
+
+</html>
+
+<script>
+
+</script>
