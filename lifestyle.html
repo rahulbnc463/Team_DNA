@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lifestyle</title>
+  </head>
+
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+      box-sizing: border-box;
+      font-family: "Roboto Slab", sans-serif;
+    }
+    /* ----------------------------------------------------------------Head Advertise---------------------------------------------------- */
+    #headAdvertise > #headAdvertiseBrand {
+      display: block;
+      margin: 10px auto;
+    }
+    /* ----------------------------------------------------------------Icon Bar---------------------------------------------------------- */
+    #icon {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-between;
+      height: 65px;
+      background-color: #fede2f;
+      position: sticky;
+      top: 0px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #icon > #iconchild {
+      padding: 0%;
+      margin: 0%;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-between;
+    }
+    #iconchild > #logo {
+      width: 90px;
+    }
+    #iconchild > #hinditext {
+      padding: 5px 10px;
+      border-radius: 20px;
+      border: 1px solid;
+      margin: 30px;
+      background-color: #fede2f;
+    }
+    #iconchild > #hinditext:hover {
+      background-color: #4c4c4c;
+      color: white;
+      border: 1px solid black;
+      font-weight: 15px;
+    }
+    #icon > #search {
+      display: block;
+      width: 30px;
+      height: 20px;
+    }
+    /* ---------------------------------------------------------------Top News Bar------------------------------------------------------- */
+    #topnewsbar {
+      display: flex;
+      align-items: center;
+      padding: 0%;
+      margin: 20px auto;
+      width: 98%;
+      background-color: #313131;
+    }
+    #topnewsbar > #topnewsText {
+      display: flex;
+      background-color: #aaaaaa;
+      padding: 0%;
+      width: 11%;
+      color: #31373c;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0% 5px 5px 0%;
+    }
+    #topnewsbar > #topnewsFlash {
+      display: flex;
+      margin: auto 3% auto 1%;
+      color: white;
+      justify-content: space-between;
+      width: 87%;
+    }
+    /* -----------------------------------------------------------------CONTENT----------------------------------------------------------*/
+    #pageBody {
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 2.4fr 1fr;
+      grid-template-rows: auto;
+      gap: 2%;
+      width: 98%;
+    }
+    /* ---------------------------------------------------------------NAVBAR------------------------------------------------------------ */
+    /* #navbar {
+      position: relative;
+      top: 0%;
+    } */
+    #pageBody > #navbar > div {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 80px;
+      display: block;
+    }
+    #navbar > div > a > .navbarOption {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      height: 35px;
+      padding-left: 7px;
+    }
+    #navbar > div > a > .navbarOption:hover {
+      background-color: #fede2f;
+    }
+    #navbar > div > a {
+      text-decoration: none;
+      color: black;
+    }
+    #navbar > div > a > .navbarOption > p {
+      margin-left: 4%;
+    }
+    /* -----------------------------------------------------------------SPORTS CONTENT---------------------------------------------------*/
+
+    #spotscontent > h6 {
+      display: inline;
+      color: #4c4c4c;
+    }
+    #spotscontent > h2 {
+      border-bottom: 3px solid #fede2f;
+      width: 135px;
+    }
+    #newsbox {
+      display: flex;
+      margin: 12px auto;
+      padding: 1.5%;
+      border-radius: 7px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #spotscontent > p {
+      width: 80%;
+      margin: -0.37% auto auto 19.8%;
+    }
+    #newsbox > img {
+      width: 27%;
+    }
+    #newsbox > p {
+      margin: 0.8% 1.5%;
+    }
+  </style>
+
+  <body>
+    <!-----------------------------------------------------------------Head Advertise-------------------------------------------------------->
+    <div id="headAdvertise">
+      <img
+        id="headAdvertiseBrand"
+        src="https://ad.adsrvr.org/dsuqmi6/rhb17n6/iryt5zmv_728x90.jpg?cb=141695"
+      />
+    </div>
+    <!-- --------------------------------------------------------------Icon Bar-------------------------------------------------------------->
+    <div id="icon">
+      <div id="iconchild">
+        <img
+          id="logo"
+          src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
+        />
+        <button id="hinditext">हिंदी में पढ़ें</button>
+      </div>
+
+      <img
+        src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
+        alt=""
+      />
+    </div>
+    <!-----------------------------------------------------------------Top News Bar---------------------------------------------------------->
+    <div id="topnewsbar">
+      <div id="topnewsText"><p>Top News</p></div>
+      <div id="topnewsFlash">
+        <p>
+          SBI FD rates increased, PNB, IDBI also hike fixed deposit interest rates; check details
+        </p>
+        <div>
+          <img
+            src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
+            alt=""
+          />
+          <img
+            src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <!-----------------------------------------------------------------CONTENT--------------------------------------------------------------->
+    <div id="pageBody">
+      <!-----------------------------------------------------------------NAVBAR---------------------------------------------------------------->
+      <div id="navbar">
+        <div>
+          <a href="latestnews.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-latestnews.svg"
+              />
+              <p>Latest News</p>
+            </div>
+          </a>
+          <a href="photos.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-photos.svg"
+              />
+              <p>Photos</p>
+            </div>
+          </a>
+          <a href="videos.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-videos.svg"
+              />
+              <p>Videos</p>
+            </div>
+          </a>
+          <a href="explainers.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg"
+              />
+              <p>Explainers</p>
+            </div>
+          </a>
+          <a href="india.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-india.svg"
+              />
+              <p>India</p>
+            </div>
+          </a>
+          <a href="entertainment.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-entertainment.svg"
+              />
+              <p>Entertainment</p>
+            </div>
+          </a>
+          <a href="sports.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-sports.svg"
+              />
+              <p>Sports</p>
+            </div>
+          </a>
+          <a href="viralnews.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-viralNews.svg"
+              />
+              <p>Viral News</p>
+            </div>
+          </a>
+          <a href="lifestyle.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-lifestyle.svg"
+              />
+              <p>Lifestyle</p>
+            </div>
+          </a>
+          <a href="business.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-business.svg"
+              />
+              <p>Business</p>
+            </div>
+          </a>
+          <a href="world.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-world.svg"
+              />
+              <p>World</p>
+            </div>
+          </a>
+          <a href="ezmall.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/ezmall-icon1.png"
+              />
+              <p>Ezmall</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-----------------------------------------------------------------SPORTS CONTENT-------------------------------------------------------->
+      <div id="spotscontent">
+        <h6>Home</h6>
+        <h6>>></h6>
+        <h6>Lifestyle</h6>
+        <h2>LIFESTYLE</h2>
+      </div>
+      <div>
+        <img
+          src="https://s0.2mdn.net/simgad/6647267115441125478"
+        />
+        <img
+          src="https://tpc.googlesyndication.com/simgad/18400838911162322563?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qnlgI-Dceaz0diUvxl86hzLFhss9Q"
+        />
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // -------------------------------------------------------------------SPORTS CONTENT---------------------------------------------------------
+
+  let lifestyle = [
+    {
+      ruler: "<hr>",
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2304215-heart-pixabay.jpg",
+      newshead:
+        "Your heart is very important: 10 facts you must know",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2290758-blood.jpg",
+      newshead:
+        "World Blood Donor Day 2022: 5 health benefits of donating blood",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/13/2285242-june-teamology-article-10-dna-002.jpg",
+      newshead:
+        "Tea Burn reviews: Real USA customer results exposed!",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/13/2284685-stressed-final.jpg",
+      newshead:
+        "Feeling stressed? Steps to avoid burnout",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/13/2284343-shooting-dna-7.png",
+      newshead:
+        "World Blood Donor Day 2022: History, significance, theme to spread awareness on June 14",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/10/2234792-shehnaaz-fi.jpg",
+      newshead:
+        "Fashion Friday: Photos of Shehnaaz Gill that proves her as 'ultimate stunner'",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/10/2225644-cancer-1.jpg",
+      newshead:
+        "Mahima Chaudhry, Tahira Kashyap, Maya Rudolph: Actresses who fearlessly battled breast cancer",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/10/2214088-ekadashi-image.jpg",
+      newshead:
+        "Nirjala Ekadashi 2022: Date, time, puja vidhi, all you need to know about one-day fasting ritual",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/09/2193421-sonam-fi.jpg",
+      newshead:
+        "Happy birthday Sonam Kapoor: 6 times Neerja actress redefined maternity fashion",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/08/2187753-1654694737-00000003.jpg",
+      newshead:
+        "Study explores how genetics influence immunity in Type 1 diabetes patients",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/08/2186968-kissing-pixabay.jpg",
+      newshead:
+        "Why do we 'kiss', where did the trend of kissing come from",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/08/2186291-whatsapp-image-2022-06-08-at-4.21.43-pm.jpeg",
+      newshead:
+        "7 simple habits that you should adopt before 40",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/08/2175663-ocean.jpg",
+      newshead:
+        "World Oceans Day 2022: Know history, significance and more",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/08/2176198-1654629638-00000003.jpg",
+      newshead:
+        "How to maintain a healthy heart? 5 things to do daily to make it healthy",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/07/2171773-poha-pixabay.jpg",
+      newshead:
+        "World Poha Day: Why is it a good breakfast choice",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/06/2153779-fotojet-1-1.jpg",
+      newshead:
+        "The secrets behind stunning Cannes 2022 red carpet looks",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/06/2153212-1654509140-00000004.jpg",
+      newshead:
+        "Low-nutrient diet responsible for high mortality rates during COVID: Sadhguru",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/06/2153151-1654507870-00000009.jpg",
+      newshead:
+        "Visible light activates molecular machineries to treat infections: Study",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/06/2152310-pests-reuters.jpg",
+      newshead:
+        "World Pest Day 2022: History, significance, theme and purpose",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/04/2125967-1654282211-00000003.jpg",
+      newshead:
+        "Can heat and humidity trigger a heart attack like the one suffered by KK? Know more about it",
+    },
+  ];
+
+  lifestylecontent(lifestyle);
+  function lifestylecontent(lifestyle) {
+    lifestyle.map(function (ele) {
+      let sportnews = document.createElement("div");
+      sportnews.id = "newsbox";
+      let img = document.createElement("img");
+      img.src = ele.image;
+      let news = document.createElement("p");
+      news.innerText = ele.newshead;
+      let hr = document.createElement("p");
+      hr.innerHTML = ele.ruler;
+
+      sportnews.append(img, news);
+      if (ele.ruler == undefined) {
+        spotscontent.append(sportnews);
+      } else {
+        spotscontent.append(hr, sportnews);
+      }
+    });
+  }
+</script>
