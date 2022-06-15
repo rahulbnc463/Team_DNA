@@ -128,6 +128,10 @@
       display: inline;
       color: #4c4c4c;
     }
+    #spotscontent > h2 {
+      border-bottom: 3px solid #fede2f;
+      width: 99px;
+    }
     #newsbox {
       display: flex;
       margin: 12px auto;
@@ -136,7 +140,8 @@
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     #spotscontent > p {
-      margin: 10px auto;
+      width: 85.7%;
+      margin: -0.37% auto auto 14.55%;
     }
     #newsbox > img {
       width: 27%;
@@ -369,10 +374,33 @@
       newshead:
         "UEFA Nations League: Luka Modric penalty seals 1-0 win for Croatia, France miss out on final 4 berth",
     },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2308250-fotojet-5.jpg",
+      newshead:
+        "Yuzvendra Chahal and Harshal Patel's match winning spells lead India to victory against South Africa in 3rd T20I",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2307651-fotojet-4.jpg",
+      newshead:
+        "Jonny Bairstow scores England's 2nd fastest Test century while chasing the target of 299 against New Zealand",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2320829-fotojet.jpg",
+      newshead:
+        "England wins the 2nd Test match against New Zealand after chasing 299 runs in 50 overs",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2289475-bcci.jpg",
+      newshead: "BCCI hikes monthly pensions of former cricketers and umpires",
+    },
   ];
 
-  sportscontent();
-  function sportscontent() {
+  sportscontent(sports);
+  function sportscontent(sports) {
     sports.map(function (ele) {
       let sportnews = document.createElement("div");
       sportnews.id = "newsbox";
