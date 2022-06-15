@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports</title>
+  </head>
+
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+      box-sizing: border-box;
+      font-family: "Roboto Slab", sans-serif;
+    }
+    /* ----------------------------------------------------------------Head Advertise---------------------------------------------------- */
+    #headAdvertise > #headAdvertiseBrand {
+      display: block;
+      margin: 10px auto;
+    }
+    /* ----------------------------------------------------------------Icon Bar---------------------------------------------------------- */
+    #icon {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-between;
+      height: 65px;
+      background-color: #fede2f;
+      position: sticky;
+      top: 0px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #icon > #iconchild {
+      padding: 0%;
+      margin: 0%;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-between;
+    }
+    #iconchild > #logo {
+      width: 90px;
+    }
+    #iconchild > #hinditext {
+      padding: 5px 10px;
+      border-radius: 20px;
+      border: 1px solid;
+      margin: 30px;
+      background-color: #fede2f;
+    }
+    #iconchild > #hinditext:hover {
+      background-color: #4c4c4c;
+      color: white;
+      border: 1px solid black;
+      font-weight: 15px;
+    }
+    #icon > #search {
+      display: block;
+      width: 30px;
+      height: 20px;
+    }
+    /* ---------------------------------------------------------------Top News Bar------------------------------------------------------- */
+    #topnewsbar {
+      display: flex;
+      align-items: center;
+      padding: 0%;
+      margin: 20px auto;
+      width: 98%;
+      background-color: #313131;
+    }
+    #topnewsbar > #topnewsText {
+      display: flex;
+      background-color: #aaaaaa;
+      padding: 0%;
+      width: 11%;
+      color: #31373c;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0% 5px 5px 0%;
+    }
+    #topnewsbar > #topnewsFlash {
+      display: flex;
+      margin: auto 3% auto 1%;
+      color: white;
+      justify-content: space-between;
+      width: 87%;
+    }
+    /* -----------------------------------------------------------------CONTENT----------------------------------------------------------*/
+    #pageBody {
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 2.4fr 1fr;
+      grid-template-rows: auto;
+      gap: 2%;
+      width: 98%;
+    }
+    /* ---------------------------------------------------------------NAVBAR------------------------------------------------------------ */
+    #pageBody > #navbar > div {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 80px;
+      display: block;
+    }
+    #navbar > div > a > .navbarOption {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      height: 35px;
+      padding-left: 7px;
+    }
+    #navbar > div > a > .navbarOption:hover {
+      background-color: #fede2f;
+    }
+    #navbar > div > a {
+      text-decoration: none;
+      color: black;
+    }
+    #navbar > div > a > .navbarOption > p {
+      margin-left: 4%;
+    }
+    /* -----------------------------------------------------------------SPORTS CONTENT---------------------------------------------------*/
+
+    #spotscontent > h6 {
+      display: inline;
+      color: #4c4c4c;
+    }
+    #newsbox {
+      display: flex;
+      margin: 12px auto;
+      padding: 1.5%;
+      border-radius: 7px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #spotscontent > p {
+      margin: 10px auto;
+    }
+    #newsbox > img {
+      width: 27%;
+    }
+    #newsbox > p {
+      margin: 0.8% 1.5%;
+    }
+  </style>
+
+  <body>
+    <!-----------------------------------------------------------------Head Advertise-------------------------------------------------------->
+    <div id="headAdvertise">
+      <img
+        id="headAdvertiseBrand"
+        src="https://s0.2mdn.net/simgad/6856187729639747120"
+      />
+    </div>
+    <!-- --------------------------------------------------------------Icon Bar-------------------------------------------------------------->
+    <div id="icon">
+      <div id="iconchild">
+        <img
+          id="logo"
+          src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
+        />
+        <button id="hinditext">हिंदी में पढ़ें</button>
+      </div>
+
+      <img
+        src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
+        alt=""
+      />
+    </div>
+    <!-----------------------------------------------------------------Top News Bar---------------------------------------------------------->
+    <div id="topnewsbar">
+      <div id="topnewsText"><p>Top News</p></div>
+      <div id="topnewsFlash">
+        <p>
+          National Herald case: Rahul Gandhi to appear again before ED today,
+          timeline of yesterday's events
+        </p>
+        <div>
+          <img
+            src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
+            alt=""
+          />
+          <img
+            src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <!-----------------------------------------------------------------CONTENT--------------------------------------------------------------->
+    <div id="pageBody">
+      <!-----------------------------------------------------------------NAVBAR---------------------------------------------------------------->
+      <div id="navbar">
+        <div>
+          <a href="latestnews.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-latestnews.svg"
+              />
+              <p>Latest News</p>
+            </div>
+          </a>
+          <a href="photos.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-photos.svg"
+              />
+              <p>Photos</p>
+            </div>
+          </a>
+          <a href="videos.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-videos.svg"
+              />
+              <p>Videos</p>
+            </div>
+          </a>
+          <a href="explainers.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg"
+              />
+              <p>Explainers</p>
+            </div>
+          </a>
+          <a href="india.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-india.svg"
+              />
+              <p>India</p>
+            </div>
+          </a>
+          <a href="entertainment.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-entertainment.svg"
+              />
+              <p>Entertainment</p>
+            </div>
+          </a>
+          <a href="sports.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-sports.svg"
+              />
+              <p>Sports</p>
+            </div>
+          </a>
+          <a href="viralnews.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-viralNews.svg"
+              />
+              <p>Viral News</p>
+            </div>
+          </a>
+          <a href="lifestyle.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-lifestyle.svg"
+              />
+              <p>Lifestyle</p>
+            </div>
+          </a>
+          <a href="business.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-business.svg"
+              />
+              <p>Business</p>
+            </div>
+          </a>
+          <a href="world.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-world.svg"
+              />
+              <p>World</p>
+            </div>
+          </a>
+          <a href="ezmall.html">
+            <div class="navbarOption">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/ezmall-icon1.png"
+              />
+              <p>Ezmall</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-----------------------------------------------------------------SPORTS CONTENT-------------------------------------------------------->
+      <div id="spotscontent">
+        <h6>Home</h6>
+        <h6>>></h6>
+        <h6>Sports</h6>
+        <h2>SPORTS</h2>
+      </div>
+      <div>
+        <img
+          src="https://tpc.googlesyndication.com/simgad/18222565089302457977?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qm5ym-FWie_Dbe_TKqtbAo7GE_MGQ"
+        />
+        <img
+          src="https://tpc.googlesyndication.com/simgad/18240297336161166099?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qkPX0rUzOQ3AjwYP3nZO4sciWayUA"
+        />
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // -------------------------------------------------------------------SPORTS CONTENT---------------------------------------------------------
+
+  let sports = [
+    {
+      ruler: "<hr>",
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg",
+      newshead:
+        "Sheldon Jackson alleges 'communication gap' after team India snub",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303090-1392964-861258-pv-sindhu-reuters-1.jpg",
+      newshead:
+        "PV Sindhu and Sai Praneeth crash out of the 1st round of the Indonesian Open 2022",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2305747-fotojet-11.jpg",
+      newshead:
+        "IPL media rights auction: Star India gets TV, digital goes to Viacom18",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303935-fotojet.jpg",
+      newshead:
+        "Seth Rollins terms Cody Rhodes as a 'virus', reveals reason for attacking him",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2302303-fotojet-3.jpg",
+      newshead:
+        "IND vs SA: Check out the hottest wives and girlfriends of South African players",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2301781-new.jpg",
+      newshead:
+        "Two-time ISL champs Chennaiyin FC rope in Thomas Brdaric as head coach",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2300601-india.jpg",
+      newshead:
+        "Indian football team qualifies for AFC Asian Cup 2023 before crunch fixture versus Hong Kong",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2299342-neeraj.jpg",
+      newshead:
+        "Paavo Nurmi Games 2022 live streaming: Watch Neeraj Chopra for first time since Tokyo Olympics",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2297170-modric.jpg",
+      newshead:
+        "UEFA Nations League: Luka Modric penalty seals 1-0 win for Croatia, France miss out on final 4 berth",
+    },
+  ];
+
+  sportscontent();
+  function sportscontent() {
+    sports.map(function (ele) {
+      let sportnews = document.createElement("div");
+      sportnews.id = "newsbox";
+      let img = document.createElement("img");
+      img.src = ele.image;
+      let news = document.createElement("p");
+      news.innerText = ele.newshead;
+      let hr = document.createElement("p");
+      hr.innerHTML = ele.ruler;
+
+      sportnews.append(img, news);
+      if (ele.ruler == undefined) {
+        spotscontent.append(sportnews);
+      } else {
+        spotscontent.append(hr, sportnews);
+      }
+    });
+  }
+</script>
