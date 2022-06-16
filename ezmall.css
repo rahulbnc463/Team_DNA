@@ -393,3 +393,60 @@ h1 {
 h5 + p {
   font-size: 12px;
 }
+
+/* <!-- -----------------------------------footer-------------------------------------- --> */
+.footer {
+  background-color: rgb(232, 232, 232);
+  width: 100%;
+  display: flex;
+}
+.footer_top {
+  display: flex;
+  padding: 3%;
+  width: 60%;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-left: 5%;
+}
+.footer_top > div > p:nth-child(1) {
+  padding-bottom: 5%;
+}
+.footer_top > div:nth-child(4) > p:nth-child(1) {
+  padding-bottom: 3%;
+}
+.footer_top > div:nth-child(4) {
+  padding-top: 4%;
+}
+.img {
+  width: 8%;
+  display: flex;
+  align-items: center;
+}
+.img > img {
+  width: 100%;
+}
+.last {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+.last > span:first-child {
+  font-size: 24px;
+  font-weight: 100;
+  color: rgb(184, 181, 181);
+  padding-top: 24%;
+}
+.last > span:last-child {
+  font-size: 28px;
+  font-weight: bold;
+  color: orange;
+  line-height: 70%;
+  padding-left: 15%;
+}
+.footer1 {
+  background-color: rgb(232, 232, 232);
+  font-size: 13px;
+  text-align: center;
+  padding-bottom: 3%;
+}
