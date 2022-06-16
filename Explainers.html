@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explainers</title>
+  </head>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #f5f5f5;
+      font-family: "Roboto Slab", sans-serif;
+      box-sizing: border-box;
+    }
+    #icon {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-between;
+      height: 35px;
+      background-color: #fede2f;
+      position: sticky;
+      top: 0px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #icon > #iconchild {
+      padding: 0%;
+      height: 65px;
+      margin-left: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #iconchild > a > #logo {
+      width: 90px;
+    }
+    #iconchild > #hinditext {
+      padding: 5px 10px;
+      border-radius: 20px;
+      border: 1px solid;
+      cursor: pointer;
+      font-weight: 600;
+      margin: 30px;
+      background-color: #fede2f;
+    }
+    #iconchild > #hinditext:hover {
+      background-color: #4c4c4c;
+      color: white;
+      border: 1px solid black;
+      font-weight: 15px;
+    }
+    #icon > #search {
+      display: block;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      margin-right: 60px;
+    }
+
+    #topnewsbar {
+      display: flex;
+      align-items: center;
+      padding: 0%;
+      margin: 20px auto;
+      width: 90%;
+      background-color: #313131;
+    }
+    #topnewsbar > #topnewsText {
+      display: flex;
+      background-color: #aaaaaa;
+      padding: 0%;
+      width: 11%;
+      color: #31373c;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0% 5px 5px 0%;
+    }
+    #topnewsbar > #topnewsFlash {
+      display: flex;
+      margin: auto 3% auto 1%;
+      color: white;
+      justify-content: space-between;
+      width: 87%;
+    }
+    #topnewsbar > #topnewsFlash > a {
+      text-decoration: none;
+      color: white;
+    }
+
+    #sidebar {
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 2.4fr 1fr;
+      grid-template-rows: auto;
+      gap: 2%;
+      width: 90%;
+    }
+
+    #sidebar > #sidebarMenu > div {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 80px;
+      display: block;
+    }
+    #sidebarMenu > div > a > .Menu {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      height: 35px;
+      padding-left: 7px;
+    }
+    #sidebarMenu > div > a > .Menu:hover {
+      background-color: #fede2f;
+    }
+    #sidebarMenu > div > a {
+      text-decoration: none;
+      color: black;
+    }
+    #sidebarMenu > div > a > .Menu > p {
+      margin-left: 4%;
+    }
+
+    #Explainers > h5 {
+      display: inline;
+      color: #4c4c4c;
+    }
+    #Explainers > h5 > a {
+      text-decoration: none;
+      color: #4c4c4c;
+    }
+    #Explainers > h2 {
+      text-transform: uppercase;
+      border-bottom: 3px solid #fede2f;
+      width: 154px;
+    }
+
+    #menuContent {
+      display: flex;
+      margin: 12px auto;
+      padding: 10px;
+      border-radius: 7px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #menuContent > div:first-child {
+      width: 25%;
+    }
+
+    #menuContent > div:first-child > a > img {
+      width: 100%;
+    }
+    #menuContent > div:last-child {
+      width: 70%;
+      margin-left: 10px;
+    }
+    #menuContent > div:last-child > a {
+      font-size: 15px;
+      line-height: 20px;
+      text-decoration: none;
+      color: #4c4c4c;
+    }
+    #menuContent > div:last-child > a:hover {
+      color: #3b5998;
+    }
+    #moreNews {
+      width: 100%;
+      margin: auto;
+      height: 40px;
+      font-size: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      border: 1px solid black;
+    }
+    #moreNews:hover {
+      color: #fede2f;
+    }
+
+    /*Responsive Medium And Small*/
+    @media all and (min-width: 0px) and (max-width: 1024px) {
+      #icon > #iconchild {
+        margin-left: 10px;
+      }
+      #iconchild > a > #logo {
+        width: 60px;
+      }
+      #icon > #search {
+        margin-right: 10px;
+      }
+      #topnewsbar {
+        width: 100%;
+        font-size: 13px;
+      }
+      #topnewsFlash > div {
+        width: 10%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #Explainers > h5,
+      #Explainers > h2 {
+        margin-left: 10px;
+      }
+      #sidebar {
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+      }
+      #sidebar > #sidebarMenu > div {
+        display: flex;
+        overflow: auto;
+        white-space: nowrap;
+        position: static;
+        margin-bottom: 10px;
+      }
+      #sidebarMenu > div > a > .Menu {
+        padding-right: 10px;
+      }
+      #menuContent > div:first-child {
+        width: 40%;
+        height: auto;
+      }
+      #menuContent > div:first-child > a > img {
+        width: 100%;
+        height: auto;
+      }
+      #adv {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+
+  <body>
+    <div id="icon">
+      <div id="iconchild">
+        <a href="homepage.html">
+          <img
+            id="logo"
+            src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
+          />
+        </a>
+        <button id="hinditext">हिंदी में पढ़ें</button>
+      </div>
+      <div id="search">
+        <img
+          src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div id="topnewsbar">
+      <div id="topnewsText"><p>Top News</p></div>
+      <div id="topnewsFlash">
+        <a
+          href="https://www.dnaindia.com/india/report-weather-update-early-morning-rains-give-relief-to-delhi-ncr-from-heat-heavy-rainfall-predicted-in-many-states-2960946"
+        >
+          Weather update: Early morning rains give relief to Delhi-NCR from
+          heat, heavy rainfall predicted in many states</a
+        >
+        <div>
+          <img
+            src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
+            alt=""
+          />
+          <img
+            src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div id="sidebarMenu">
+        <div>
+          <a href="latestnews.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-latestnews.svg"
+              />
+              <p>Latest News</p>
+            </div>
+          </a>
+          <a href="photos.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-photos.svg"
+              />
+              <p>Photos</p>
+            </div>
+          </a>
+          <a href="videos.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-videos.svg"
+              />
+              <p>Videos</p>
+            </div>
+          </a>
+          <a href="explainers.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg"
+              />
+              <p>Explainers</p>
+            </div>
+          </a>
+          <a href="india.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-india.svg"
+              />
+              <p>India</p>
+            </div>
+          </a>
+          <a href="entertainment.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-entertainment.svg"
+              />
+              <p>Entertainment</p>
+            </div>
+          </a>
+          <a href="sports.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-sports.svg"
+              />
+              <p>Sports</p>
+            </div>
+          </a>
+          <a href="viralnews.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-viralNews.svg"
+              />
+              <p>Viral News</p>
+            </div>
+          </a>
+          <a href="lifestyle.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-lifestyle.svg"
+              />
+              <p>Lifestyle</p>
+            </div>
+          </a>
+          <a href="business.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-business.svg"
+              />
+              <p>Business</p>
+            </div>
+          </a>
+          <a href="world.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/icons-world.svg"
+              />
+              <p>World</p>
+            </div>
+          </a>
+          <a href="ezmall.html">
+            <div class="Menu">
+              <img
+                src="https://english.cdn.zeenews.com/static/public/icons/ezmall-icon1.png"
+              />
+              <p>Ezmall</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div id="Explainers">
+        <h5><a href="homepage.html">Home</a></h5>
+        <h5>|</h5>
+        <h5><a href="Explainers.html">Explainers</a></h5>
+        <h2>Explainers</h2>
+      </div>
+
+      <div id="adv">
+        <a
+          href="https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjsuyRicK9IE-O9zT4qg14ZUoMV2_x2kXqI1Sec8OyeodtE3bmGuFZqBZroVBWx7JNlSSDaRBRBJfGcYfwUWAGyzaZgkZTKfybql1lBJZFCgdTl_IsqiAyKSAwvxiNRNjNbE5ROsO2Gl4YtrDcdW8LiXyl6LG4mdjOpcOapj35bZiQVe1TNB3V_hX8V_cPD4Wm7dYHC8SukS15pUhLAS8pXV_SauZG7Bo1z4klimYpbJDZo9XkUeNJv9JsIsTbZIYXApD7gaSmTReSk5WjCg4Plqgjlfr1ZABUEcafgG9xwtuNhJiWMew0uH9TOqgP8UsPKW6gVV3WfofE2rN6Q&sai=AMfl-YSa27rQu24cOT7aOrpL-n_vzwAZWdLD0XHbDrFGsKLJL669G9VguY-RNA4d2Cnj--w3vD_KIPwn1W5H05qt_3poJKuIfe0EWoMhdGL3ogBaN06SHsA-3DgC4X26tUGDU06cbQ&sig=Cg0ArKJSzE6hnOUcJHcd&fbs_aeid=[gw_fbsaeid]&adurl=https://googleads.g.doubleclick.net/dbm/clk%3Fsa%3DL%26ai%3DC4g7aUCSrYpW9C8vdrAGIkJDgBuS6ms5q167t140Qzq60n9AwEAEgufmMKWDl2uaDvA7IAQmoAwGqBKoCT9D7dtLSQ4Pqk-xFWCOm3HJo6gNiTvAFsUk9Zu5V0MkgKuci2T4h_wUoZ--yWN1ity96x-vEM5JbV_1_ANtbzdj36DimObolahbybsEnig9bwmaIyTJSvkc7CLt2QbauxFbSgtdQ1Z6wkFF-f8HNGwN8wGBTRg8zuvh6pi8qHBRwifZwb4SYD0Sa0xhaFP-sTTpk7UqGlCELF1PL7sGtb5eC9H9c5JOrQrs81T5Fcj870MnFR9ZP57_D3y4JnnfbLG1MiXsVCH5a5P3gdkHYC6OrswEBOQ_3w2Y9Ts_XYaClRhPwXSLaIDAoJ8sKdoT9ViCLca101LFD4Yu-zADGMSCEmVG4Rs61ErDv5JZXTWrWo2_DXkTNCKBDDK5Ku_olmVmaU0E7HF8vVMAEgbznmIsE4AQDkAYBoAZNgAeE4vvQAogHAZAHAqgHjs4bqAeT2BuoB-6WsQKoB_6esQKoB6SjsQKoB9XJG6gHpr4bqAfz0RuoB5bYG6gHqpuxAqgH35-xAtgHANIIBggAEAIYHYAKA5gLAcgLAYAMAbATwZnBD9gTA9gUAdAVAfgWAYAXAQ%26ae%3D1%26num%3D1%26cid%3DCAMSeQClSFh35Mibb4KyD4772ZkfFs_-01YCcDoOPTI7zKtR4_OlA8JzKXIFyUA-9RV6YQd6wujGDOkqogQVnh1Dr_3l0s5SVAjfwQVDcTin5PePe2wtK87pZYGrH3RjcItwG5uicLchDGL7ouffaAiVIk-3BenTspHhayA%26sig%3DAOD64_3DfmjjVGzftmMQf3ebkaTOoHj1QA%26dbm_c%3DAKAmf-CzIetPgiwKa4paQpxkzm9Q5xkuqt_qluw8gJAcQm6W859wpSfp-bfi4EiZRNPy5aUeURZuijLZ4y53uhNbxil5NE2IIr2hUCO2IkitSw3JsO7tcc-f2nqdZ5DQ6apYsx6lwHL4R2ClYz6n3caxjk6T_hmdaQ%26cry%3D1%26dbm_d%3DAKAmf-CHe8sqKVm9VnfzSvSuNlQRL_4riiH7AVUQIDBFiqr4d_rrFIPmvL2CfELpJZBg-nYZgBVDFEHHyrGrV9A9W105RQGOw2FA2hsHPavjY4M7vQQwHAH4Tv0Gx1UW_m6S2j_qtCMC%26adurl%3Dhttps://www.flipkart.com/infinix-smart-6-polar-black-64-gb/p/itmd4041ce33d262%253Fpid%253DMOBGDC6HZHYVX96A%2526ocmpid%253DBrandAd_InfinixSmart6_BGRSBSustenance"
+        >
+          <img
+            src="https://tpc.googlesyndication.com/simgad/705039054601489960"
+            alt=""
+          />
+        </a>
+        <a
+          href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsumsxG2HGfEWFF_xJafcpyG4Y5e-dainzdPZ3_iY4Lg99Y1Ywxq49mF9WHTrNRWqKTfgmGs1_BHXZnRl0-oGM4ECJd77oCp6Cz6VR2IYQ4PQXVC6GyhucmD1xO7x8ZSoSPO9dxzwkya6gsQHL7mNDuaulYk7MUl6gQ5-SXn3teXyi0uM1taByjBj_VejkU-iUzR9rLpeXYTQJVe-FnS-gvMt1BFkFAPFU24lXVU1pzAns_b0K7m7UIybGVQKjTnPA9YnETrcoPxLAhr-52AjWMcQWH8jT7kEkDHRUlp7OQat1Qkd48WrXO_9M4Q8E0DPjpO1mNBtmhecf2gMEl6RKGDzO_nkl61_353d1fhu-H2Qt5QVqzt3j44g-FOU9Cbkj1lom8HhWqlqzDBn7O3lVJgtuY6isYXbi22_F_G9xiRZq1fap6XP2n7DU-pERO7b-yyMu4gZN52d5_mvNTA7DeghEknDLRkem0itLl-EF1T62jWzP5To3JLJe3dYc2GmB_G8UB4MZtz2f1I43kQOwUCeJjvVzHbNPE9-kh1lGZGCu4oQ-RfGmVrdqZNgwPrsZLnhQv9ako8gLnj_1e9_j9IDdjQFxafEuuhGEQWbrbmSMPO4KZ1o_HUJw75S4nuBfV3uXL7-gYqhGHKQKqseDDIO76aPs8FO4undQiPbT_0cWLMNaW8C6C822V51WkcpeIstviMooN4IV_ZJEWuwgmhqdz4NBpBbe4HuH_cxDYHz6sfPmCmQoyaPhB1nImNWpAplrvHnpjk2wqSTSmxER3zIz-N89HO2kgQfx4qiRg-yAWATfYFs8MBkXgvD1G7xvK6U4ehxIHPm3ZdCCtk1iQt8uuLocixdaVeNm3hyv1wCxVyilLYdHKPJKf_1EEUBxFUd6Yryh6B2BZSlH8Vg9pLUOGSttsKV0EBDFMhoHPx5wHu24dORVXUK-5ViSHVStO8DZ93D2QAl-IZ9ZyCgVHIuduGmL72uzAREuQaQyEmVulV9bWGQoLHDTk_k1iTfH8_YGI-KQz23RraS62ahadOkMYvh9B39O7YEF8nlTqz3nQ_mr0ALG3g34ViFfOmxbeJx84lB3Zmh0Zg6R7weyZ9oi8jqPKLB3tiWl3xrr6vj8ag5t5R-FE-ZH3KsQ03euVzZ-VdqymzbmrT0w4p85T8plbGObqxR6JKoT_Add2QSOz8H96sem03Kr4NfIYyo125ocMEa1Q4Ot2OwOIZyK5SKZ1B7x3PQa1JcgkNbqlwW4Gj6hBfnn0If26aH6-3tcS2kakwmUXVocltqbBzkGXYnAH2PwtS3mRIDoo5Un3dURjLHS0zAKFg&sai=AMfl-YTxx7-thEctQ9zd3sNxJY1x0I_zI2rar_OeVFVZiQq4dBDcZWAsPaFasnhVAi5TAjFSmUCkdaZGVswApcS4xxSstd_d6I9bre5Fi_nfr6Ga_gKsdhzb3W68-W6urCCy9QSa4yuY5NEGsWf6Xlnq2ob4sDq_dfNbHkwF3e9Dgd4OtnnUVC9JdynWIzrBAHrwsq4s2qIjYt_QCrIO1LM_LdQDuahMBNJV_SKpwBCN7LLS8TU9Sa19_VBmwj-Aq98EEllCe1wDg6aakz9G3AO4lD6u3SultEozA1TP1t8moITvqJmR15HvToGB_ETIW_hO0AHaDmGzLb7cpU9bjBn-vkQrCTIZ0K-H0Xmgbu5rEUkHt59Mr6sAMVI308183XoD6uqbQIc&sig=Cg0ArKJSzPHyw-3rrrOw&cry=1&fbs_aeid=[gw_fbsaeid]&urlfix=1&nx=95&ny=129&dim=300x250&adurl=https://voot.onelink.me/2750673526/rl57ttdy%3Fdclid%3D%25edclid!"
+        >
+          <img src="https://s0.2mdn.net/simgad/1186808727724926983" alt="" />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let newsExplainers = [
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/16/2344781-agnipath-scheme-ians.jpg",
+      titleLink:
+        "https://www.dnaindia.com/explainer/report-dna-explainer-fears-around-agnipath-scheme-what-we-know-so-far-agniveer-short-term-recruit-army-navy-air-force-2961132",
+      newsTitle:
+        "DNA Explainer: Fears around Agnipath scheme, what we know so far",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2325714-government-vacancy.jpg",
+      titleLink:
+        "https://www.dnaindia.com/explainer/report-dna-explainer-here-are-departments-where-most-recruitments-likely-to-happen-civil-defence-railways-home-postal-2960787",
+      newsTitle:
+        "DNA Explainer: Here are the departments where most recruitments are likely to happen",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303726-national-e-vidhan-application-mpaindia.jpg",
+      titleLink:
+        "https://www.dnaindia.com/explainer/report-dna-explainer-what-is-the-digital-vidhan-sabha-system-and-how-it-will-function-national-e-vidhan-application-2960500",
+      newsTitle:
+        "DNA Explainer: What is the digital Vidhan Sabha system and how it will function?",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/13/2284209-crypto-crash-reuters.jpg",
+      titleLink:
+        "https://www.dnaindia.com/explainer/report-dna-explainer-why-is-the-crypto-market-crashing-today-bitcoin-ethereum-federal-reserve-interest-rate-inflation-2960103",
+      newsTitle:
+        "Why is the crypto market crashing today? Bitcoin and Ethereum now worth half of their all-time highs",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2322450-presidential-election-ians.jpg",
+      titleLink:
+        "https://www.dnaindia.com/bollywood/report-jayeshbhai-jordaar-boman-irani-opens-up-on-film-s-box-office-collection-says-it-should-ve-done-better-2961078",
+      newsTitle:
+        "DNA Explainer: Why vote value of MPs will decrease in Presidential Election 2022",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/09/2207722-corvette-ani.jpg",
+      titleLink:
+        "https://www.dnaindia.com/bollywood/report-raksha-bandhan-akshay-kumar-bhumi-pednekar-film-release-on-august-11-clash-with-aamir-khan-laal-singh-chaddha-2961081",
+      newsTitle:
+        "DNA Explainer: How next-generation indigenously built Corvettes will help modernise Indian Navy",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/08/2186389-viagra-pixabay.jpg",
+      titleLink:
+        "https://www.dnaindia.com/entertainment/report-prabhas-to-be-seen-in-double-role-in-kgf-director-prashanth-neel-s-salaar-2961077",
+      newsTitle:
+        "DNA Explainer: What is Viagra overdose which leads to the condition priapism",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/08/2183851-ethanol-blended-petrol-moefcc.jpg",
+      titleLink:
+        "https://www.dnaindia.com/television/report-nikki-tamboli-sets-internet-on-fire-in-black-co-ord-set-fans-call-her-sexy-hot-2961070",
+      newsTitle:
+        "DNA Explainer: What is ethanol blended petrol, how useful or harmful it is for vehicles",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/08/2171113-india-gulf-rulers.jpg",
+      titleLink:
+        "https://www.dnaindia.com/bollywood/report-rocketry-the-nambi-effect-r-madhavan-drops-making-video-reveals-when-he-decided-to-do-the-film-2960960",
+      newsTitle:
+        "DNA Explainer: Why Gulf matters to India? How much are we inter-dependent",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/06/2062611-gujarat-french-fries-ani.jpg",
+      titleLink:
+        "https://www.dnaindia.com/hollywood/report-amber-heard-says-she-loves-ex-husband-johnny-depp-with-all-her-heart-has-no-bad-feeling-towards-him-2960954",
+      newsTitle:
+        "DNA Explainer: How Gujarat turned the game around for India in exporting French fries",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/03/2120320-turkey-reuters.jpg",
+      titleLink:
+        "https://www.dnaindia.com/bollywood/report-malaika-arora-gets-brutally-trolled-for-rude-behaviour-with-fans-netizens-says-karvali-bezati-2960941",
+      newsTitle:
+        "'DNA Explainer: Why Turkey rejected India's wheat consignment?",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/05/26/1993801-pjimage.jpg",
+      titleLink:
+        "https://www.dnaindia.com/explainer/report-gun-violence-top-killer-of-american-kids-surpassing-road-accidents-drug-overdose-study-2955819",
+      newsTitle:
+        "Gun violence top killer of American kids surpassing road accidents, drug overdose: Study",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/05/24/1960784-terminator-tank-support-system-israelmidru.jpg",
+      titleLink:
+        "https://www.dnaindia.com/explainer/report-dna-explainer-how-russia-terminator-tank-support-system-can-be-a-game-changer-in-ukraine-war-2955320",
+      newsTitle:
+        "DNA Explainer: How Russia's Terminator tank support system can be a game changer in Ukraine war",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/05/24/1959549-quad-summit-reuters.jpg",
+      titleLink:
+        "https://www.dnaindia.com/entertainment/photo-gallery-nayanthara-samantha-ruth-prabhu-rashmika-mandanna-pooja-hegde-anushka-shetty-south-actresses-fee-per-film-2960770",
+      newsTitle:
+        "DNA Explainer: What is the 4-nation Quad and the idea behind it",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/05/20/1917083-saudi-activist-reuters.jpg",
+      titleLink:
+        "https://www.dnaindia.com/explainer/report-how-a-saudi-woman-activist-iphone-revealed-pegasus-snooping-2954399",
+      newsTitle:
+        "How a Saudi woman activist's iPhone revealed Pegasus snooping",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/05/23/1944676-soil-pollution-reuters.jpg",
+      titleLink:
+        "https://www.dnaindia.com/explainer/report-dna-explainer-here-is-how-some-plants-will-help-removing-soil-contamination-phytoremediation-hyperaccumulators-2955059",
+      newsTitle:
+        "DNA Explainer: Here's how some plants will help in removing soil contamination",
+    },
+  ];
+
+  dnaExplainers(newsExplainers);
+  function dnaExplainers(News) {
+    News.map(function (element) {
+      let newsExplainers = document.createElement("div");
+      newsExplainers.id = "newsMenu";
+
+      let content = document.createElement("div");
+      content.id = "menuContent";
+
+      let imageDiv = document.createElement("div");
+      let titleDiv = document.createElement("div");
+
+      let imgTitle = document.createElement("a");
+      imgTitle.href = element.titleLink;
+
+      let img = document.createElement("img");
+      img.src = element.image;
+
+      let news = document.createElement("a");
+      news.href = element.titleLink;
+      news.innerText = element.newsTitle;
+
+      imgTitle.append(img);
+
+      imageDiv.append(imgTitle);
+      titleDiv.append(news);
+
+      content.append(imageDiv, titleDiv);
+      newsExplainers.append(content);
+
+      Explainers.append(newsExplainers);
+    });
+    let moreNews = document.createElement("button");
+    moreNews.innerText = "More News";
+    moreNews.id = "moreNews";
+    Explainers.append(moreNews);
+  }
+</script>
