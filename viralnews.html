@@ -41,7 +41,7 @@
       justify-content: center;
       justify-content: space-between;
     }
-    #iconchild >a>#logo {
+    #iconchild > a > #logo {
       width: 90px;
     }
     #iconchild > #hinditext {
@@ -56,11 +56,25 @@
       color: white;
       border: 1px solid black;
       font-weight: 15px;
+      cursor: pointer;
     }
-    #icon > #search {
-      display: block;
-      width: 30px;
-      height: 20px;
+    #icon > #searchLogout {
+      display: flex;
+      justify-content: space-between;
+      width: 90px;
+    }
+    #icon > #searchLogout > a > #logout {
+      padding: 3px 5px;
+      border-radius: 10px;
+      border: 1px solid;
+      background-color: #fede2f;
+    }
+    #icon > #searchLogout > a > #logout:hover {
+      background-color: #4c4c4c;
+      color: white;
+      border: 1px solid black;
+      font-weight: 15px;
+      cursor: pointer;
     }
     /* ---------------------------------------------------------------Top News Bar------------------------------------------------------- */
     #topnewsbar {
@@ -86,8 +100,16 @@
       display: flex;
       margin: auto 3% auto 1%;
       color: white;
+      align-items: center;
       justify-content: space-between;
       width: 87%;
+    }
+    #topnewsbar > #topnewsFlash > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      width: 60px;
     }
     /* -----------------------------------------------------------------CONTENT----------------------------------------------------------*/
     #pageBody {
@@ -130,7 +152,7 @@
     }
     #spotscontent > h2 {
       border-bottom: 3px solid #fede2f;
-      width: 75px;
+      width: 99px;
     }
     #newsbox {
       display: flex;
@@ -140,14 +162,100 @@
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     #spotscontent > p {
-      width: 89%;
-      margin: -0.37% auto auto 11%;
+      margin: -0.4% auto;
     }
     #newsbox > img {
       width: 27%;
     }
     #newsbox > p {
       margin: 0.8% 1.5%;
+    }
+    /* --------------------------------------------------------------------PAGE ADD IMAGE---------------------------------------------------*/
+    #pageBody > div:nth-child(3) > img {
+      width: 100%;
+    }
+
+    /* ----------------------------------------------------------------RESPONSIVE MEDIUM SIZE-------------------------------------------*/
+    @media all and (max-width: 1199px) and (min-width: 1000px) {
+      #icon {
+        padding: 15px 10%;
+      }
+      #topnewsbar {
+        width: 80%;
+      }
+      #pageBody {
+        grid-template-columns: 1fr 2.4fr 1fr;
+        width: 80%;
+      }
+      #topnewsbar > #topnewsText {
+        border-radius: 0%;
+        font-size: 15px;
+      }
+      #topnewsbar > #topnewsFlash {
+        font-size: 13px;
+        align-items: center;
+      }
+      #navbar > div > a > .navbarOption {
+        font-size: 13px;
+      }
+      #newsbox > p {
+        font-size: 14px;
+      }
+    }
+
+    /* ----------------------------------------------------------------RESPONSIVE SMALL SIZE--------------------------------------------*/
+    @media all and (max-width: 999px) {
+      #headAdvertiseBrand {
+        width: 80%;
+      }
+      #icon {
+        padding: 15px;
+      }
+      #topnewsbar {
+        width: 100%;
+      }
+      #topnewsbar > #topnewsText {
+        border-radius: 0%;
+        font-size: 13px;
+      }
+      #topnewsbar > #topnewsFlash {
+        font-size: 12px;
+        align-items: center;
+      }
+      #topnewsbar > #topnewsFlash > div {
+        width: 40px;
+        /* border: 1px solid red; */
+      }
+      #topnewsbar > #topnewsFlash > div > img {
+        width: 7px;
+      }
+      #topnewsbar > #topnewsFlash > div > img:nth-child(2) {
+        width: 15px;
+      }
+      #pageBody {
+        display: flex;
+        flex-direction: column;
+      }
+      #pageBody > #navbar > div {
+        display: flex;
+        overflow: auto;
+        white-space: nowrap;
+        position: static;
+      }
+      #navbar > div > a > .navbarOption {
+        margin: 5px;
+        height: 20px;
+        padding: 15px 3px;
+        padding-right: 10px;
+        font-size: 12px;
+      }
+      #pageBody > div:nth-child(3) > img {
+        display: block;
+        margin: 10px auto;
+      }
+      #newsbox > p {
+        font-size: 12.5px;
+      }
     }
   </style>
 
@@ -164,16 +272,19 @@
       <div id="iconchild">
         <a href="homepage.html">
           <img
-          id="logo"
-          src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
-        />
-        </a>       
+            id="logo"
+            src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
+          />
+        </a>
         <button id="hinditext">हिंदी में पढ़ें</button>
       </div>
-      <img
-        src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
-        alt=""
-      />
+      <div id="searchLogout">
+        <img
+          src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
+          alt=""
+        />
+        <a href="index.html"><button id="logout">Logout</button></a>
+      </div>
     </div>
     <!-----------------------------------------------------------------Top News Bar---------------------------------------------------------->
     <div id="topnewsbar">
@@ -188,6 +299,7 @@
             src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
             alt=""
           />
+          <img src="https://www.linkpicture.com/q/pause_2.png" />
           <img
             src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
           />
