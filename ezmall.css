@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+body {
+  background-color: white;
+}
 nav {
   display: flex;
   width: 100%;
@@ -12,6 +15,7 @@ nav {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   position: sticky;
   top: 0px;
+  z-index: 1;
   background-color: white;
 }
 #nav {
@@ -70,4 +74,124 @@ a:hover {
 }
 #nav-right-buttons > img {
   width: 10%;
+}
+.topdiv {
+  /* border: 1px solid blue; */
+  width: 90%;
+  margin: auto;
+  margin-top: 1%;
+  position: relative;
+}
+.topdiv > img {
+  width: 100%;
+  border-radius: 20px;
+}
+.button {
+  position: absolute;
+  top: 50%;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border: #fafafa;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.topdiv > button:nth-child(2) {
+  left: -1.9%;
+}
+.topdiv > button:nth-child(3) {
+  right: -1.9%;
+}
+.second_bg {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+  position: relative;
+}
+.second_bg > .second_2nd {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+}
+.second_2nd > div {
+  width: 24%;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+.second_2nd > div > img {
+  width: 100%;
+  border-radius: 20px;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  cursor: pointer;
+}
+.second_2nd > div > img:hover {
+  box-shadow: rgba(12, 11, 11, 0.2) 0px 7px 29px 0px;
+  transition: 0.5s;
+}
+.second_1st {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+}
+.second_1st span {
+  color: red;
+  font-weight: 100;
+}
+.second_1st > h1 {
+  font-weight: 100;
+  margin-bottom: 6%;
+}
+
+.third_bg {
+  width: 90%;
+  /* border: 1px solid red; */
+  margin: auto;
+  margin-top: 4%;
+  display: flex;
+  justify-content: space-between;
+}
+.third_bg > div {
+  /* border: 1px solid orange; */
+}
+.first {
+  /* border: 1px solid rgb(0, 0, 0); */
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.first > div {
+  width: 15.5%;
+  border-radius: 20px;
+}
+.first > div > img {
+  width: 100%;
+  border-radius: 15px;
+}
+.second {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2%;
+  padding-left: 4%;
+}
+
+.second span {
+  color: red;
+  font-weight: 100;
+  padding-left: 3%;
+}
+.second h1 {
+  font-weight: 100;
+  padding-bottom: 2%;
+}
+.second > p {
+  padding-right: 12%;
 }
