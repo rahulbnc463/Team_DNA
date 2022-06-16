@@ -75,6 +75,8 @@ a:hover {
 #nav-right-buttons > img {
   width: 10%;
 }
+
+/* -----------------------------------------TopBanner_Section------------------------------------------------------ */
 .topdiv {
   /* border: 1px solid blue; */
   width: 90%;
@@ -106,6 +108,8 @@ a:hover {
 .topdiv > button:nth-child(3) {
   right: -1.9%;
 }
+
+/* ----------------------------------second_section----------------------------------------- - */
 .second_bg {
   display: flex;
   justify-content: space-between;
@@ -147,7 +151,7 @@ a:hover {
   font-weight: 100;
   margin-bottom: 6%;
 }
-
+/* ---------------------Third_section-------------------------------- */
 .third_bg {
   width: 90%;
   /* border: 1px solid red; */
@@ -156,9 +160,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
 }
-.third_bg > div {
-  /* border: 1px solid orange; */
-}
+
 .first {
   /* border: 1px solid rgb(0, 0, 0); */
   width: 80%;
@@ -173,6 +175,9 @@ a:hover {
 .first > div > img {
   width: 100%;
   border-radius: 15px;
+  cursor: pointer;
+  box-shadow: rgba(12, 11, 11, 0.2) 0px 7px 29px 0px;
+  transition: 0.5s;
 }
 .second {
   width: 25%;
@@ -194,4 +199,129 @@ a:hover {
 }
 .second > p {
   padding-right: 12%;
+}
+/* --------------------------fourth_bg------------------------------- */
+.fourth_bg {
+  width: 90%;
+  margin: auto;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  display: flex;
+  justify-content: space-between;
+}
+.fourth_bg > div {
+  width: 19%;
+}
+.fourth_bg > div > img {
+  width: 100%;
+  border-radius: 15px;
+}
+/* -----------------------------------Fifth_Section------------------------------ -- */
+.fifth_bg {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9e6e5;
+  padding-right: 2%;
+}
+.fifth_bg > img {
+  width: 25%;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.master_child {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 0.5%;
+}
+.child {
+  width: 24%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.child > img {
+  width: 100%;
+  padding: 7% 7% 3% 7%;
+}
+
+.BName {
+  color: rgb(18, 188, 255);
+  font-size: 12px;
+}
+.PName {
+  text-align: center;
+  padding: 2% 3% 2% 3%;
+  font-size: 15px;
+}
+.p {
+  padding-bottom: 6%;
+}
+.OPrise {
+  font-weight: bold;
+}
+.PPrise {
+  font-size: 13px;
+  text-decoration: line-through;
+}
+.redPrise {
+  color: red;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+/* ---------------------Sixth_section-------------------------- */
+#sixthimg {
+  border-radius: 20px 0px 0px 20px;
+}
+.sixth_bg {
+  margin-top: 2%;
+  padding-right: 0%;
+}
+/* -----------------------------seventh_Section---------------------------- */
+#seventh_bg {
+  background-color: rgb(255, 239, 241);
+}
+h2 {
+  margin-top: 3%;
+  margin-left: 7%;
+  color: rgb(35, 35, 35);
+}
+/* ------------------------Eight_Section------------------------------- */
+.Eight_bg {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+.mChild {
+  padding: 2%;
+  width: 20%;
+}
+.mChild:hover {
+  border: 0.3px solid rgb(232, 232, 232);
+}
+.mChild > img {
+  width: 100%;
+}
+.mChild {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  cursor: pointer;
+}
+#BName {
+  margin-top: 3%;
+}
+#mChildbg {
+  background-color: rgb(0, 0, 0);
+  color: black;
 }
