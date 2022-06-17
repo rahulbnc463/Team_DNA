@@ -170,6 +170,18 @@
     #newsbox > p {
       margin: 0.8% 1.5%;
     }
+    #morenews{      
+      display: block;
+      margin: 30px auto 70px auto;
+      padding: 12px 40%;
+      border: 1px solid;
+      border-radius: 20px;
+      font-weight: bolder;
+    }
+    #morenews:hover{
+      color: #fede2f; 
+      border: 1px solid black;     
+    }
     /* --------------------------------------------------------------------PAGE ADD IMAGE---------------------------------------------------*/
     #pageBody > div:nth-child(3) > img {
       width: 100%;
@@ -517,7 +529,8 @@
 
   sportscontent(sports);
   function sportscontent(sports) {
-    sports.map(function (ele) {
+    
+    sports.map(function (ele,index) {
       let sportnews = document.createElement("div");
       sportnews.id = "newsbox";
       let img = document.createElement("img");
@@ -530,9 +543,14 @@
       sportnews.append(img, news);
       if (ele.ruler == undefined) {
         spotscontent.append(sportnews);
-      } else {
+      }else if(ele.ruler!=undefined){
         spotscontent.append(hr, sportnews);
-      }
-    });
+      }               
+    }); 
+    let seemore=document.createElement("button");
+        seemore.innerText="More News";
+        seemore.id="morenews"
+        spotscontent.append(seemore);        
   }
+  
 </script>

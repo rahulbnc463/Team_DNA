@@ -170,6 +170,18 @@
     #newsbox > p {
       margin: 0.8% 1.5%;
     }
+    #morenews{      
+      display: block;
+      margin: 30px auto 70px auto;
+      padding: 12px 40%;
+      border: 1px solid;
+      border-radius: 20px;
+      font-weight: bolder;
+    }
+    #morenews:hover{
+      color: #fede2f; 
+      border: 1px solid black;     
+    }
     /* --------------------------------------------------------------------PAGE ADD IMAGE---------------------------------------------------*/
     #pageBody > div:nth-child(3) > img {
       width: 100%;
@@ -563,5 +575,9 @@
         spotscontent.append(hr, sportnews);
       }
     });
+    let seemore=document.createElement("button");
+        seemore.innerText="More News";
+        seemore.id="morenews"
+        spotscontent.append(seemore); 
   }
 </script>
