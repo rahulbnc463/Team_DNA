@@ -44,14 +44,14 @@
     #iconchild > a > #logo {
       width: 90px;
     }
-    #iconchild>a > #hinditext {
+    #iconchild > a > #hinditext {
       padding: 5px 10px;
       border-radius: 20px;
       border: 1px solid;
       margin: 30px;
       background-color: #fede2f;
     }
-    #iconchild>a > #hinditext:hover {
+    #iconchild > a > #hinditext:hover {
       background-color: #4c4c4c;
       color: white;
       border: 1px solid black;
@@ -110,6 +110,12 @@
       align-items: center;
       justify-content: space-between;
       width: 60px;
+    }
+    #prev {
+      cursor: pointer;
+    }
+    #next {
+      cursor: pointer;
     }
     /* -----------------------------------------------------------------CONTENT----------------------------------------------------------*/
     #pageBody {
@@ -170,7 +176,7 @@
     #newsbox > p {
       margin: 0.8% 1.5%;
     }
-    #morenews{      
+    #morenews {
       display: block;
       margin: 30px auto 70px auto;
       padding: 12px 40%;
@@ -179,9 +185,9 @@
       font-weight: bolder;
       cursor: pointer;
     }
-    #morenews:hover{
-      color: #fede2f; 
-      border: 1px solid black;     
+    #morenews:hover {
+      color: #fede2f;
+      border: 1px solid black;
     }
     /* --------------------------------------------------------------------PAGE ADD IMAGE---------------------------------------------------*/
     #pageBody > div:nth-child(3) > img {
@@ -289,7 +295,9 @@
             src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
           />
         </a>
-        <a href="https://www.dnaindia.com/hindi"><button id="hinditext">हिंदी में पढ़ें</button></a> 
+        <a href="https://www.dnaindia.com/hindi"
+          ><button id="hinditext">हिंदी में पढ़ें</button></a
+        >
       </div>
       <div id="searchLogout">
         <img
@@ -304,17 +312,18 @@
       <div id="topnewsText"><p>Top News</p></div>
       <div id="topnewsFlash">
         <p>
-          SBI FD rates increased, PNB, IDBI also hike fixed deposit interest
-          rates; check details
+          Neeraj Chopra sets new national record with a throw of 89.30m, bags
+          silver medal in the Paavo Nurmi Games
         </p>
         <div>
           <img
             src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
-            alt=""
+            id="prev"
           />
           <img src="https://www.linkpicture.com/q/pause_2.png" />
           <img
             src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
+            id="next"
           />
         </div>
       </div>
@@ -576,9 +585,39 @@
         spotscontent.append(hr, sportnews);
       }
     });
-    let seemore=document.createElement("button");
-        seemore.innerText="More News";
-        seemore.id="morenews"
-        spotscontent.append(seemore); 
+    let seemore = document.createElement("button");
+    seemore.innerText = "More News";
+    seemore.id = "morenews";
+    spotscontent.append(seemore);
   }
+
+  // --------------------------------------------change news flash----------------------------
+  let flash = document.querySelector("#topnewsFlash>p");
+
+  let flashText = [
+    "Neeraj Chopra sets new national record with a throw of 89.30m, bags silver medal in the Paavo Nurmi Games",
+    "Assam floods: Manas, Brahmaputra rivers flowing above danger mark, 4 dead in last 24 hours",
+    "Talaq-e-Hasan: Supreme Court to hear plea against Muslim divorce practice today",
+    "PM Modi to visit Gujarat on a 2-day trip today, launch projects worth Rs 21,000 crore",
+  ];
+
+  let flashme = 0;
+  prev.addEventListener("click", function () {
+    if (flashme == 0) {
+      flashme = flashText.length - 1;
+    } else {
+      flashme--;
+    }
+
+    flash.innerText = flashText[flashme];
+  });
+
+  next.addEventListener("click", function () {
+    if (flashme == flashText.length - 1) {
+      flashme = 0;
+    } else {
+      flashme++;
+    }
+    flash.innerText = flashText[flashme];
+  });
 </script>
