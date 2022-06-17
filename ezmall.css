@@ -141,7 +141,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 20%;
+  width: 18%;
+  text-align: left;
 }
 .second_1st span {
   color: red;
@@ -150,6 +151,7 @@ a:hover {
 .second_1st > h1 {
   font-weight: 100;
   margin-bottom: 6%;
+  padding-right: 34%;
 }
 /* ---------------------Third_section-------------------------------- */
 .third_bg {
@@ -196,6 +198,7 @@ a:hover {
 .second h1 {
   font-weight: 100;
   padding-bottom: 2%;
+  text-align: left;
 }
 .second > p {
   padding-right: 12%;

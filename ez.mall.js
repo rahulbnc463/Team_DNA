@@ -29,3 +29,28 @@ buttom[1].addEventListener("click", function () {
   }
   img.src = imgArr[imgNum];
 });
+
+let link = document
+  .querySelector(".topdiv>img")
+  .addEventListener("click", function () {
+    window.location.href =
+      "https://www.ezmall.com/the-authentic-store/accessories/jewellery";
+  });
+document
+  .querySelector("#nav-right-buttons>img+img")
+  .addEventListener("click", function () {
+    window.location.href =
+      "https://www.ezmall.com/faces/fe/jsps/myAccountMain.jsp?tabValue=tab-5";
+  });
+document
+  .querySelector("#nav-right-buttons>img:last-child")
+  .addEventListener("click", function () {
+    window.location.href =
+      "https://www.ezmall.com/faces/fe/jsps/mainShoppingCart.jsp";
+  });
+document
+  .querySelector(".second_2nd>div")
+  .addEventListener("click", function () {
+    window.location.href =
+      "https://www.ezmall.com/watch/live/angoori-petha-500gms/23919/buy/115";
+  });
