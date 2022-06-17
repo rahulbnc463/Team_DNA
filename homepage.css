@@ -1,0 +1,252 @@
+
+#navbar{
+    margin:auto;
+    width:100%;
+    height: 64px;
+    padding: 4px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+
+    /* padding: 4px 0; */
+    /* height: 64px; */
+    /* border: 1px solid; */
+    background-color: rgb(255, 222, 47);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+}
+#search{
+  margin-left: -20px;
+}
+
+#navbar>div:first-child {
+    /* border: 1px solid ; */
+    height: 50px;
+    width: 200px;
+}
+
+#navbar>div:last-child {
+    /* border: 1px solid; */
+    height: 50px;
+    width: 100px;
+}
+#log{
+    margin-left:px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#left-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+
+#left-navbar>div:last-child {
+    font-family: "Roboto Slab", sans-serif;
+font-size: 10px;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 25%;
+    height: 20%;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    padding: 5px 10px;
+
+}
+
+#left-navbar>div>img {
+    height: 80%;
+    width: auto;
+    margin-top: 5px;
+}
+
+#left-navbar>div {
+    padding: 5px;
+}
+
+#right-navbar {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#right-navbar img {
+    display: flex;
+    margin-left: -40px;
+    height: 20px;
+}
+
+#left-navbar>div:last-child:hover {
+    background-color: rgb(65, 69, 73);
+    color: aliceblue;
+}
+
+#bar {
+    border: 1px solid;
+    height: 30px;
+    ;
+    width: 100%;
+    background-color: hsl(0, 0%, 19%);
+    margin-top: 10px;
+}
+
+#bar div:first-child {
+    background-color: grey;
+    height: auto;
+    width: 150px;
+    padding: 5px;
+    border-radius: 0px 5px 5px 0px;
+    text-align: center;
+}
+
+#bar>h4 {
+    padding: 10px
+}
+
+;
+
+/* here i start the coading for the container  */
+
+
+
+
+#left-container {
+    /* margin-top: -110px; */
+}
+
+#right-container {
+    /* margin-top: 10px;
+/* } */
+}
+
+.imgcontent>img {
+    height: auto;
+    width: 550px;
+    margin-right: 5px;
+    /* margin-top: 10px;
+width: 25%;
+height:400px; */
+    /* border: 1px solid; */
+}
+
+.add {
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+#body {
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: 1.1fr 2fr 1fr;
+    grid-template-rows: auto;
+}
+
+#left-container>div:hover {
+    background-color: rgb(255, 222, 47);
+    cursor: pointer;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+#left-container {
+    /* margin-top: 20px; */
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    /* justify-content: center; */
+    /* align-items:center ; */
+}
+
+
+
+.content {
+    color: blue;
+    margin-top: -10px;
+
+}
+
+#headlines>div>img {
+    height: 90px;
+    width: 120px;
+    margin-right: 10px;
+}
+
+#headlines {
+    display: flex;
+
+}
+
+#headlines {
+    margin-top: 15px;
+}
+
+#headlines>div:hover {
+    color: blue;
+    cursor: pointer;
+}
+.subtitle{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    border-bottom: 2px yellow solid;
+}
+
+#bar{
+    display: flex;
+    
+}
+#bar >div:last-child{
+    color: white;
+}
+.navbarOption {
+display: flex;
+align-items: center;
+cursor: pointer;
+height: 35px;
+padding-left: 7px;
+color: black;
+border-bottom: none ;
+}
+.navbarOption:hover{
+background-color: #fede2f;
+}
+#left-container{
+margin-top: 100px;
+position: fixed;
+}
+#middle-container{
+margin-top: 100px;
+margin-left: 200px;
+/* width: 500px; */
+margin-right: 10px;
+}
+a{
+text-decoration: none;
+}
+/* #navbar{
+position: fixed;
+width: auto;
+
+} */
+#bar{
+margin-top: 80px;
+position: fixed;
+width: 100%;
+
+}
+#right-container{
+margin-top: 100px;
+
+}
