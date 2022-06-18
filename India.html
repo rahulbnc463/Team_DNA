@@ -27,6 +27,7 @@
       position: sticky;
       top: 0px;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      z-index: 10;
     }
     #icon > #iconchild {
       padding: 0%;
@@ -197,73 +198,58 @@
       color: #fede2f;
     }
 
-    /* Footer */
-    #main {
-      height: 350px;
+        /* Footer */
+
+        #main {
+      color: gray;
       background-color: #1c1c1c;
-      padding: 10px;
+      margin-top: 150px;
     }
-    .box,
-    .box1,
-    .box2 {
-      width: 90%;
+    #main > .box {
+      display: flex;
+      
+      align-items: center;
+      padding: 14.5px;
+    }
+    .box > div > img {
+      width: 95px;
+      margin-right: 100px;
+    }
+    #main > .box > .nice {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #main > .box > .nice > div {
+      margin: auto 15px;
+      white-space: nowrap;
+    }
+    #right {
+      justify-content: center;
+    }
+    #follow {
+      margin: auto 20px;
+      margin-right: 100px;
+    }
+    #follow > img {
+      width: 25px;
+    }
+    .nice > div {
+      font-size: small;
+    }
+    .span {
+      margin: 5px 20px;
+      margin-left: 0px;
+      font-size: large;
+    }
+    .rule {
+      border: 0.1px solid #3b3a3a;
+      width: 98%;
       margin: auto;
-      height: 20%;
-      display: flex;
-      font-size: 14px;
-    }
-
-    .box1 > div:first-child {
-      font-size: 10px;
-      color: grey;
-      padding: 0px 40px 0px 0px;
-    }
-    .box1 > div:nth-child(2) {
-      display: flex;
-    }
-    .box1 > div:nth-child(2) > img {
-      padding: 0px 4px 0px 4px;
-    }
-
-    hr {
-      color: grey;
-    }
-    #img1 {
-      height: 70%;
-      width: 90px;
-      padding: 15px 20px 0px 10px;
-    }
-
-    #nice {
-      display: flex;
-      justify-content: space-evenly;
-      padding: 30px 20px 0px 50px;
-    }
-    #nice > div {
-      margin-right: 20px;
-      color: rgba(128, 128, 128, 0.925);
-    }
-    .box1 > #nice2 > div {
-      color: rgba(128, 128, 128, 0.925);
-      display: flex;
-      padding: 30px 0px 0px 20px;
-    }
-    #nice2 {
-      display: flex;
-      justify-content: space-evenly;
-    }
-    .box2 > div:nth-child(2) {
-      width: 1100px;
-      padding: 0px 10px 0px 20px;
-      display: flex;
-    }
-    .box2 > div:nth-child(2) > div {
-      padding: 25px 10px 0px 10px;
-      color: grey;
     }
 
     /*Responsive Medium And Small*/
     @media all and (min-width: 0px) and (max-width: 1024px) {
+      /* Header */
       #icon > #iconchild {
         margin-left: 10px;
       }
@@ -283,6 +269,8 @@
         justify-content: space-evenly;
         align-items: center;
       }
+
+      /* Main Body */
       #India > h5,
       #India > h2 {
         margin-left: 10px;
@@ -317,6 +305,7 @@
         flex-direction: column;
         align-items: center;
       }
+   
     }
   </style>
 
@@ -489,8 +478,8 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <div>
+     <!-- Footer -->
+     <div>
       <div id="main">
         <div class="box">
           <div>
@@ -500,7 +489,7 @@
               alt=""
             />
           </div>
-          <div id="nice">
+          <div class="nice">
             <div>INDIA</div>
             <div>WORLD</div>
             <div>BUSSINESS</div>
@@ -510,11 +499,11 @@
             <div>ENTERTAINMENT</div>
           </div>
         </div>
-        <hr />
-        <div class="box1">
-          <div id="inside">
-            <div><h2>FOLLOW US ON</h2></div>
-            <div>
+        <hr class="rule" />
+        <div class="box">
+          <div>
+            <div class="span"><span>FOLLOW US ON</span></div>
+            <div id="follow">
               <img
                 src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-facebook.svg"
                 alt=""
@@ -529,7 +518,7 @@
               />
             </div>
           </div>
-          <div id="nice2">
+          <div class="nice">
             <div>ABOUT DNA</div>
             <div>CONTACT US</div>
             <div>INVESTORS</div>
@@ -537,12 +526,12 @@
             <div>PRIVACY-POLICY</div>
           </div>
         </div>
-        <hr />
-        <div class="box2">
-          <div font-size: 14px;>
-            <p style="color: grey; font-size: 20px">PARTNER SITE</p>
+        <hr class="rule" />
+        <div class="box">
+          <div class="span">
+            <span>PARTNER SITE</span>
           </div>
-          <div>
+          <div class="nice">
             <div>ZEE NEWS</div>
             <div>HINDI NEWS</div>
             <div>MARATHI NEWS</div>
@@ -553,9 +542,9 @@
             <div>WION</div>
           </div>
         </div>
-        <hr />
-        <div class="box">
-          <div style="padding: 10px 0px 0px 300px; color: grey">
+        <hr class="rule" />
+        <div class="box" id="right">
+          <div>
             @1918-2022 INDIA DOT COM PRIVATE LIMITED, ALL RIGHTS RESERVED.
           </div>
         </div>
