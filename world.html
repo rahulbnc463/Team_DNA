@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sports</title>
+    <title>Viral News</title>
   </head>
 
   <style>
@@ -29,6 +29,7 @@
       height: 65px;
       background-color: #fede2f;
       position: sticky;
+      z-index: 5;
       top: 0px;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
@@ -41,26 +42,40 @@
       justify-content: center;
       justify-content: space-between;
     }
-    #iconchild > #logo {
+    #iconchild > a > #logo {
       width: 90px;
     }
-    #iconchild > #hinditext {
+    #iconchild > a > #hinditext {
       padding: 5px 10px;
       border-radius: 20px;
       border: 1px solid;
       margin: 30px;
       background-color: #fede2f;
     }
-    #iconchild > #hinditext:hover {
+    #iconchild > a > #hinditext:hover {
       background-color: #4c4c4c;
       color: white;
       border: 1px solid black;
       font-weight: 15px;
+      cursor: pointer;
     }
-    #icon > #search {
-      display: block;
-      width: 30px;
-      height: 20px;
+    #icon > #searchLogout {
+      display: flex;
+      justify-content: space-between;
+      width: 90px;
+    }
+    #icon > #searchLogout > a > #logout {
+      padding: 3px 5px;
+      border-radius: 10px;
+      border: 1px solid;
+      background-color: #fede2f;
+    }
+    #icon > #searchLogout > a > #logout:hover {
+      background-color: #4c4c4c;
+      color: white;
+      border: 1px solid black;
+      font-weight: 15px;
+      cursor: pointer;
     }
     /* ---------------------------------------------------------------Top News Bar------------------------------------------------------- */
     #topnewsbar {
@@ -86,8 +101,22 @@
       display: flex;
       margin: auto 3% auto 1%;
       color: white;
+      align-items: center;
       justify-content: space-between;
       width: 87%;
+    }
+    #topnewsbar > #topnewsFlash > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      width: 60px;
+    }
+    #prev {
+      cursor: pointer;
+    }
+    #next {
+      cursor: pointer;
     }
     /* -----------------------------------------------------------------CONTENT----------------------------------------------------------*/
     #pageBody {
@@ -140,14 +169,113 @@
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     #spotscontent > p {
-      width: 85.7%;
-      margin: -0.37% auto auto 14.55%;
+      margin: -0.4% auto;
     }
     #newsbox > img {
       width: 27%;
     }
     #newsbox > p {
       margin: 0.8% 1.5%;
+    }
+    #morenews {
+      display: block;
+      margin: 30px auto 70px auto;
+      padding: 12px 40%;
+      border: 1px solid;
+      border-radius: 20px;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+    #morenews:hover {
+      color: #fede2f;
+      border: 1px solid black;
+    }
+    /* --------------------------------------------------------------------PAGE ADD IMAGE---------------------------------------------------*/
+    #pageBody > div:nth-child(3) > img {
+      width: 100%;
+    }
+
+    /* ----------------------------------------------------------------RESPONSIVE MEDIUM SIZE-------------------------------------------*/
+    @media all and (max-width: 1199px) and (min-width: 1000px) {
+      #icon {
+        padding: 15px 10%;
+      }
+      #topnewsbar {
+        width: 80%;
+      }
+      #pageBody {
+        grid-template-columns: 1fr 2.4fr 1fr;
+        width: 80%;
+      }
+      #topnewsbar > #topnewsText {
+        border-radius: 0%;
+        font-size: 15px;
+      }
+      #topnewsbar > #topnewsFlash {
+        font-size: 13px;
+        align-items: center;
+      }
+      #navbar > div > a > .navbarOption {
+        font-size: 13px;
+      }
+      #newsbox > p {
+        font-size: 14px;
+      }
+    }
+
+    /* ----------------------------------------------------------------RESPONSIVE SMALL SIZE--------------------------------------------*/
+    @media all and (max-width: 999px) {
+      #headAdvertiseBrand {
+        width: 80%;
+      }
+      #icon {
+        padding: 15px;
+      }
+      #topnewsbar {
+        width: 100%;
+      }
+      #topnewsbar > #topnewsText {
+        border-radius: 0%;
+        font-size: 13px;
+      }
+      #topnewsbar > #topnewsFlash {
+        font-size: 12px;
+        align-items: center;
+      }
+      #topnewsbar > #topnewsFlash > div {
+        width: 40px;
+        /* border: 1px solid red; */
+      }
+      #topnewsbar > #topnewsFlash > div > img {
+        width: 7px;
+      }
+      #topnewsbar > #topnewsFlash > div > img:nth-child(2) {
+        width: 15px;
+      }
+      #pageBody {
+        display: flex;
+        flex-direction: column;
+      }
+      #pageBody > #navbar > div {
+        display: flex;
+        overflow: auto;
+        white-space: nowrap;
+        position: static;
+      }
+      #navbar > div > a > .navbarOption {
+        margin: 5px;
+        height: 20px;
+        padding: 15px 3px;
+        padding-right: 10px;
+        font-size: 12px;
+      }
+      #pageBody > div:nth-child(3) > img {
+        display: block;
+        margin: 10px auto;
+      }
+      #newsbox > p {
+        font-size: 12.5px;
+      }
     }
   </style>
 
@@ -156,39 +284,46 @@
     <div id="headAdvertise">
       <img
         id="headAdvertiseBrand"
-        src="https://s0.2mdn.net/simgad/6856187729639747120"
+        src="https://tpc.googlesyndication.com/simgad/1405589099521099660?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qmT7FYU2qdE9LdxHLExYTowtUtIHQ"
       />
     </div>
     <!-- --------------------------------------------------------------Icon Bar-------------------------------------------------------------->
     <div id="icon">
       <div id="iconchild">
-        <img
-          id="logo"
-          src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
-        />
-        <button id="hinditext">हिंदी में पढ़ें</button>
+        <a href="homepage.html">
+          <img
+            id="logo"
+            src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
+          />
+        </a>
+        <a href="https://www.dnaindia.com/hindi"
+          ><button id="hinditext">हिंदी में पढ़ें</button></a
+        >
       </div>
-
-      <img
-        src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
-        alt=""
-      />
+      <div id="searchLogout">
+        <img
+          src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
+          alt=""
+        />
+        <a href="index.html"><button id="logout">Logout</button></a>
+      </div>
     </div>
     <!-----------------------------------------------------------------Top News Bar---------------------------------------------------------->
     <div id="topnewsbar">
       <div id="topnewsText"><p>Top News</p></div>
       <div id="topnewsFlash">
         <p>
-          National Herald case: Rahul Gandhi to appear again before ED today,
-          timeline of yesterday's events
+          J-K Police officer shot deadly terrorists inside his home in Pulvama
         </p>
         <div>
           <img
             src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
-            alt=""
+            id="prev"
           />
+          <img src="https://www.linkpicture.com/q/pause_2.png" />
           <img
             src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
+            id="next"
           />
         </div>
       </div>
@@ -259,7 +394,7 @@
               <img
                 src="https://english.cdn.zeenews.com/static/public/icons/icons-viralNews.svg"
               />
-              <p>Viral News</p>
+              <p>World News</p>
             </div>
           </a>
           <a href="lifestyle.html">
@@ -300,17 +435,182 @@
       <div id="spotscontent">
         <h6>Home</h6>
         <h6>>></h6>
-        <h6>Sports</h6>
-        <h2>SPORTS</h2>
+        <h6>World</h6>
+        <h2>WORLD</h2>
       </div>
       <div>
         <img
-          src="https://tpc.googlesyndication.com/simgad/18222565089302457977?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qm5ym-FWie_Dbe_TKqtbAo7GE_MGQ"
+          src="data:image/jpeg;base64,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"
         />
         <img
-          src="https://tpc.googlesyndication.com/simgad/18240297336161166099?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qkPX0rUzOQ3AjwYP3nZO4sciWayUA"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrL7Eno2zatoMiCZxsaoPna0YA-nse6zyrCA&usqp=CAU"
         />
       </div>
     </div>
   </body>
 </html>
+
+<script>
+  // -------------------------------------------------------------------SPORTS CONTENT---------------------------------------------------------
+
+  let viralnews = [
+    {
+      ruler: "<hr>",
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2365332-1655493310-00000003.jpg",
+      newshead:
+        "Astronomers observe dead star ripping up an entire planetary system, know about Cosmic cannibalism ",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2364634-1655489411-00000003.jpg",
+      newshead:
+        "Countering China's influence in the Pacific: The US introduces a new initiative",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2363549-1655483770-00000003.jpg",
+      newshead:
+        "US to provide India alternatives on security issues, says White House Indo-Pacific Advisor",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2363283-untitled-design-2022-06-17t213806.827.jpg",
+      newshead:
+        "US-India bid to designate Abdul Rehman Makki as global terrorist blocked by China in UN",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2362076-1655474887-00000007.jpg",
+      newshead:
+        "India succeeded in bringing regulation in fishing, says Piyush Goyal at World Trade Organisation's Summit",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2360557-1655464204-thumbnail1800038.jpeg",
+      newshead:
+        "Here's what Tesla CEO Elon Musk said to the Twitter Employee?",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2351111-1655408110-00000003.jpg",
+      newshead:
+        "Ukraine's President Zelenskyy says Ukraine struggles every day to get weapons and equipment",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/16/2348066-1655393404-thumbnail1800035.jpeg",
+      newshead:
+        "Report: China says it has received signals from aliens; have aliens finally contacted us?",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/16/2347870-1655392504-thumbnail1800034.jpeg",
+      newshead:
+        "NASA's Perseverance Mars Rover spots `human trash` on Mars",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2350738-1655406010-00000003.jpg",
+      newshead:
+        "Meta, Google, Twitter vow to fight fake news better as EU gets tougher",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/16/2349055-1655398246-00000003.jpg",
+      newshead:
+        "Amidst increase in aviation accidents, Nepal conducts mock drill at Tribhuwan International Airport",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/16/2346525-1655386844-00000003.jpg",
+      newshead:
+        "INSEAD launches LEAD, its first 12-month transformational flagship online executive education programme",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2350843-1655406609-00000003.jpg",
+      newshead:
+        "Sri Lanka is becoming country of queue? Sri Lankans rush for passports to better lives",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2355633-untitled-design-1.jpg",
+      newshead:
+        "US church shooting: Multiple people shot in Alabama, suspect arrested",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/16/2347056-sexualviolence-dna.png",
+      newshead:
+        "Pakistan shocker: Two Hindu teenage sisters raped at gunpoint in Punjab province",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2351276-1655409021-00000003.jpg",
+      newshead:
+        "Wildfires in Spain's Catalonia burn down 1,100 hectares of woods",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2361076-1655467804-thumbnail1800040.jpg",
+      newshead:
+        "Know why Elon Musk has been sued for $258 billion by a crypto investor?",
+    },
+  ];
+
+  sportscontent(viralnews);
+  function sportscontent(viralnews) {
+    viralnews.map(function (ele) {
+      let sportnews = document.createElement("div");
+      sportnews.id = "newsbox";
+      let img = document.createElement("img");
+      img.src = ele.image;
+      let news = document.createElement("p");
+      news.innerText = ele.newshead;
+      let hr = document.createElement("p");
+      hr.innerHTML = ele.ruler;
+
+      sportnews.append(img, news);
+      if (ele.ruler == undefined) {
+        spotscontent.append(sportnews);
+      } else {
+        spotscontent.append(hr, sportnews);
+      }
+    });
+    let seemore = document.createElement("button");
+    seemore.innerText = "More News";
+    seemore.id = "morenews";
+    spotscontent.append(seemore);
+  }
+
+  // --------------------------------------------change news flash----------------------------
+  let flash = document.querySelector("#topnewsFlash>p");
+
+  let flashText = [
+    "Neeraj Chopra sets new national record with a throw of 89.30m, bags silver medal in the Paavo Nurmi Games",
+    "Assam floods: Manas, Brahmaputra rivers flowing above danger mark, 4 dead in last 24 hours",
+    "Talaq-e-Hasan: Supreme Court to hear plea against Muslim divorce practice today",
+    "PM Modi to visit Gujarat on a 2-day trip today, launch projects worth Rs 21,000 crore",
+  ];
+
+  let flashme = 0;
+  prev.addEventListener("click", function () {
+    if (flashme == 0) {
+      flashme = flashText.length - 1;
+    } else {
+      flashme--;
+    }
+
+    flash.innerText = flashText[flashme];
+  });
+
+  next.addEventListener("click", function () {
+    if (flashme == flashText.length - 1) {
+      flashme = 0;
+    } else {
+      flashme++;
+    }
+    flash.innerText = flashText[flashme];
+  });
+</script>
