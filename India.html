@@ -27,11 +27,11 @@
       position: sticky;
       top: 0px;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      z-index: 10;
     }
     #icon > #iconchild {
       padding: 0%;
       height: 65px;
-      margin-left: 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -54,19 +54,31 @@
       border: 1px solid black;
       font-weight: 15px;
     }
+
     #icon > #search {
-      display: block;
-      width: 30px;
-      height: 20px;
+      display: flex;
+      justify-content: space-between;
+      width: 90px;
+    }
+    #icon > #search > a > #logout {
+      padding: 3px 5px;
+      border-radius: 10px;
+      border: 1px solid;
+      background-color: #fede2f;
+    }
+    #icon > #search > a > #logout:hover {
+      background-color: #4c4c4c;
+      color: white;
+      border: 1px solid black;
+      font-weight: 15px;
       cursor: pointer;
-      margin-right: 60px;
     }
     #topnewsbar {
       display: flex;
       align-items: center;
       padding: 0%;
       margin: 20px auto;
-      width: 90%;
+      width: 99%;
       background-color: #313131;
     }
     #topnewsbar > #topnewsText {
@@ -87,9 +99,13 @@
       justify-content: space-between;
       width: 87%;
     }
-    #topnewsbar > #topnewsFlash > a {
-      text-decoration: none;
-      color: white;
+    #topnewsbar > #topnewsFlash > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      width: 60px;
+      cursor: pointer;
     }
 
     #sidebar {
@@ -98,7 +114,7 @@
       grid-template-columns: 1fr 2.4fr 1fr;
       grid-template-rows: auto;
       gap: 2%;
-      width: 90%;
+      width: 99%;
     }
 
     #sidebar > #sidebarMenu > div {
@@ -182,8 +198,58 @@
       color: #fede2f;
     }
 
+        /* Footer */
+
+        #main {
+      color: gray;
+      background-color: #1c1c1c;
+      margin-top: 150px;
+    }
+    #main > .box {
+      display: flex;
+      
+      align-items: center;
+      padding: 14.5px;
+    }
+    .box > div > img {
+      width: 95px;
+      margin-right: 100px;
+    }
+    #main > .box > .nice {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #main > .box > .nice > div {
+      margin: auto 15px;
+      white-space: nowrap;
+    }
+    #right {
+      justify-content: center;
+    }
+    #follow {
+      margin: auto 20px;
+      margin-right: 100px;
+    }
+    #follow > img {
+      width: 25px;
+    }
+    .nice > div {
+      font-size: small;
+    }
+    .span {
+      margin: 5px 20px;
+      margin-left: 0px;
+      font-size: large;
+    }
+    .rule {
+      border: 0.1px solid #3b3a3a;
+      width: 98%;
+      margin: auto;
+    }
+
     /*Responsive Medium And Small*/
     @media all and (min-width: 0px) and (max-width: 1024px) {
+      /* Header */
       #icon > #iconchild {
         margin-left: 10px;
       }
@@ -194,7 +260,7 @@
         margin-right: 10px;
       }
       #topnewsbar {
-        width: 100%;
+        width: 99%;
         font-size: 13px;
       }
       #topnewsFlash > div {
@@ -203,6 +269,8 @@
         justify-content: space-evenly;
         align-items: center;
       }
+
+      /* Main Body */
       #India > h5,
       #India > h2 {
         margin-left: 10px;
@@ -237,10 +305,12 @@
         flex-direction: column;
         align-items: center;
       }
+   
     }
   </style>
 
   <body>
+    <!-- Header Navigation -->
     <div id="icon">
       <div id="iconchild">
         <a href="homepage.html">
@@ -256,28 +326,32 @@
           src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
           alt=""
         />
+        <a href="index.html"><button id="logout">Logout</button></a>
       </div>
     </div>
+    <!-- Flash News -->
     <div id="topnewsbar">
       <div id="topnewsText"><p>Top News</p></div>
       <div id="topnewsFlash">
-        <a
-          href="https://www.dnaindia.com/india/report-weather-update-early-morning-rains-give-relief-to-delhi-ncr-from-heat-heavy-rainfall-predicted-in-many-states-2960946"
-        >
+        <p>
           Weather update: Early morning rains give relief to Delhi-NCR from
-          heat, heavy rainfall predicted in many states</a
-        >
+          heat, heavy rainfall predicted in many states
+        </p>
         <div>
           <img
             src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
             alt=""
+            id="previous"
           />
+          <img src="https://www.linkpicture.com/q/pause_2.png" />
           <img
             src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
+            id="next"
           />
         </div>
       </div>
     </div>
+    <!-- Main Body -->
     <div id="sidebar">
       <div id="sidebarMenu">
         <div>
@@ -401,6 +475,79 @@
         >
           <img src="https://s0.2mdn.net/simgad/1186808727724926983" alt="" />
         </a>
+      </div>
+    </div>
+
+     <!-- Footer -->
+     <div>
+      <div id="main">
+        <div class="box">
+          <div>
+            <img
+              id="img1"
+              src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
+              alt=""
+            />
+          </div>
+          <div class="nice">
+            <div>INDIA</div>
+            <div>WORLD</div>
+            <div>BUSSINESS</div>
+            <div>TECHONOLOGY</div>
+            <div>SPORTS</div>
+            <div>CRICKET</div>
+            <div>ENTERTAINMENT</div>
+          </div>
+        </div>
+        <hr class="rule" />
+        <div class="box">
+          <div>
+            <div class="span"><span>FOLLOW US ON</span></div>
+            <div id="follow">
+              <img
+                src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-facebook.svg"
+                alt=""
+              />
+              <img
+                src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-twitter.svg"
+                alt=""
+              />
+              <img
+                src="https://english.cdn.zeenews.com/static/apprun/dna/icons/youtube-white.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="nice">
+            <div>ABOUT DNA</div>
+            <div>CONTACT US</div>
+            <div>INVESTORS</div>
+            <div>ADVERTISE</div>
+            <div>PRIVACY-POLICY</div>
+          </div>
+        </div>
+        <hr class="rule" />
+        <div class="box">
+          <div class="span">
+            <span>PARTNER SITE</span>
+          </div>
+          <div class="nice">
+            <div>ZEE NEWS</div>
+            <div>HINDI NEWS</div>
+            <div>MARATHI NEWS</div>
+            <div>BENGALI NEWS</div>
+            <div>TAMIL NEWS</div>
+            <div>MALYALAM NEWS</div>
+            <div>ZEE NEWS</div>
+            <div>WION</div>
+          </div>
+        </div>
+        <hr class="rule" />
+        <div class="box" id="right">
+          <div>
+            @1918-2022 INDIA DOT COM PRIVATE LIMITED, ALL RIGHTS RESERVED.
+          </div>
+        </div>
       </div>
     </div>
   </body>
@@ -548,4 +695,33 @@
     moreNews.id = "moreNews";
     India.append(moreNews);
   }
+
+  let flash = document.querySelector("#topnewsFlash>p");
+
+  let flashText = [
+    "In Pics: Trains torched, property destroyed as Agnipath scheme protests turn violent in India",
+    "J-K: Police officer shot dead by terrorists inside his home in Pulwama",
+    "Agnipath scheme row: 15 arrested, 225 booked for violence, blocking expressway near Noida",
+    "WhatsApp new feature: WhatsApp will now allow users to hide profile photo, last seen, about info from specific contacts",
+  ];
+
+  let flashme = 0;
+  previous.addEventListener("click", function () {
+    if (flashme == 0) {
+      flashme = flashText.length - 1;
+    } else {
+      flashme--;
+    }
+
+    flash.innerText = flashText[flashme];
+  });
+
+  next.addEventListener("click", function () {
+    if (flashme == flashText.length - 1) {
+      flashme = 0;
+    } else {
+      flashme++;
+    }
+    flash.innerText = flashText[flashme];
+  });
 </script>
