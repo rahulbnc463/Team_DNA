@@ -97,9 +97,13 @@
       justify-content: space-between;
       width: 87%;
     }
-    #topnewsbar > #topnewsFlash > a {
-      text-decoration: none;
-      color: white;
+    #topnewsbar > #topnewsFlash > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      width: 60px;
+      cursor: pointer;
     }
 
     #sidebar {
@@ -338,19 +342,20 @@
     <div id="topnewsbar">
       <div id="topnewsText"><p>Top News</p></div>
       <div id="topnewsFlash">
-        <a
-          href="https://www.dnaindia.com/india/report-weather-update-early-morning-rains-give-relief-to-delhi-ncr-from-heat-heavy-rainfall-predicted-in-many-states-2960946"
-        >
+        <p>
           Weather update: Early morning rains give relief to Delhi-NCR from
-          heat, heavy rainfall predicted in many states</a
-        >
+          heat, heavy rainfall predicted in many states
+        </p>
         <div>
           <img
             src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
             alt=""
+            id="previous"
           />
+          <img src="https://www.linkpicture.com/q/pause_2.png" />
           <img
             src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
+            id="next"
           />
         </div>
       </div>
@@ -709,4 +714,33 @@
     moreNews.id = "moreNews";
     Explainers.append(moreNews);
   }
+
+  let flash = document.querySelector("#topnewsFlash>p");
+
+  let flashText = [
+    "In Pics: Trains torched, property destroyed as Agnipath scheme protests turn violent in India",
+    "J-K: Police officer shot dead by terrorists inside his home in Pulwama",
+    "Agnipath scheme row: 15 arrested, 225 booked for violence, blocking expressway near Noida",
+    "WhatsApp new feature: WhatsApp will now allow users to hide profile photo, last seen, about info from specific contacts",
+  ];
+
+  let flashme = 0;
+  previous.addEventListener("click", function () {
+    if (flashme == 0) {
+      flashme = flashText.length - 1;
+    } else {
+      flashme--;
+    }
+
+    flash.innerText = flashText[flashme];
+  });
+
+  next.addEventListener("click", function () {
+    if (flashme == flashText.length - 1) {
+      flashme = 0;
+    } else {
+      flashme++;
+    }
+    flash.innerText = flashText[flashme];
+  });
 </script>
