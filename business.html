@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BUSINESS</title>
+    <title>Business | Latest Business News</title>
     <link rel="icon" type="image/x-icon" href="https://cdn.dnaindia.com/sites/all/themes/dnaindia/favicon-1016.ico">
   </head>
 
@@ -16,7 +15,11 @@
       box-sizing: border-box;
       font-family: "Roboto Slab", sans-serif;
     }
-  
+    /* ----------------------------------------------------------------Head Advertise---------------------------------------------------- */
+    #headAdvertise > #headAdvertiseBrand {
+      display: block;
+      margin: 10px auto;
+    }
     /* ----------------------------------------------------------------Icon Bar---------------------------------------------------------- */
     #icon {
       padding: 15px;
@@ -40,26 +43,40 @@
       justify-content: center;
       justify-content: space-between;
     }
-    #iconchild > #logo {
+    #iconchild > a > #logo {
       width: 90px;
     }
-    #iconchild > #hinditext {
+    #iconchild > a > #hinditext {
       padding: 5px 10px;
       border-radius: 20px;
       border: 1px solid;
       margin: 30px;
       background-color: #fede2f;
     }
-    #iconchild > #hinditext:hover {
+    #iconchild > a > #hinditext:hover {
       background-color: #4c4c4c;
       color: white;
       border: 1px solid black;
       font-weight: 15px;
+      cursor: pointer;
     }
-    #icon > #search {
-      display: block;
-      width: 30px;
-      height: 20px;
+    #icon > #searchLogout {
+      display: flex;
+      justify-content: space-between;
+      width: 90px;
+    }
+    #icon > #searchLogout > a > #logout {
+      padding: 3px 5px;
+      border-radius: 10px;
+      border: 1px solid;
+      background-color: #fede2f;
+    }
+    #icon > #searchLogout > a > #logout:hover {
+      background-color: #4c4c4c;
+      color: white;
+      border: 1px solid black;
+      font-weight: 15px;
+      cursor: pointer;
     }
     /* ---------------------------------------------------------------Top News Bar------------------------------------------------------- */
     #topnewsbar {
@@ -113,7 +130,6 @@
     }
     /* ---------------------------------------------------------------NAVBAR------------------------------------------------------------ */
     #pageBody > #navbar > div {
-      position: -webkit-sticky;
       position: sticky;
       top: 80px;
       display: block;
@@ -153,8 +169,7 @@
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     #spotscontent > p {
-      width: 85.7%;
-      margin: -0.37% auto auto 14.55%;
+      margin: -0.4% auto;
     }
     #newsbox > img {
       width: 27%;
@@ -162,19 +177,121 @@
     #newsbox > p {
       margin: 0.8% 1.5%;
     }
-   .active{background-color: #ffde2f;}
+    #morenews {
+      display: block;
+      margin: 30px auto -30px auto;
+      padding: 12px 40%;
+      border: 1px solid;
+      border-radius: 20px;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+    #morenews:hover {
+      color: #fede2f;
+      border: 1px solid black;
+    }
+    .active {
+      background-color: #fede2f;
+    }
+    /* --------------------------------------------------------------------PAGE ADD IMAGE---------------------------------------------------*/
+    #pageBody > div:nth-child(3) > img {
+      width: 100%;
+    }
+    .active {
+      background-color: #fede2f;
+    }
 
+    /* ----------------------------------------------------------------RESPONSIVE MEDIUM SIZE-------------------------------------------*/
+    @media all and (max-width: 1199px) and (min-width: 1000px) {
+      #icon {
+        padding: 15px 10%;
+      }
+      #topnewsbar {
+        width: 80%;
+      }
+      #pageBody {
+        grid-template-columns: 1fr 2.4fr 1fr;
+        width: 80%;
+      }
+      #topnewsbar > #topnewsText {
+        border-radius: 0%;
+        font-size: 15px;
+      }
+      #topnewsbar > #topnewsFlash {
+        font-size: 13px;
+        align-items: center;
+      }
+      #navbar > div > a > .navbarOption {
+        font-size: 13px;
+      }
+      #newsbox > p {
+        font-size: 14px;
+      }
+    }
 
-   /*   ===============================  footer  =============================== */
-
-   #main {
+    /* ----------------------------------------------------------------RESPONSIVE SMALL SIZE--------------------------------------------*/
+    @media all and (max-width: 999px) {
+      #headAdvertiseBrand {
+        width: 80%;
+      }
+      #icon {
+        padding: 15px;
+      }
+      #topnewsbar {
+        width: 100%;
+      }
+      #topnewsbar > #topnewsText {
+        border-radius: 0%;
+        font-size: 13px;
+      }
+      #topnewsbar > #topnewsFlash {
+        font-size: 12px;
+        align-items: center;
+      }
+      #topnewsbar > #topnewsFlash > div {
+        width: 40px;
+        /* border: 1px solid red; */
+      }
+      #topnewsbar > #topnewsFlash > div > img {
+        width: 7px;
+      }
+      #topnewsbar > #topnewsFlash > div > img:nth-child(2) {
+        width: 15px;
+      }
+      #pageBody {
+        display: flex;
+        flex-direction: column;
+      }
+      #pageBody > #navbar > div {
+        display: flex;
+        overflow: auto;
+        white-space: nowrap;
+        position: static;
+      }
+      #navbar > div > a > .navbarOption {
+        margin: 5px;
+        height: 20px;
+        padding: 15px 3px;
+        padding-right: 10px;
+        font-size: 12px;
+      }
+      #pageBody > div:nth-child(3) > img {
+        display: block;
+        margin: 10px auto;
+      }
+      #newsbox > p {
+        font-size: 12.5px;
+      }
+    }
+    /*-----------------------------------------------------------------footer------------------------------------------------------------*/
+    #main {
       color: gray;
       background-color: #1c1c1c;
       margin-top: 150px;
     }
     #main > .box {
       display: flex;
-      
+
       align-items: center;
       padding: 14.5px;
     }
@@ -213,42 +330,55 @@
       width: 98%;
       margin: auto;
     }
-
-
-
   </style>
 
   <body>
-
+    <!-----------------------------------------------------------------Head Advertise-------------------------------------------------------->
+    <div id="headAdvertise">
+      <img
+        id="headAdvertiseBrand"
+        src="https://s0.2mdn.net/simgad/6856187729639747120"
+      />
+    </div>
     <!-- --------------------------------------------------------------Icon Bar-------------------------------------------------------------->
     <div id="icon">
       <div id="iconchild">
-        <img
-          id="logo"
-          src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
-        />
-        <button id="hinditext">हिंदी में पढ़ें</button>
+        <a href="homepage.html">
+          <img
+            id="logo"
+            src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
+          />
+        </a>
+        <a href="https://www.dnaindia.com/hindi"
+          ><button id="hinditext">हिंदी में पढ़ें</button></a
+        >
       </div>
-
-      <img
-        src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
-        alt=""
-      />
+      <div id="searchLogout">
+        <img
+          src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
+          alt=""
+        />
+        <a href="index.html"><button id="logout">Logout</button></a>
+      </div>
     </div>
     <!-----------------------------------------------------------------Top News Bar---------------------------------------------------------->
     <div id="topnewsbar">
-      <div id="topnewsText">
-        <p>Top News</p>
-      </div>
+      <div id="topnewsText"><p>Top News</p></div>
       <div id="topnewsFlash">
         <p>
           Neeraj Chopra sets new national record with a throw of 89.30m, bags
           silver medal in the Paavo Nurmi Games
         </p>
         <div>
-          <img src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg" id="prev" />
+          <img
+            src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
+            id="prev"
+          />
           <img src="https://www.linkpicture.com/q/pause_2.png" />
-          <img src="https://english.cdn.zeenews.com/static/public/next_carousel.svg" id="next" />
+          <img
+            src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
+            id="next"
+          />
         </div>
       </div>
     </div>
@@ -329,12 +459,12 @@
               <p>Lifestyle</p>
             </div>
           </a>
-          <a class="active" href="business.html">
+          <a href="business.html">
             <div class="navbarOption active">
               <img
                 src="https://english.cdn.zeenews.com/static/public/icons/icons-business.svg"
               />
-              <p >Business</p>
+              <p>Business</p>
             </div>
           </a>
           <a href="world.html">
@@ -359,11 +489,9 @@
       <div id="spotscontent">
         <h6>Home</h6>
         <h6>>></h6>
-        <h6>BUSINESS</h6>
-        <h2>BUSINESS</h2>
-
+        <h6>Business</h6>
+        <h2>BUISENESS</h2>
       </div>
-
       <div>
         <img
           src="https://tpc.googlesyndication.com/simgad/18222565089302457977?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qm5ym-FWie_Dbe_TKqtbAo7GE_MGQ"
@@ -373,8 +501,7 @@
         />
       </div>
     </div>
-
-    <!-- ============================= footer ============================= -->
+    <!-- /*-----------------------------------------------------------------footer------------------------------------------------------------*/ -->
     <div>
       <div id="main">
         <div class="box">
@@ -456,87 +583,86 @@
     {
       ruler: "<hr>",
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2323259-1267150-sbi.jpg",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg",
       newshead:
-        "SBI FD rates increased, PNB, IDBI also hike fixed deposit interest rates; check details",
+        "Sheldon Jackson alleges 'communication gap' after team India snub",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2322900-5g-dna.png",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303090-1392964-861258-pv-sindhu-reuters-1.jpg",
       newshead:
-        "5G rollout in India: Cabinet approves auction of 5G Spectrum, speed 10 times higher than 4G services",
+        "PV Sindhu and Sai Praneeth crash out of the 1st round of the Indonesian Open 2022",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2319178-toyota-logo.png",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2305747-fotojet-11.jpg",
       newshead:
-        "Toyota defends its slow pace towards electric vehicles",
+        "IPL media rights auction: Star India gets TV, digital goes to Viacom18",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2317071-untitled-design-57.png",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303935-fotojet.jpg",
       newshead:
-        "Share market news: This company's shares gave Rs 21 lakh as return on an investment of Rs 1 lakh",
+        "Seth Rollins terms Cody Rhodes as a 'virus', reveals reason for attacking him",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2309607-tax.jpg",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2302303-fotojet-3.jpg",
       newshead:
-        "What is advance tax, check last date and steps to pay",
+        "IND vs SA: Check out the hottest wives and girlfriends of South African players",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2311115-1655236523-00000003.jpg",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2301781-new.jpg",
       newshead:
-        "India's wholesale price inflation runs at 30-yr high, what it means",
-    },
-
-    {
-      image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303898-june-14-shweta-1.jpg",
-      newshead:
-        "Adel Bhinder leading the private security industry in India",
+        "Two-time ISL champs Chennaiyin FC rope in Thomas Brdaric as head coach",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2308552-cng.jpg",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2300601-india.jpg",
       newshead:
-        "Doorstep delivery of CNG to begin soon in THIS city",
+        "Indian football team qualifies for AFC Asian Cup 2023 before crunch fixture versus Hong Kong",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2305835-1655213805-00000003.jpg",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2299342-neeraj.jpg",
       newshead:
-        "Sensex slips 351 points, Nifty below 16,000",
+        "Paavo Nurmi Games 2022 live streaming: Watch Neeraj Chopra for first time since Tokyo Olympics",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2305907-bitcoin-reuters.jpg",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2297170-modric.jpg",
       newshead:
-        "How much more value could bitcoin lose in 2022? Here's what analysts forecast",
+        "UEFA Nations League: Luka Modric penalty seals 1-0 win for Croatia, France miss out on final 4 berth",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2306071-untitled-design-6.jpg",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2308250-fotojet-5.jpg",
       newshead:
-        "Wall Street slips into bear market - Here's what it means, how it affects you",
+        "Yuzvendra Chahal and Harshal Patel's match winning spells lead India to victory against South Africa in 3rd T20I",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2304850-untitled-design-5.jpg",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2307651-fotojet-4.jpg",
       newshead:
-        "DGCA sets guidelines for compensation from airlines to passenger denied boarding",
+        "Jonny Bairstow scores England's 2nd fastest Test century while chasing the target of 299 against New Zealand",
     },
     {
       image:
-        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2304374-airasia-india.jpg",
-      newshead: "Air India to acquire AirAsia India, gets Competition Commission’s nod",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2320829-fotojet.jpg",
+      newshead:
+        "England wins the 2nd Test match against New Zealand after chasing 299 runs in 50 overs",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2289475-bcci.jpg",
+      newshead: "BCCI hikes monthly pensions of former cricketers and umpires",
     },
   ];
 
   sportscontent(sports);
   function sportscontent(sports) {
-    sports.map(function (ele) {
+    sports.map(function (ele, index) {
       let sportnews = document.createElement("div");
       sportnews.id = "newsbox";
       let img = document.createElement("img");
@@ -549,20 +675,70 @@
       sportnews.append(img, news);
       if (ele.ruler == undefined) {
         spotscontent.append(sportnews);
-      } else {
+      } else if (ele.ruler != undefined) {
         spotscontent.append(hr, sportnews);
       }
     });
+    let seemore = document.createElement("button");
+    seemore.innerText = "More News";
+    seemore.id = "morenews";
+    spotscontent.append(seemore);
   }
 
+  // -------------------------------------------------See more-------------------------------------------
 
+  let more = [
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2360316-742579-archana-kamath-tt-twitter.jpg",
+      newshead:
+        "Table Tennis player Archana Kamath moves court after excluded from the CWG squad",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2372935-2.jpg",
+      newshead:
+        "IND vs SA 4th T20I: Avesh Khan dedicates match winning spell to father on his birthday",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2372449-pant.jpg",
+      newshead:
+        "'He hasn't learned': Rishabh Pant gets schooled by Sunil Gavaskar for his shot selection",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2370523-vince-mcmahon.jpg",
+      newshead: "WWE: Vince McMahon steps down as CEO and chairman",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2363509-1655483499-00000003.jpg",
+      newshead:
+        "Ultimate Kho-Kho on-boards two new franchise owners in Capri Global: KLO Sports",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2361296-818529-ness-wadia.jpg",
+      newshead:
+        "Punjab Kings co-owner Ness Wadia vouches for longer IPL with two halves every year",
+    },
+  ];
+  morenews.addEventListener("click", function () {
+    document
+      .getElementById("spotscontent")
+      .removeChild(document.getElementById("morenews"));
+    sportscontent(more);
+    document
+      .getElementById("spotscontent")
+      .removeChild(document.getElementById("morenews"));
+  });
 
-  //   changing flash 
-
-  let flash = document.querySelector("#topnewsFlash>p")
+  // --------------------------------------------change news flash----------------------------
+  let flash = document.querySelector("#topnewsFlash>p");
 
   let flashText = [
-  "Neeraj Chopra sets new national record with a throw of 89.30m, bags silver medal in the Paavo Nurmi Games",
+    "Neeraj Chopra sets new national record with a throw of 89.30m, bags silver medal in the Paavo Nurmi Games",
     "Assam floods: Manas, Brahmaputra rivers flowing above danger mark, 4 dead in last 24 hours",
     "Talaq-e-Hasan: Supreme Court to hear plea against Muslim divorce practice today",
     "PM Modi to visit Gujarat on a 2-day trip today, launch projects worth Rs 21,000 crore",
