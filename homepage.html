@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DNA India</title>
+</head>
+
+<style>
+  * {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", sans-serif;
+  }
+
+  /* ----------------------------------------------------------------Head Advertise---------------------------------------------------- */
+  #headAdvertise>#headAdvertiseBrand {
+    display: block;
+    margin: 10px auto;
+  }
+
+  /* ----------------------------------------------------------------Icon Bar---------------------------------------------------------- */
+  #icon {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    height: 65px;
+    background-color: #fede2f;
+    position: sticky;
+    z-index: 5;
+    top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  #icon>#iconchild {
+    padding: 0%;
+    margin: 0%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+  }
+
+  #iconchild>a>#logo {
+    width: 90px;
+  }
+
+  #iconchild>a>#hinditext {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid;
+    margin: 30px;
+    background-color: #fede2f;
+  }
+
+  #iconchild>a>#hinditext:hover {
+    background-color: #4c4c4c;
+    color: white;
+    border: 1px solid black;
+    font-weight: 15px;
+    cursor: pointer;
+  }
+
+  #icon>#searchLogout {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+  }
+
+  #icon>#searchLogout>a>#logout {
+    padding: 3px 5px;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: #fede2f;
+  }
+
+  #icon>#searchLogout>a>#logout:hover {
+    background-color: #4c4c4c;
+    color: white;
+    border: 1px solid black;
+    font-weight: 15px;
+    cursor: pointer;
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* ---------------------------------------------------------------Top News Bar------------------------------------------------------- */
+  #topnewsbar {
+    display: flex;
+    align-items: center;
+    padding: 0%;
+    margin: 20px auto;
+    width: 98%;
+    background-color: #313131;
+  }
+
+  #topnewsbar>#topnewsText {
+    display: flex;
+    background-color: #aaaaaa;
+    padding: 0%;
+    width: 11%;
+    color: #31373c;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0% 5px 5px 0%;
+  }
+
+  #topnewsbar>#topnewsFlash {
+    display: flex;
+    margin: auto 3% auto 1%;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 87%;
+  }
+
+  #topnewsbar>#topnewsFlash>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+  }
+  #top{
+    font-size: large;
+  margin-bottom: 10px;
+  }
+
+  /* -----------------------------------------------------------------CONTENT----------------------------------------------------------*/
+  #pageBody {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2.4fr 1fr;
+    grid-template-rows: auto;
+    gap: 2%;
+    width: 98%;
+  }
+
+  /* ---------------------------------------------------------------NAVBAR------------------------------------------------------------ */
+  #pageBody>#navbar>div {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    display: block;
+  }
+
+  #navbar>div>a>.navbarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 35px;
+    padding-left: 7px;
+  }
+
+  #navbar>div>a>.navbarOption:hover {
+    background-color: #fede2f;
+  }
+
+  #navbar>div>a {
+    text-decoration: none;
+    color: black;
+  }
+
+  #navbar>div>a>.navbarOption>p {
+    margin-left: 4%;
+  }
+  /* fotter content  */
+  #main{
+            height: 350px;
+            background-color: rgba(0, 0, 0, 0.788);
+            padding: 10px;
+            
+        }
+        .box{
+            height: 20%;
+            display: flex;
+        }
+        .box1{
+            height: 20%;
+            display: flex;
+            
+        }
+        .box4{
+            height: 20%;
+            display: flex;
+        }
+        .box1>div:first-child{
+            font-size: 10px;
+            color: grey;
+            padding: 0px 40px 0px 0px;
+            
+        }
+        .box1>div:nth-child(2){
+            display: flex;
+        }
+        .box1>div:nth-child(2)>img{
+            padding: 0px 4px 0px 4px;
+
+        }
+       
+        hr{
+            color: grey;
+        }
+        #img1{
+            height: 70%;
+            width: 90px;
+            padding: 15px 20px 0px 10px ;
+        }
+        
+        .box>div:last-child{
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+            padding: 30px 20px 0px 50px;
+        }
+        .box>#nice>div{
+            font-size: 14px;
+            color: rgba(128, 128, 128, 0.925);
+        }
+        .box1>#nice2>div{
+            font-size: 14px;
+            color: rgba(128, 128, 128, 0.925);
+            display: flex;
+            width:150px ;
+            
+            padding: 30px 0px 0px 20px;
+        }
+        #nice2{
+            display: flex;
+        }
+        .box4>div:nth-child(2){
+            width: 1100px;
+            padding: 0px 10px 0px 20px;
+           
+            display: flex;
+            
+        }
+        .box4>div:nth-child(2)>div{
+            padding: 25px 10px 0px 10px ;
+            color: grey;
+        }
+        
+
+  /* -----------------------------------------------------------------SPORTS CONTENT---------------------------------------------------*/
+
+  #spotscontent>h6 {
+    display: inline;
+    color: #4c4c4c;
+  }
+
+  #spotscontent>h2 {
+    border-bottom: 3px solid #fede2f;
+    width: 99px;
+  }
+
+  #newsbox {
+    display: flex;
+    margin: 12px auto;
+    padding: 1.5%;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  #spotscontent>p {
+    margin: -0.4% auto;
+  }
+
+  #newsbox>img {
+    width: 27%;
+  }
+
+  #newsbox>p {
+    margin: 0.8% 1.5%;
+  }
+
+  /* #spotscontent{
+      width: 50px;
+    } */
+  #big>img {
+    width: 700px;
+  }
+
+
+
+
+
+
+
+  #morenews {
+    display: block;
+    margin: 30px auto 70px auto;
+    padding: 12px 40%;
+    border: 1px solid;
+    border-radius: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  #morenews:hover {
+    color: #fede2f;
+    border: 1px solid black;
+  }
+
+  /* --------------------------------------------------------------------PAGE ADD IMAGE---------------------------------------------------*/
+  #pageBody>div:nth-child(3)>img {
+    width: 100%;
+  }
+
+  .active {
+    background-color: #fede2f;
+  }
+
+  /* ----------------------------------------------------------------RESPONSIVE MEDIUM SIZE-------------------------------------------*/
+  @media all and (max-width: 1199px) and (min-width: 1000px) {
+    #icon {
+      padding: 15px 10%;
+    }
+
+    #topnewsbar {
+      width: 80%;
+    }
+
+    #pageBody {
+      grid-template-columns: 1fr 2.4fr 1fr;
+      width: 80%;
+    }
+
+    #topnewsbar>#topnewsText {
+      border-radius: 0%;
+      font-size: 15px;
+    }
+
+    #topnewsbar>#topnewsFlash {
+      font-size: 13px;
+      align-items: center;
+    }
+
+    #navbar>div>a>.navbarOption {
+      font-size: 13px;
+    }
+
+    #newsbox>p {
+      font-size: 14px;
+    }
+
+  
+  }
+
+  /* ----------------------------------------------------------------RESPONSIVE SMALL SIZE--------------------------------------------*/
+  @media all and (max-width: 999px) {
+    #headAdvertiseBrand {
+      width: 80%;
+    }
+
+    #icon {
+      padding: 15px;
+    }
+
+    #topnewsbar {
+      width: 100%;
+    }
+
+    #topnewsbar>#topnewsText {
+      border-radius: 0%;
+      font-size: 13px;
+    }
+
+    #topnewsbar>#topnewsFlash {
+      font-size: 12px;
+      align-items: center;
+    }
+
+    #topnewsbar>#topnewsFlash>div {
+      width: 40px;
+      /* border: 1px solid red; */
+    }
+
+    #topnewsbar>#topnewsFlash>div>img {
+      width: 7px;
+    }
+
+    #topnewsbar>#topnewsFlash>div>img:nth-child(2) {
+      width: 15px;
+    }
+
+    #pageBody {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #pageBody>#navbar>div {
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      position: static;
+    }
+
+    #navbar>div>a>.navbarOption {
+      margin: 5px;
+      height: 20px;
+      padding: 15px 3px;
+      padding-right: 10px;
+      font-size: 12px;
+    }
+
+    #pageBody>div:nth-child(3)>img {
+      display: block;
+      margin: 10px auto;
+    }
+
+    #newsbox>p {
+      font-size: 12.5px;
+    }
+  }
+</style>
+
+<body>
+  <!-----------------------------------------------------------------Head Advertise-------------------------------------------------------->
+  <div id="headAdvertise">
+    <img id="headAdvertiseBrand" src="https://s0.2mdn.net/simgad/6856187729639747120">
+  </div>
+  <!-- --------------------------------------------------------------Icon Bar-------------------------------------------------------------->
+  <div id="icon">
+    <div id="iconchild">
+      <a href="homepage.html">
+        <img id="logo" src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png">
+      </a>
+      <a href="https://www.dnaindia.com/hindi"><button id="hinditext">हिंदी में पढ़ें</button></a>
+    </div>
+    <div id="searchLogout">
+      <img src="https://english.cdn.zeenews.com/static/public/menusearch.svg" alt="">
+      <a href="index.html"><button id="logout">Logout</button></a>
+     
+
+    </div>
+  </div>
+  <!-----------------------------------------------------------------Top News Bar---------------------------------------------------------->
+  <div id="topnewsbar">
+    <div id="topnewsText">
+      <p>Top News</p>
+    </div>
+    <div id="topnewsFlash">
+      <p>
+        National Herald case: Rahul Gandhi to appear again before ED today,
+        timeline of yesterday's events
+      </p>
+      <div>
+        <img src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg" alt="">
+        <img src="https://www.linkpicture.com/q/pause_2.png">
+        <img src="https://english.cdn.zeenews.com/static/public/next_carousel.svg">
+      </div>
+    </div>
+  </div>
+  <!-----------------------------------------------------------------CONTENT--------------------------------------------------------------->
+  <div id="pageBody">
+    <!-----------------------------------------------------------------NAVBAR---------------------------------------------------------------->
+    <div id="navbar">
+      <div>
+        <a href="latestnews.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-latestnews.svg">
+            <p>Latest News</p>
+          </div>
+        </a>
+        <a href="photos.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-photos.svg">
+            <p>Photos</p>
+          </div>
+        </a>
+        <a href="videos.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-videos.svg">
+            <p>Videos</p>
+          </div>
+        </a>
+        <a href="explainers.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg">
+            <p>Explainers</p>
+          </div>
+        </a>
+        <a href="india.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-india.svg">
+            <p>India</p>
+          </div>
+        </a>
+        <a href="entertainment.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-entertainment.svg">
+            <p>Entertainment</p>
+          </div>
+        </a>
+        <a href="sports.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-sports.svg">
+            <p>Sports</p>
+          </div>
+        </a>
+        <a href="viralnews.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-viralNews.svg">
+            <p>Viral News</p>
+          </div>
+        </a>
+        <a href="lifestyle.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-lifestyle.svg">
+            <p>Lifestyle</p>
+          </div>
+        </a>
+        <a href="business.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-business.svg">
+            <p>Business</p>
+          </div>
+        </a>
+        <a href="world.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-world.svg">
+            <p>World</p>
+          </div>
+        </a>
+        <a href="ezmall.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/ezmall-icon1.png">
+            <p>Ezmall</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-----------------------------------------------------------------SPORTS CONTENT-------------------------------------------------------->
+    <div id="spotscontent">
+      <div id="top">TOP NEWS</div>
+      <div id="big">
+        <img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          alt="">
+        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
+          voluptas recusandae! u arent you happy that i made the century</p>
+      </div>
+
+      <p>
+        <hr>
+      </p>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      </div>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      <a href="https://www.dnaindia.com/headlines"></div><button id="morenews">More Top News</button></a>
+      <div id="top">INDIA NEWS</div>
+      <div id="big">
+        <img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          alt="">
+        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
+          voluptas recusandae! u arent you happy that i made the century</p>
+      </div>
+
+      <p>
+        <hr>
+      </p>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      </div>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      <a href="https://www.dnaindia.com/india"></div><button id="morenews">More  India News</button></a>
+      <div id="top">ENTERTAINMENT NEWS</div>
+      <div id="big">
+        <img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          alt="">
+        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
+          voluptas recusandae! u arent you happy that i made the century</p>
+      </div>
+
+      <p>
+        <hr>
+      </p>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      </div>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+     <a href="https://www.dnaindia.com/entertainment"> </div><button id="morenews">More Entertainment News</button></a>
+      <div id="top">SPORTS NEWS</div>
+      <div id="big">
+        <img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          alt="">
+        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
+          voluptas recusandae! u arent you happy that i made the century</p>
+      </div>
+<!-- https://www.dnaindia.com/entertainment#google_vignette -->
+      <p>
+        <hr>
+      </p>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      </div>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      <a href="https://www.dnaindia.com/entertainment#google_vignette"></div><button id="morenews">More Sports News</button></a>
+      <div id="top"> BUISENESS NEWS</div>
+      <div id="big">
+        <img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          alt="">
+        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
+          voluptas recusandae! u arent you happy that i made the century</p>
+      </div>
+
+      <p>
+        <hr>
+      </p>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      </div>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+     <a href="https://www.dnaindia.com/business"> </div><button id="morenews">More Buiseness News</button></a>
+      <div id="top">World NEWS</div>
+      <div id="big">
+        <img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          alt="">
+        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
+          voluptas recusandae! u arent you happy that i made the century</p>
+      </div>
+
+      <p>
+        <hr>
+      </p>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      </div>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      <a href="https://www.dnaindia.com/world"></div><button id="morenews">More World News</button></a>
+      <div id="top">EXPLAINER NEWS</div>
+      <div id="big">
+        <img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          alt="">
+        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
+          voluptas recusandae! u arent you happy that i made the century</p>
+      </div>
+
+      <p>
+        <hr>
+      </p>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      </div>
+      <div id="newsbox"><img
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
+        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+      <a href="https://www.dnaindia.com/explainer"></div><button id="morenews">More  Explainer News</button></a>
+    </div>
+
+    <div id="middle">
+
+      <img
+        src="https://tpc.googlesyndication.com/simgad/18222565089302457977?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&amp;rs=AOga4qm5ym-FWie_Dbe_TKqtbAo7GE_MGQ">
+      <img
+        src="https://tpc.googlesyndication.com/simgad/18222565089302457977?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&amp;rs=AOga4qm5ym-FWie_Dbe_TKqtbAo7GE_MGQ">
+      <img
+        src="https://tpc.googlesyndication.com/simgad/18240297336161166099?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&amp;rs=AOga4qkPX0rUzOQ3AjwYP3nZO4sciWayUA">
+    </div>
+  </div>
+  <div>
+    <div id="main">
+        <div class="box">
+            <div ><img id="img1" src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png" alt=""></div>
+            <div id="nice">
+                <div>INDIA</div>
+                <div>WORLD</div>
+                <div>BUSSINESS</div>
+                <div>TECHONOLOGY</div>
+                <div>SPORTS</div>
+                <div>CRICKET</div>
+                <div>ENTERTAINMENT</div>
+            </div>
+        </div>
+        <hr>
+        <div class="box1">
+            <div id="inside">
+                <div><h2>FOLLOW US ON</h2></div>
+                <div>
+                    <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-facebook.svg" alt="">
+                    <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-twitter.svg" alt="">
+                    <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/youtube-white.svg" alt="">
+                </div>
+            </div>
+            <div id="nice2">
+                <div>ABOUT DNA</div>
+                <div>CONTACT US</div>
+                <div>INVESTORS</div>
+                <div>ADVERTISE</div>
+                <div>PRIVACY-POLICY</div>
+            </div>
+            
+        </div>
+        <hr>
+        <div class="box4">
+            <div font-size: 14px;>
+                <p style="color: grey;font-size: 20px;  ">PARTNER SITE</p>
+            </div>
+            <div>
+                <div>ZEE NEWS</div>
+                <div>HINDI NEWS</div>
+                <div>MARATHI NEWS</div>
+                <div>BENGALI NEWS</div>
+                <div>TAMIL NEWS</div>
+                <div>MALYALAM NEWS</div>
+                <div>ZEE NEWS</div>
+                <div>WION</div>
+            </div>
+        </div>
+        <hr>
+        <div class="box">
+            <div style="padding: 10px 0px 0px 300px ; color:grey; ">@1918-2022 INDIA DOT COM PRIVATE LIMITED, ALL RIGHTS RESERVED. </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
