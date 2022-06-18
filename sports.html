@@ -284,12 +284,13 @@
     }
     /*-----------------------------------------------------------------footer------------------------------------------------------------*/
     #main {
-      color: #8e8c75;
+      color: gray;
       background-color: #1c1c1c;
       margin-top: 150px;
     }
     #main > .box {
       display: flex;
+      
       align-items: center;
       padding: 14.5px;
     }
@@ -299,9 +300,11 @@
     }
     #main > .box > .nice {
       display: flex;
+      flex-wrap: wrap;
     }
     #main > .box > .nice > div {
       margin: auto 15px;
+      white-space: nowrap;
     }
     #right {
       justify-content: center;
