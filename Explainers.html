@@ -38,7 +38,7 @@
     #iconchild > a > #logo {
       width: 90px;
     }
-    #iconchild > #hinditext {
+    #iconchild > a > #hinditext {
       padding: 5px 10px;
       border-radius: 20px;
       border: 1px solid;
@@ -47,7 +47,7 @@
       margin: 30px;
       background-color: #fede2f;
     }
-    #iconchild > #hinditext:hover {
+    #iconchild > a > #hinditext:hover {
       background-color: #4c4c4c;
       color: white;
       border: 1px solid black;
@@ -139,6 +139,9 @@
     #sidebarMenu > div > a > .Menu > p {
       margin-left: 4%;
     }
+    .menuBackground{
+      background-color: #fede2f;
+    }
 
     #Explainers > h5 {
       display: inline;
@@ -208,7 +211,7 @@
       align-items: center;
       padding: 14.5px;
     }
-    .box > div > img {
+    .box > div > a > img {
       width: 95px;
       margin-right: 100px;
     }
@@ -232,6 +235,10 @@
     }
     .nice > div {
       font-size: small;
+    }
+    .nice>div>a{
+      color: gray;
+      text-decoration: none;
     }
     .span {
       margin: 5px 20px;
@@ -312,7 +319,8 @@
             src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
           />
         </a>
-        <button id="hinditext">हिंदी में पढ़ें</button>
+        <a href="https://www.dnaindia.com/hindi"> <button id="hinditext">हिंदी में पढ़ें</button> </a>
+        
       </div>
       <div id="search">
         <img
@@ -373,7 +381,7 @@
             </div>
           </a>
           <a href="explainers.html">
-            <div class="Menu">
+            <div class="Menu menuBackground">
               <img
                 src="https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg"
               />
@@ -475,20 +483,23 @@
       <div id="main">
         <div class="box">
           <div>
-            <img
+            <a href="homepage.html">
+              <img
               id="img1"
               src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
               alt=""
             />
+            </a>
+            
           </div>
           <div class="nice">
-            <div>INDIA</div>
-            <div>WORLD</div>
-            <div>BUSSINESS</div>
-            <div>TECHONOLOGY</div>
-            <div>SPORTS</div>
-            <div>CRICKET</div>
-            <div>ENTERTAINMENT</div>
+            <div><a href="index.html">INDIA</a></div>
+            <div><a href="world.html">WORLD</a></div>
+            <div><a href="business.html">BUSSINESS</a></div>
+            <div><a href="https://www.dnaindia.com/technology">TECHONOLOGY</a></div>
+            <div><a href="sports.html">SPORTS</a></div>
+            <div><a href="https://www.dnaindia.com/cricket">CRICKET</a></div>
+            <div><a href="Entertainment.html">ENTERTAINMENT</a></div>
           </div>
         </div>
         <hr class="rule" />
@@ -511,11 +522,11 @@
             </div>
           </div>
           <div class="nice">
-            <div>ABOUT DNA</div>
-            <div>CONTACT US</div>
-            <div>INVESTORS</div>
-            <div>ADVERTISE</div>
-            <div>PRIVACY-POLICY</div>
+            <div><a href="https://www.dnaindia.com/about">ABOUT DNA</a></div>
+            <div><a href="https://www.dnaindia.com/contact">CONTACT US</a></div>
+            <div><a href="https://www.dnaindia.com/investors/index.html">INVESTORS</a></div>
+            <div><a href="https://www.dnaindia.com/advertise">ADVERTISE</a></div>
+            <div><a href="https://www.dnaindia.com/privacy-policy">PRIVACY-POLICY</a></div>
           </div>
         </div>
         <hr class="rule" />
@@ -524,14 +535,14 @@
             <span>PARTNER SITE</span>
           </div>
           <div class="nice">
-            <div>ZEE NEWS</div>
-            <div>HINDI NEWS</div>
-            <div>MARATHI NEWS</div>
-            <div>BENGALI NEWS</div>
-            <div>TAMIL NEWS</div>
-            <div>MALYALAM NEWS</div>
-            <div>ZEE NEWS</div>
-            <div>WION</div>
+            <div><a href="https://zeenews.india.com/">ZEE NEWS</a></div>
+            <div><a href="https://zeenews.india.com/hindi">HINDI NEWS</a></div>
+            <div><a href="https://zeenews.india.com/marathi">MARATHI NEWS</a></div>
+            <div><a href="https://zeenews.india.com/bengali">BENGALI NEWS</a></div>
+            <div><a href="https://zeenews.india.com/tamil">TAMIL NEWS</a></div>
+            <div><a href="https://zeenews.india.com/malayalam">MALYALAM NEWS</a></div>
+            <div><a href="https://www.zeebiz.com/">ZEE NEWS</a></div>
+            <div><a href="https://www.wionews.com/">WION</a></div>
           </div>
         </div>
         <hr class="rule" />
@@ -709,10 +720,16 @@
 
       Explainers.append(newsExplainers);
     });
+
+     let more = document.createElement("a");
+    more.href = "https://www.dnaindia.com/explainer" ;
     let moreNews = document.createElement("button");
     moreNews.innerText = "More News";
     moreNews.id = "moreNews";
-    Explainers.append(moreNews);
+    moreNews.style.cursor = "pointer" ;
+
+    more.append(moreNews) ;
+    Explainers.append(more);
   }
 
   let flash = document.querySelector("#topnewsFlash>p");

@@ -39,7 +39,7 @@
     #iconchild > a > #logo {
       width: 90px;
     }
-    #iconchild > #hinditext {
+    #iconchild > a> #hinditext {
       padding: 5px 10px;
       border-radius: 20px;
       border: 1px solid;
@@ -48,7 +48,7 @@
       margin: 30px;
       background-color: #fede2f;
     }
-    #iconchild > #hinditext:hover {
+    #iconchild >a> #hinditext:hover {
       background-color: #4c4c4c;
       color: white;
       border: 1px solid black;
@@ -140,6 +140,9 @@
     #sidebarMenu > div > a > .Menu > p {
       margin-left: 4%;
     }
+    .menuBackground{
+      background-color: #fede2f;
+    }
 
     #India > h5 {
       display: inline;
@@ -211,7 +214,7 @@
       align-items: center;
       padding: 14.5px;
     }
-    .box > div > img {
+    .box > div  > img {
       width: 95px;
       margin-right: 100px;
     }
@@ -235,6 +238,10 @@
     }
     .nice > div {
       font-size: small;
+    }
+    .nice>div>a{
+      color: gray;
+      text-decoration: none;
     }
     .span {
       margin: 5px 20px;
@@ -319,7 +326,9 @@
             src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
           />
         </a>
+       <a href="https://www.dnaindia.com/hindi"> 
         <button id="hinditext">हिंदी में पढ़ें</button>
+       </a> 
       </div>
       <div id="search">
         <img
@@ -388,7 +397,7 @@
             </div>
           </a>
           <a href="india.html">
-            <div class="Menu">
+            <div class="Menu menuBackground">
               <img
                 src="https://english.cdn.zeenews.com/static/public/icons/icons-india.svg"
               />
@@ -690,10 +699,16 @@
 
       India.append(newsIndia);
     });
+
+    let more = document.createElement("a");
+    more.href = "https://www.dnaindia.com/india" ;
     let moreNews = document.createElement("button");
     moreNews.innerText = "More News";
     moreNews.id = "moreNews";
-    India.append(moreNews);
+    moreNews.style.cursor = "pointer" ;
+
+    more.append(moreNews)
+    India.append(more);
   }
 
   let flash = document.querySelector("#topnewsFlash>p");
