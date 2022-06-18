@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>index.html</title>
+    <style>
+      *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+        #navbar {
+            height: 64px;
+            background-color: #fede2f;
+            box-shadow: 0 2px 8px 1px rgb(0 0 0 / 20%);
+            display: flex;
+            justify-content: space-between;
+            position:fixed;
+            width: 100%;
+            margin-top: -100px;
+
+        }
+
+        #hindi {
+            margin-top: 10px;
+            background-color: #fede2f;
+            height: 30px;
+            width: 80px;
+
+            /* padding:5px 14px 6pxc 14px; */
+            /* display: inline-block; */
+            border: 1px solid #000;
+
+            border-radius: 50px;
+            color: #000;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 25px;
+            position: relative;
+            /* top: 1px; */
+            /* margin-bottom: 2px; */
+        }
+
+        #hindi:hover {
+            color: white;
+            cursor: pointer;
+            background-color: rgb(49, 49, 49);
+        }
+
+        #nav {
+            display: flex;
+            /* border: 1px solid red; */
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        #nav>div {
+            justify-content: space-around;
+            display: flex;
+            padding: 10px;
+            /* border: 1px solid */
+            ;
+
+        }
+
+        /* #search{
+        margin-left:900px;
+        margin-right: 10px;
+        height: 40px;
+    } */
+        #log {
+            border-radius: 10px;
+            background-color: #fede2f;
+            padding: 10px;
+        }
+
+        #log:hover {
+            border-radius: 20px;
+            background-color: red;
+            cursor: pointer;
+        }
+
+        #sign {
+            border-radius: 10px;
+            margin-left: 20px;
+            background-color: #fede2f;
+            padding: 10px;
+        }
+
+        #sign:hover {
+            border-radius: 20px;
+            margin-left: 20px;
+            background-color: green;
+            cursor: pointer;
+        }
+
+        #dna {
+            margin-left: 10px;
+        }
+
+        /* navbar completes */
+        #bar {
+       
+            height: 60px;
+            display: flex;
+            background-color: black;
+            width: 98%;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        #bar>div:first-child {
+            background-color: grey;
+            border-radius: 0px 10px 10px 0px;
+            padding: 20px;
+            width: 10%;
+
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        #bar>div:last-child {
+
+            color: aliceblue;
+            padding: 20px;
+
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        #top {
+            text-align: center;
+        }
+
+        #previous {
+            margin-left: 450px;
+        }
+
+        #next {
+            margin-left: 10px;
+        }
+
+        /* here the bar part is complete */
+        .center {
+            /* margin: auto; */
+            width: 600px;
+            height: 400px;
+        }
+
+        #left {
+            border: 1px solid;
+            width: 24%;
+            height: 800px;
+            position: fixed
+        }
+
+        #left>div {
+            padding: 10px;
+            /* justify-content: center; */
+            /* text-align: center; */
+            align-items: center;
+            /* margin-left: 10px; */
+            margin-left: -1px;
+            margin-bottom: -10px;
+
+        }
+
+        #logo {
+            /* display: flex; */
+            margin-left: 10px;
+        }
+
+        #logo+div {
+            margin-left: 10px;
+        }
+        #logo>img{
+            margin-right: 10px;
+        }
+        #leftlogo{
+            display: flex;
+        }
+        
+
+#body{
+  /* background-color: aqua; */
+  display: flex;
+  /* border: 1px solid; */
+  width: 98%;
+padding-top: 10px;
+  margin: auto;
+}
+#body>div:first-child{
+  width: 25%;
+  margin-right: 5px;
+  /* border: 1px solid brown; */
+}
+#body>div:nth-child(2){
+  width: 55%;
+  /* border: 1px solid red; */
+  /* background-color: #fede2f; */
+}
+#body>div:last-child{
+  width: 24%;
+  margin: auto;
+  /* border: 2px solid blue; */
+}
+#left-container>div:first-child{
+/* padding-top: 5px; */
+/* background-color: blue; */
+/* width: 50px; */
+}#heading1{
+  display: flex;
+}
+#topic{
+  padding-top:5px ;
+}
+.bigb>img{
+  /* margin-top: 10px; */
+  width: 100%;
+  height: 350px;
+}
+.small{
+  display: flex;
+  /* border: 2px solid red; */
+}
+.small>.subhead>img{
+  width: 30%;
+  /* border: 5px solid; */
+}
+#right-container>img{
+width: 100%;
+}
+.small>div:last-child{
+  border: 2px solid ;
+  padding-top: 15px;
+}
+.bigheading{
+  font-family: 'Roboto Slab',sans-serif;
+  border: 1px solid;
+  font-size: 25px;
+  font-size: 18px;
+    line-height: 22px;
+}
+#big+div:hover{
+color: aqua; 
+cursor: pointer;
+}
+#big+div{
+  font-size: 18px;
+    line-height: 22px;
+    margin-left: 10px;
+}
+#big>img{
+  width: 700px;
+  float: left;
+
+}
+#small{
+  /* border: 5px solid; */
+  width: 100%;
+  height: 100px;
+display: flex;
+margin-top: 20px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+margin-bottom: 20PX;
+}
+#sidebutton{
+width: 25%;
+/* border: 2px solid red; */
+height: 100%;
+}
+#sidebutton>img{
+
+/* border: 2px solid red; */
+height: 100%;
+}
+#sidebutton+div{
+  font-size: 20px;
+}
+#sidenote{
+  padding-top: 10px;
+  width: 75%;
+/* border: 2px solid red; */
+height: 80%;
+font-size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+
+}#overlap{
+  border-bottom: 3px #fede2f solid;
+margin-left: 20px;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#sidebutton+div{
+  font-size: 15px;
+  margin-left: 20px
+}
+#sidebutton+div:hover{
+color: blue;
+cursor: pointer;
+}
+#left-container>div:hover{
+  background-color: #fede2f;
+}
+#left-container{
+  position:fixed
+}
+#middle-container{
+  margin-left: 350px;
+  margin-right: 5px;
+}
+#right-container{
+  margin-top: -400px;
+}
+#more{
+  text-align: center;
+  /* border: 1px solid #000; */
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+#more:hover{
+color: blue;
+cursor: pointer;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="nav">
+            <div><img id="dna" src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png" alt=""><a href="https://www.dnaindia.com/hindi"><button
+              id="hindi">हिंदी में पढ़ें</button></a></div>
+            <div><img id="search" src="https://english.cdn.zeenews.com/static/public/menusearch.svg" alt="">
+              <a href="login.html"><button
+                id="log" >LogIn</button></a>
+                <a href="signup.html"><button id="sign">SignUp</button></a></div>
+
+        </div>
+    </div>
+    <!-- here the navbar complete -->
+    <div id="bar">
+        <div id="top">Top News</div>
+        <div id="topnews"> The team DNA wil be the best one to get success and to cross everything <img id="previous"
+                src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg" alt=""> <img id="next"
+                src="https://english.cdn.zeenews.com/static/public/next_carousel.svg" alt=""></div>
+    </div>
+    <!-- here the bar completes -->
+   <div id="body">
+    <div id="left-container">
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-latestnews.svg" alt=""></div><div id="topic">Latest News</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-photos.svg" alt=""></div><div id="topic">Photos</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-videos.svg" alt=""></div><div id="topic">Videos</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg" alt=""></div><div id="topic">Explainers</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-india.svg" alt=""></div><div id="topic">India</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-entertainment.svg" alt=""></div><div id="topic">Entertainment</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-sports.svg" alt=""></div><div id="topic">Sports</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-viralNews.svg" alt=""></div><div id="topic">Viralnews</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-lifestyle.svg" alt=""></div><div id="topic">Lifestyle</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-business.svg" alt=""></div><div id="topic">Business</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/icons-world.svg" alt=""></div><div id="topic">World</div></div>
+      <div id="heading1"><div><img src="https://english.cdn.zeenews.com/static/public/icons/ezmall-icon1.png" alt=""></div><div id="topic">Ezmall</div></div>
+
+    </div>
+    <div id="middle-container">
+      <div id="overlap">Top News</div>
+
+      <div id="big"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2357458-untitled-design-71.png" alt="">
+      </div>
+      <div id="bigheadline">Agnipath scheme protest: Train coaches set afire in Bihar, Internet shutdown in Haryana's Ballabhgarh</div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2356240-2342277-2291173-untitled-design-1.jpg" alt=""></div>
+        <div id="sidenote">Agnipath scheme salary package: What's Agniveer in-hand salary during first, second, third years? Will Agniveers pay P</div>
+      </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2355659-2340373-agnipath-ians.jpg" alt=""></div>
+        <div id="sidenote">Agnipath scheme explained: Why Centre raised age limit from 21 to 23</div>
+      </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2350032-untitled-design-80.png" alt=""></div>
+        <div id="sidenote">PM Modi to visit Gujarat on a 2-day trip today, launch projects worth Rs 21,000 crore</div>
+      </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2355149-assam.jpg" alt=""></div>
+        <div id="sidenote">Assam floods: Manas, Brahmaputra rivers flowing above danger mark, 4 dead in last 24 hours</div>
+      </div>
+      <div id="more">More Top news</div>
+      <div id="overlap">INDIA NEWS</div>
+
+      <div id="big"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2357558-untitled-design-3.jpg" alt="">
+      </div>
+      <div id="bigheadline">Gujarat: Gandhinagar civic body postpones plan to name road after PM Modi's mother Hiraba </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2357365-police.jpg" alt=""></div>
+        <div id="sidenote"> Tight security, high alert in Uttar Pradesh amid row over remarks on Prophet Muhammad.</div>
+      </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2357458-untitled-design-71.png" alt=""></div>
+        <div id="sidenote"> Agnipath scheme protest: Train coaches set afire in Bihar, Internet shutdown in Haryana's Ballabhgarh</div>
+      </div> 
+      <div id="more">More India news</div>
+
+      <div id="overlap">ENTERTAINMENT</div>
+
+      <div id="big"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2357807-suzhal-the-vortexposter-1.jpg" alt="">
+      </div>
+      <div id="bigheadline">Suzhal The Vortex Twitter review: Netizens call Vikram Vedha makers Pushkar-Gayatri's web series 'sensational' </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2357408-kumar-gaurav-daughter.jpg" alt=""></div>
+        <div id="sidenote">Meet Kumar Gaurav's beautiful daughter Saachi whose photo is going viral on the internet.</div>
+      </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2357410-sonam-kapoorinstagram-1.jpg" alt=""></div>
+        <div id="sidenote">Anand Ahuja drops adorable photos of soon-to-be-mom Sonam Kapoor flaunting her baby bump.</div>
+      </div>
+      <div id="more">More Entertainment news</div>
+     
+      <div id="overlap">SPORTS</div>
+
+      <div id="big"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2357483-fotojet-2.jpg" alt="">
+      </div>
+      <div id="bigheadline">Prithvi Shaw trolls Yashasvi Jaiswal with Avengers meme after he scores 1st run on 54th ball </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2357132-fotojet-1.jpg" alt=""></div>
+        <div id="sidenote">
+          IND vs SA 4th T20I: Dinesh Karthik's roll no. 1 coming out of viva video will give you nostalgia max.</div>
+      </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2356691-sau.jpg" alt=""></div>
+        <div id="sidenote">
+          India vs South Africa 4th T20I: Will rain play spoilsport at SCA Stadium in Rajkot?</div>
+      </div>
+      <div id="more">More Sports news</div>
+      <div id="overlap">VIRAL NEWS</div>
+
+      <div id="big"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2356240-2342277-2291173-untitled-design-1.jpg" alt="">
+      </div>
+      <div id="bigheadline">Here is the Dna team working their Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, perferendis! best </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2321197-modi-pune-dna.png" alt=""></div>
+        <div id="sidenote">Haldwani is the best place wherer you can help anyone and rghe anals</div>
+      </div>
+      <div id="small">
+        <div id="sidebutton"><img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2321197-modi-pune-dna.png" alt=""></div>
+        <div id="sidenote"> modi want to visit haldwani and help the people of haldwani</div>
+      </div>
+
+     
+      <div id="more">More Viral news</div>
+
+
+    </div>
+    <div id="right-contianer">
+      <img src="https://tpc.googlesyndication.com/simgad/5458570048506454683" alt="">
+      <img src="https://tpc.googlesyndication.com/simgad/5458570048506454683" alt="">
+      <img src="https://tpc.googlesyndication.com/simgad/5458570048506454683" alt="">
+      <img src="https://tpc.googlesyndication.com/simgad/5458570048506454683" alt="">
+      <img src="https://tpc.googlesyndication.com/simgad/5458570048506454683" alt="">
+      <img src="https://tpc.googlesyndication.com/simgad/5458570048506454683" alt="">
+      <img src="https://tpc.googlesyndication.com/simgad/5458570048506454683" alt="">
+      <img src="https://tpc.googlesyndication.com/simgad/5458570048506454683" alt="">
+      <img src="https://tpc.googlesyndication.com/simgad/5458570048506454683" alt="">
+      <img src="https://tpc.googlesyndication.com/simgad/5458570048506454683" alt="">
+
+
+    </div>
+
+</div>
+    
+
+</body>
+
+</html>
+<script>
+    document.querySelector("#search").addEventListener("click", popupsearch)
+    function popupsearch() {
+        alert("This feature is available for members only")
+    }
+    document.querySelector("#previous").addEventListener("click", prev)
+    function prev() {
+        // change the innertext of the id previous
+    }
+    let x= document.querySelectorAll("#left-container>div")
+    for(let i=0;i<x.length;i++){
+        x[i].addEventListener("click",myfunction)
+
+}
+
+function myfunction(){
+    alert("only for the members buy a MEMBERSHIP")
+}
+let y=document.querySelectorAll("#more")
+for(let i=0;i<y.length;i++){
+  y[i].addEventListener("click",morefunction)
+}
+function morefunction(){
+  console.log("sachin")
+  alert("make sure to signup")
+}
+let z=document.querySelectorAll("#sidebutton+div")
+for(let i=0;i<z.length;i++){
+  z[i].addEventListener("click",moreefunction)
+}
+function moreefunction(){
+  console.log("sachin")
+  alert("this feature is available for only paid members")
+}
+
+
+</script>
