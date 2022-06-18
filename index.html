@@ -70,7 +70,7 @@
   #icon>#searchLogout {
     display: flex;
     justify-content: space-between;
-    width: 90px;
+    width: 140px;
   }
 
   #icon>#searchLogout>a>#logout {
@@ -175,81 +175,52 @@
     margin-left: 4%;
   }
   /* fotter content  */
-  #main{
-            height: 350px;
-            background-color: rgba(0, 0, 0, 0.788);
-            padding: 10px;
-            
-        }
-        .box{
-            height: 20%;
-            display: flex;
-        }
-        .box1{
-            height: 20%;
-            display: flex;
-            
-        }
-        .box4{
-            height: 20%;
-            display: flex;
-        }
-        .box1>div:first-child{
-            font-size: 10px;
-            color: grey;
-            padding: 0px 40px 0px 0px;
-            
-        }
-        .box1>div:nth-child(2){
-            display: flex;
-        }
-        .box1>div:nth-child(2)>img{
-            padding: 0px 4px 0px 4px;
-
-        }
-       
-        hr{
-            color: grey;
-        }
-        #img1{
-            height: 70%;
-            width: 90px;
-            padding: 15px 20px 0px 10px ;
-        }
-        
-        .box>div:last-child{
-            display: flex;
-            width: 50%;
-            justify-content: space-around;
-            padding: 30px 20px 0px 50px;
-        }
-        .box>#nice>div{
-            font-size: 14px;
-            color: rgba(128, 128, 128, 0.925);
-        }
-        .box1>#nice2>div{
-            font-size: 14px;
-            color: rgba(128, 128, 128, 0.925);
-            display: flex;
-            width:150px ;
-            
-            padding: 30px 0px 0px 20px;
-        }
-        #nice2{
-            display: flex;
-        }
-        .box4>div:nth-child(2){
-            width: 1100px;
-            padding: 0px 10px 0px 20px;
-           
-            display: flex;
-            
-        }
-        .box4>div:nth-child(2)>div{
-            padding: 25px 10px 0px 10px ;
-            color: grey;
-        }
-        
+  #main {
+    color: gray;
+    background-color: #1c1c1c;
+    margin-top: 150px;
+  }
+  #main > .box {
+    display: flex;
+    
+    align-items: center;
+    padding: 14.5px;
+  }
+  .box > div > img {
+    width: 95px;
+    margin-right: 100px;
+  }
+  #main > .box > .nice {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #main > .box > .nice > div {
+    margin: auto 15px;
+    white-space: nowrap;
+  }
+  #right {
+    justify-content: center;
+  }
+  #follow {
+    margin: auto 20px;
+    margin-right: 100px;
+  }
+  #follow > img {
+    width: 25px;
+  }
+  .nice > div {
+    font-size: small;
+  }
+  .span {
+    margin: 5px 20px;
+    margin-left: 0px;
+    font-size: large;
+  }
+  .rule {
+    border: 0.1px solid #3b3a3a;
+    width: 98%;
+    margin: auto;
+  }
 
   /* -----------------------------------------------------------------SPORTS CONTENT---------------------------------------------------*/
 
@@ -355,6 +326,12 @@
 
   
   }
+  /* button{
+    text-decoration: none;
+  } */
+  p:hover{
+color: blue;
+  }
 
   /* ----------------------------------------------------------------RESPONSIVE SMALL SIZE--------------------------------------------*/
   @media all and (max-width: 999px) {
@@ -455,9 +432,15 @@
         timeline of yesterday's events
       </p>
       <div>
-        <img src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg" alt="">
-        <img src="https://www.linkpicture.com/q/pause_2.png">
-        <img src="https://english.cdn.zeenews.com/static/public/next_carousel.svg">
+        <img
+          src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
+          id="prev"
+        />
+        <img src="https://www.linkpicture.com/q/pause_2.png" />
+        <img
+          src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
+          id="next"
+        />
       </div>
     </div>
   </div>
@@ -545,71 +528,67 @@
       <div id="top">TOP NEWS</div>
       <div id="big">
         <img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2374334-sonia-gandhi1234.jpg"
           alt="">
-        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
-          voluptas recusandae! u arent you happy that i made the century</p>
+        <p>Agnipath directionless, Congress with you: Sonia Gandhi's letter to Agniveer plan protesters from hospital</p>
       </div>
 
       <p>
         <hr>
       </p>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2369879-kumar-main.jpg">
-        <p>
-          J-K: Police officer shot dead by terrorists inside his home in Pulwama</p>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2374713-2305402-sidhu-moose-wala-lawrence-bishnoi.jpg">
+        <p>Sidhu Moose Wala murder: Is Lawrence Bishnoi being subjected to third-degree torture</p>
       </div>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2369988-untitled-design-3.jpg">
-        <p>Union Minister Nitin Gadkari proposes 'Innovation Bank' for quality infra development</p>
-      <a></div><button id="morenews">More Top News</button></a>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2374682-untitled-design-74.png">
+        <p>Google Doodle: Who is Stefania Maracineanu, physicist allegedly denied Nobel Prize despite making key discovery?</p>
+      <a href="https://www.dnaindia.com/headlines"></div><button id="morenews">More Top News</button></a>
       <div id="top">INDIA NEWS</div>
       <div id="big">
         <img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2369664-rains-delhi-ani.jpg"
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2373276-bihar-agnipath-protest-pti.jpg"
           alt="">
-        <p>
-          IMD predicts heavy rainfall in several states this weekend - Check full list</p>
+        <p>Anti-Agnipath protests: Violence continues to rock Bihar; vehicles in police outpost set ablaze</p>
       </div>
 
       <p>
         <hr>
       </p>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
-        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2375431-1655555197-00000006.jpg">
+        <p>Agnipath scheme row: 80 people involved in protest have been identified so far, says ASP Danapur</p>
       </div>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
-        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
-      <a></div><button id="morenews">More  India News</button></a>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2375120-1655553388-00000004.jpg">
+        <p>NCW Chairperson Rekha Sharma calls Marathi actor's arrest ‘a political vendetta’</p>
+      <a href="https://www.dnaindia.com/india"></div><button id="morenews">More  India News</button></a>
       <div id="top">ENTERTAINMENT NEWS</div>
       <div id="big">
         <img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2375628-vijay.jpg"
           alt="">
-        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
-          voluptas recusandae! u arent you happy that i made the century</p>
+        <p>
+          Vijay to play gangster in Lokesh Kanagraj's film, Kamal Haasan might do cameo in Thalapathy 67</p>
       </div>
 
       <p>
         <hr>
       </p>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
-        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2374658-shivangi-joshi.jpg">
+        <p>Khatron Ke Khiladi 12: Shivangi Joshi eliminated from Rohit Shetty's show?</p>
       </div>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
-        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
-     <a > </div><button id="morenews">More Entertainment News</button></a>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2374188-fi.jpg">
+        <p>Sara Ali Khan, Ibrahim Ali Khan treat papa Saif Ali Khan with special brunch a day before father's day</p>
+     <a href="https://www.dnaindia.com/entertainment"> </div><button id="morenews">More Entertainment News</button></a>
       <div id="top">SPORTS NEWS</div>
       <div id="big">
         <img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2372449-pant.jpg"
           alt="">
-        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
-          voluptas recusandae! u arent you happy that i made the century</p>
+        <p>'He hasn't learned': Rishabh Pant gets schooled by Sunil Gavaskar for his shot selection</p>
       </div>
 <!-- https://www.dnaindia.com/entertainment#google_vignette -->
       <p>
@@ -620,56 +599,55 @@
         <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
       </div>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
-        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
-      <a ></div><button id="morenews">More Sports News</button></a>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2374105-1655546104-thumbnail1800046.jpeg">
+        <p>IND vs SA 4th T20I: Avesh Khan dedicates match winning spell to father on his birthday</p>
+      <a href="https://www.dnaindia.com/entertainment#google_vignette"></div><button id="morenews">More Sports News</button></a>
       <div id="top"> BUISENESS NEWS</div>
       <div id="big">
         <img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2360755-1655465430-00000003.jpg"
           alt="">
-        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
-          voluptas recusandae! u arent you happy that i made the century</p>
+        <p>Equity indices open in red, Sensex down by 318 points</p>
       </div>
 
       <p>
         <hr>
       </p>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
-        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2363726-2257581-aadhaar.jpg">
+        <p>Cost Inflation Index: How it works and how helpful it is in saving tax</p>
       </div>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
-        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
-     <a> </div><button id="morenews">More Buiseness News</button></a>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2361143-picture1june-17th.png">
+        <p>Cost Inflation Index: How it works and how helpful it is in saving tax</p>
+     <a href="https://www.dnaindia.com/business"> </div><button id="morenews">More Buiseness News</button></a>
       <div id="top">World NEWS</div>
       <div id="big">
         <img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2372638-1655536235-00000006.jpg"
           alt="">
-        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
-          voluptas recusandae! u arent you happy that i made the century</p>
+        <p>EAM S Jaishankar, Vietnam Foreign Minister launch logo to mark 50 years of diplomatic relations</p>
       </div>
 
       <p>
         <hr>
       </p>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
-        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2374987-1655552462-00000002.jpg">
+        <p>Tamil Nadu Police rescues seven Sri Lankans in Rameswaram</p>
       </div>
       <div id="newsbox"><img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg">
-        <p>Sheldon Jackson alleges 'communication gap' after team India snub</p>
-      <a></div><button id="morenews">More World News</button></a>
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2375318-1655554509-00000003.jpg">
+        <p>
+          EU Trade Commissioner is pleased to resume talks with India to conclude Free Trade Agreement</p>
+      <a href="https://www.dnaindia.com/world"></div><button id="morenews">More World News</button></a>
       <div id="top">EXPLAINER NEWS</div>
       <div id="big">
         <img
-          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2303306-978909-sheldon-jackson-m.jpg"
+          src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2325714-government-vacancy.jpg"
           alt="">
-        <p>hi there how are yo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam inventore magni omnis sit
-          voluptas recusandae! u arent you happy that i made the century</p>
+        <p>
+          DNA Explainer: Fears around Agnipath scheme, what we know so far</p>
       </div>
 
       <p>
@@ -697,79 +675,129 @@
   </div>
   <div>
     <div id="main">
-        <div class="box">
-            <div ><img id="img1" src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png" alt=""></div>
-            <div id="nice">
-                <div>INDIA</div>
-                <div>WORLD</div>
-                <div>BUSSINESS</div>
-                <div>TECHONOLOGY</div>
-                <div>SPORTS</div>
-                <div>CRICKET</div>
-                <div>ENTERTAINMENT</div>
-            </div>
+      <div class="box">
+        <div>
+          <img
+            id="img1"
+            src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
+            alt=""
+          />
         </div>
-        <hr>
-        <div class="box1">
-            <div id="inside">
-                <div><h2>FOLLOW US ON</h2></div>
-                <div>
-                    <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-facebook.svg" alt="">
-                    <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-twitter.svg" alt="">
-                    <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/youtube-white.svg" alt="">
-                </div>
-            </div>
-            <div id="nice2">
-                <div>ABOUT DNA</div>
-                <div>CONTACT US</div>
-                <div>INVESTORS</div>
-                <div>ADVERTISE</div>
-                <div>PRIVACY-POLICY</div>
-            </div>
-            
+        <div class="nice">
+          <div>INDIA</div>
+          <div>WORLD</div>
+          <div>BUSSINESS</div>
+          <div>TECHONOLOGY</div>
+          <div>SPORTS</div>
+          <div>CRICKET</div>
+          <div>ENTERTAINMENT</div>
         </div>
-        <hr>
-        <div class="box4">
-            <div font-size: 14px;>
-                <p style="color: grey;font-size: 20px;  ">PARTNER SITE</p>
-            </div>
-            <div>
-                <div>ZEE NEWS</div>
-                <div>HINDI NEWS</div>
-                <div>MARATHI NEWS</div>
-                <div>BENGALI NEWS</div>
-                <div>TAMIL NEWS</div>
-                <div>MALYALAM NEWS</div>
-                <div>ZEE NEWS</div>
-                <div>WION</div>
-            </div>
+      </div>
+      <hr class="rule" />
+      <div class="box">
+        <div>
+          <div class="span"><span>FOLLOW US ON</span></div>
+          <div id="follow">
+            <img
+              src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-facebook.svg"
+              alt=""
+            />
+            <img
+              src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-twitter.svg"
+              alt=""
+            />
+            <img
+              src="https://english.cdn.zeenews.com/static/apprun/dna/icons/youtube-white.svg"
+              alt=""
+            />
+          </div>
         </div>
-        <hr>
-        <div class="box">
-            <div style="padding: 10px 0px 0px 300px ; color:grey; ">@1918-2022 INDIA DOT COM PRIVATE LIMITED, ALL RIGHTS RESERVED. </div>
+        <div class="nice">
+          <div>ABOUT DNA</div>
+          <div>CONTACT US</div>
+          <div>INVESTORS</div>
+          <div>ADVERTISE</div>
+          <div>PRIVACY-POLICY</div>
         </div>
+      </div>
+      <hr class="rule" />
+      <div class="box">
+        <div class="span">
+          <span>PARTNER SITE</span>
+        </div>
+        <div class="nice">
+          <div>ZEE NEWS</div>
+          <div>HINDI NEWS</div>
+          <div>MARATHI NEWS</div>
+          <div>BENGALI NEWS</div>
+          <div>TAMIL NEWS</div>
+          <div>MALYALAM NEWS</div>
+          <div>ZEE NEWS</div>
+          <div>WION</div>
+        </div>
+      </div>
+      <hr class="rule" />
+      <div class="box" id="right">
+        <div>
+          @1918-2022 INDIA DOT COM PRIVATE LIMITED, ALL RIGHTS RESERVED.
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
 </body>
 
 </html>
 <script>
-  let x=document.querySelectorAll("button")
-  let y=document.querySelectorAll("a+div")
-  let z=document.querySelectorAll(".navbarOption")
+  let x=document.querySelectorAll(".navbarOption")
+  // let y=document.querySelectorAll("a+div")
+  // let z=document.querySelectorAll(".navbarOption")
   for(let i=0;i<x.length;i++){
     x[i].addEventListener("click",myfunction)
-    y[i].addEventListener("click",myfunction)
-    z[i].addEventListener("click",myfunction)
+  //   y[i].addEventListener("click",myfunction)
+  //   z[i].addEventListener("click",myfunction)
 
   }
 
-
+  let y=document.querySelectorAll("#morenews")
+  for(let i=0;i<y.length;i++){
+    y[i].addEventListener("click",myfunction)
+  }
 
 
   function myfunction(){
     alert("sign up  or login for this feature only for the members")
     console.log("sachin")
   }
+ 
+ 
+ 
+  let flash = document.querySelector("#topnewsFlash>p");
+
+let flashText = [
+  "Neeraj Chopra sets new national record with a throw of 89.30m, bags silver medal in the Paavo Nurmi Games",
+  "Assam floods: Manas, Brahmaputra rivers flowing above danger mark, 4 dead in last 24 hours",
+  "Talaq-e-Hasan: Supreme Court to hear plea against Muslim divorce practice today",
+  "PM Modi to visit Gujarat on a 2-day trip today, launch projects worth Rs 21,000 crore",
+];
+
+let flashme = 0;
+prev.addEventListener("click", function () {
+  if (flashme == 0) {
+    flashme = flashText.length - 1;
+  } else {
+    flashme--;
+  }
+
+  flash.innerText = flashText[flashme];
+});
+
+next.addEventListener("click", function () {
+  if (flashme == flashText.length - 1) {
+    flashme = 0;
+  } else {
+    flashme++;
+  }
+  flash.innerText = flashText[flashme];
+});
 </script>

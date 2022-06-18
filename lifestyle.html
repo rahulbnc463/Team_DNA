@@ -715,6 +715,56 @@
     spotscontent.append(seemore);
   }
 
+  // -------------------------------------------------See more-------------------------------------------
+
+  let more = [
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2371877-fotojet-2022-06-18t111525.910-1.jpg",
+      newshead:
+        "Father's Day 2022: Budget-friendly gifts that will bring a smile on your dad's face",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/16/2346553-1655386949-00000010.jpg",
+      newshead:
+        "Diabetes wellness visits reduce risk of amputation, says study",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2371332-haircare.jpg",
+      newshead:
+        "Effective and easy haircare tips to follow this monsoon season",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2363513-1655483527-00000003.jpg",
+      newshead:
+        "New study compares diff types of moisturisers for children with eczema, know the details",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2363504-1655483471-00000003.jpg",
+      newshead:
+        "Consumption of protein supplements can manage Type 2 diabetes, says new study",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2361919-1655473905-00000007.jpg",
+      newshead:
+        "Produced by tribal farmers, Koraput coffee gets popular in Europe, America",
+    },
+  ];
+  morenews.addEventListener("click", function () {
+    document
+      .getElementById("spotscontent")
+      .removeChild(document.getElementById("morenews"));
+    lifestylecontent(more);
+    document
+      .getElementById("spotscontent")
+      .removeChild(document.getElementById("morenews"));
+  });
+
   // --------------------------------------------change news flash----------------------------
   let flash = document.querySelector("#topnewsFlash>p");
 

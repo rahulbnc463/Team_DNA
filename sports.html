@@ -290,7 +290,7 @@
     }
     #main > .box {
       display: flex;
-      
+
       align-items: center;
       padding: 14.5px;
     }
@@ -683,6 +683,55 @@
     seemore.id = "morenews";
     spotscontent.append(seemore);
   }
+
+  // -------------------------------------------------See more-------------------------------------------
+
+  let more = [
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2360316-742579-archana-kamath-tt-twitter.jpg",
+      newshead:
+        "Table Tennis player Archana Kamath moves court after excluded from the CWG squad",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2372935-2.jpg",
+      newshead:
+        "IND vs SA 4th T20I: Avesh Khan dedicates match winning spell to father on his birthday",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2372449-pant.jpg",
+      newshead:
+        "'He hasn't learned': Rishabh Pant gets schooled by Sunil Gavaskar for his shot selection",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2370523-vince-mcmahon.jpg",
+      newshead: "WWE: Vince McMahon steps down as CEO and chairman",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2363509-1655483499-00000003.jpg",
+      newshead:
+        "Ultimate Kho-Kho on-boards two new franchise owners in Capri Global: KLO Sports",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2361296-818529-ness-wadia.jpg",
+      newshead:
+        "Punjab Kings co-owner Ness Wadia vouches for longer IPL with two halves every year",
+    },
+  ];
+  morenews.addEventListener("click", function () {
+    document
+      .getElementById("spotscontent")
+      .removeChild(document.getElementById("morenews"));
+    sportscontent(more);
+    document
+      .getElementById("spotscontent")
+      .removeChild(document.getElementById("morenews"));
+  });
 
   // --------------------------------------------change news flash----------------------------
   let flash = document.querySelector("#topnewsFlash>p");
