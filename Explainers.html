@@ -180,6 +180,72 @@
       color: #fede2f;
     }
 
+     /* Footer */
+     #main{   
+            height: 350px;
+            background-color:#1c1c1c;
+            padding: 10px;      
+        }
+        .box,.box1,.box2{
+            width: 90%;
+            margin: auto;
+            height: 20%;
+            display: flex;
+            font-size: 14px;
+        }
+       
+        .box1>div:first-child{
+            font-size: 10px;
+            color: grey;
+            padding: 0px 40px 0px 0px;
+            
+        }
+        .box1>div:nth-child(2){
+            display: flex;
+            
+        }
+        .box1>div:nth-child(2)>img{
+            padding: 0px 4px 0px 4px;
+        }
+       
+        hr{
+            color: grey;
+        }
+        #img1{
+            height: 70%;
+            width: 90px;
+            padding: 15px 20px 0px 10px ;
+        }
+        
+        #nice{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 30px 20px 0px 50px;
+        }
+        #nice>div{
+            margin-right: 20px;
+            color: rgba(128, 128, 128, 0.925);
+        }
+        .box1>#nice2>div{
+            color: rgba(128, 128, 128, 0.925);
+            display: flex;  
+            padding: 30px 0px 0px 20px;
+        }
+        #nice2{
+            display: flex;
+            justify-content: space-evenly;  
+        }
+        .box2>div:nth-child(2){
+            width: 1100px;
+            padding: 0px 10px 0px 20px;
+            display: flex;          
+        }
+        .box2>div:nth-child(2)>div{
+            padding: 25px 10px 0px 10px ;
+            color: grey;
+        }
+
+
     /*Responsive Medium And Small*/
     @media all and (min-width: 0px) and (max-width: 1024px) {
       #icon > #iconchild {
@@ -239,6 +305,7 @@
   </style>
 
   <body>
+      <!-- Header Navigation -->
     <div id="icon">
       <div id="iconchild">
         <a href="homepage.html">
@@ -256,6 +323,7 @@
         />
       </div>
     </div>
+    <!-- Flash News -->
     <div id="topnewsbar">
       <div id="topnewsText"><p>Top News</p></div>
       <div id="topnewsFlash">
@@ -276,6 +344,7 @@
         </div>
       </div>
     </div>
+     <!-- Main Body -->
     <div id="sidebar">
       <div id="sidebarMenu">
         <div>
@@ -400,6 +469,63 @@
         </a>
       </div>
     </div>
+
+    <!-- Footer -->
+    <div>
+      <div id="main">
+          <div class="box">
+              <div><img id="img1" src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png" alt=""></div>
+              <div id="nice">
+                  <div>INDIA</div>
+                  <div>WORLD</div>
+                  <div>BUSSINESS</div>
+                  <div>TECHONOLOGY</div>
+                  <div>SPORTS</div>
+                  <div>CRICKET</div>
+                  <div>ENTERTAINMENT</div>
+              </div>
+          </div>
+          <hr>
+          <div class="box1">
+              <div id="inside">
+                  <div><h2>FOLLOW US ON</h2></div>
+                  <div>
+                      <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-facebook.svg" alt="">
+                      <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-twitter.svg" alt="">
+                      <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/youtube-white.svg" alt="">
+                  </div>
+              </div>
+              <div id="nice2">
+                  <div>ABOUT DNA</div>
+                  <div>CONTACT US</div>
+                  <div>INVESTORS</div>
+                  <div>ADVERTISE</div>
+                  <div>PRIVACY-POLICY</div>
+              </div>
+              
+          </div>
+          <hr>
+          <div class="box2">
+              <div font-size: 14px;>
+                  <p style="color: grey;font-size: 20px;  ">PARTNER SITE</p>
+              </div>
+              <div>
+                  <div>ZEE NEWS</div>
+                  <div>HINDI NEWS</div>
+                  <div>MARATHI NEWS</div>
+                  <div>BENGALI NEWS</div>
+                  <div>TAMIL NEWS</div>
+                  <div>MALYALAM NEWS</div>
+                  <div>ZEE NEWS</div>
+                  <div>WION</div>
+              </div>
+          </div>
+          <hr>
+          <div class="box">
+              <div style="padding: 10px 0px 0px 300px ; color:grey; ">@1918-2022 INDIA DOT COM PRIVATE LIMITED, ALL RIGHTS RESERVED. </div>
+          </div>
+      </div>
+  </div>
   </body>
 </html>
 
