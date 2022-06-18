@@ -18,108 +18,104 @@
                background-color: #f5f5f5;
           }
 
-          header {
-               height: 70px;
-               margin-top: 10px;
-               background-color: #ffde2f;
+
+          /* ++++++++++++++++++++ icon section  +++++++++++++++++++++++++++++ */
+
+          #icon {
+               padding: 15px;
                display: flex;
                align-items: center;
                justify-content: center;
-               box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+               justify-content: space-between;
+               height: 65px;
+               background-color: #fede2f;
                position: sticky;
-               top: 0;
                z-index: 10;
+               top: 0px;
+               box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           }
 
-          nav {
-               display: flex;
-               width: 90%;
-               margin: auto;
-               justify-content: space-between;
-               align-items: center;
-
-          }
-
-          nav>#left {
-               width: 15%;
+          #icon>#iconchild {
+               padding: 0%;
+               margin: 0%;
+               height: 65px;
                display: flex;
                align-items: center;
+               justify-content: center;
                justify-content: space-between;
           }
 
-          nav>#left>div:first-child {
-               width: 45%;
+          #iconchild>#logo {
+               width: 90px;
           }
 
-          nav>#left>div:first-child>img {
-               width: 100%;
+          #iconchild>#hinditext {
+               padding: 5px 10px;
+               border-radius: 20px;
+               border: 1px solid;
+               margin: 30px;
+               background-color: #fede2f;
           }
 
-          nav>#left>div:last-child>button {
-               padding: 7px 12px;
-               background: transparent;
-               border: 1px solid #000;
-               border-radius: 30px;
-               cursor: pointer;
-               font-weight: 600;
-          }
-
-          nav>#left>div:last-child>button:hover {
-               background-color: rgb(24, 24, 24);
-               color: #fff;
-          }
-
-          nav>#right>div {
-               text-align: right;
-               cursor: pointer;
-          }
-
-          nav>#right>div>img {
-               width: 10%;
-          }
-
-
-          #sliderNav {
-               width: 90%;
-               margin: auto;
-               height: 50px;
+          #iconchild>#hinditext:hover {
                background-color: #4c4c4c;
-               margin-top: 20px;
+               color: white;
+               border: 1px solid black;
+               font-weight: 15px;
+          }
+
+          #icon>#search {
+               display: block;
+               width: 30px;
+               height: 20px;
+          }
+
+          /*     ================== slider =========== */
+
+          #topnewsbar {
                display: flex;
                align-items: center;
+               padding: 0%;
+               margin: 20px auto;
+               width: 98%;
+               background-color: #313131;
           }
 
-          #sliderNav>div:nth-child(1) {
-               width: 11%;
-               background-color: #aaa;
-               height: 50px;
-               color: #313131;
-               font-size: 15px;
-               text-align: center;
-               font-weight: 800;
-               border-radius: 0px 7px 7px 0px;
-               padding-top: 15px;
-          }
-
-          #sliderNav>div:nth-child(2) {
-               width: 60%;
-               font-size: 18px;
-               margin-left: 20px;
-               color: #fff;
-               margin-right: 70px;
+          #topnewsbar>#topnewsText {
                display: flex;
+               background-color: #aaaaaa;
+               padding: 0%;
+               width: 11%;
+               color: #31373c;
+               height: 50px;
+               justify-content: center;
+               align-items: center;
+               border-radius: 0% 5px 5px 0%;
           }
 
-          #sliderNav>div:nth-child(3) {
-               width: 20%;
-               text-align: right;
+          #topnewsbar>#topnewsFlash {
+               display: flex;
+               margin: auto 3% auto 1%;
+               color: white;
+               align-items: center;
+               justify-content: space-between;
+               width: 87%;
           }
 
-          #sliderNav>div:nth-child(3) button {
-               background-color: transparent;
-               border: none;
-               color: grey;
-               margin: 0px 4px;
+          #topnewsbar>#topnewsFlash>div {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               justify-content: space-between;
+               width: 60px;
+          }
+
+          #prev {
+               cursor: pointer;
+          }
+
+          #next {
+               cursor: pointer;
           }
 
           #side-navbar {
@@ -157,7 +153,7 @@
           }
 
           #main-container {
-               width: 90%;
+               width: 98%;
                margin: auto;
                display: flex;
           }
@@ -251,82 +247,90 @@
           /* ============ footer ================ */
 
           #main {
-      color: gray;
-      background-color: #1c1c1c;
-      margin-top: 150px;
-    }
-    #main > .box {
-      display: flex;
-      
-      align-items: center;
-      padding: 14.5px;
-    }
-    .box > div > img {
-      width: 95px;
-      margin-right: 100px;
-    }
-    #main > .box > .nice {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    #main > .box > .nice > div {
-      margin: auto 15px;
-      white-space: nowrap;
-    }
-    #right {
-      justify-content: center;
-    }
-    #follow {
-      margin: auto 20px;
-      margin-right: 100px;
-    }
-    #follow > img {
-      width: 25px;
-    }
-    .nice > div {
-      font-size: small;
-    }
-    .span {
-      margin: 5px 20px;
-      margin-left: 0px;
-      font-size: large;
-    }
-    .rule {
-      border: 0.1px solid #3b3a3a;
-      width: 98%;
-      margin: auto;
-    }
-  
-          
+               color: gray;
+               background-color: #1c1c1c;
+               margin-top: 150px;
+          }
+
+          #main>.box {
+               display: flex;
+
+               align-items: center;
+               padding: 14.5px;
+          }
+
+          .box>div>img {
+               width: 95px;
+               margin-right: 100px;
+          }
+
+          #main>.box>.nice {
+               display: flex;
+               flex-wrap: wrap;
+          }
+
+          #main>.box>.nice>div {
+               margin: auto 15px;
+               white-space: nowrap;
+          }
+
+          #right {
+               justify-content: center;
+          }
+
+          #follow {
+               margin: auto 20px;
+               margin-right: 100px;
+          }
+
+          #follow>img {
+               width: 25px;
+          }
+
+          .nice>div {
+               font-size: small;
+          }
+
+          .span {
+               margin: 5px 20px;
+               margin-left: 0px;
+               font-size: large;
+          }
+
+          .rule {
+               border: 0.1px solid #3b3a3a;
+               width: 98%;
+               margin: auto;
+          }
      </style>
 
 </head>
 
 <body>
 
-
-     <header>
-          <nav>
-               <div id="left">
-                    <div><img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png" alt=""></div>
-                    <div> <button>हिंदी में पढ़ें</button></div>
-               </div>
-
-               <div id="right">
-                    <div><img src="/magnifying-glass-solid.svg" alt=""></div>
-               </div>
-          </nav>
-     </header>
-
-     <div id="sliderNav">
-          <div>Top News</div>
-          <div>
-               <p>Rahul Gandhi to appear again before ED today, timeline of yesterday's events</p>
+     <div id="icon">
+          <div id="iconchild">
+               <img id="logo" src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png" />
+               <button id="hinditext">हिंदी में पढ़ें</button>
           </div>
-          <div>
-               <button id="btn1">◀️</button>
-               <button>⏹️</button>
-               <button id="btn2">▶️</button>
+
+          <img src="https://english.cdn.zeenews.com/static/public/menusearch.svg" alt="" />
+     </div>
+
+     <div id="topnewsbar">
+          <div id="topnewsText">
+               <p>Top News</p>
+          </div>
+          <div id="topnewsFlash">
+               <p>
+                    Neeraj Chopra sets new national record with a throw of 89.30m, bags
+                    silver medal in the Paavo Nurmi Games
+               </p>
+               <div>
+                    <img src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg" id="prev" />
+                    <img src="https://www.linkpicture.com/q/pause_2.png" />
+                    <img src="https://english.cdn.zeenews.com/static/public/next_carousel.svg" id="next" />
+               </div>
           </div>
      </div>
 
@@ -419,7 +423,7 @@
                     <h2>VIDEOS</h2>
 
                     <div>
-                       <iframe src="https://youtu.be/kKB8Mz9Kpms" frameborder="0"></iframe>
+                         <iframe src="https://youtu.be/kKB8Mz9Kpms" frameborder="0"></iframe>
                     </div>
 
 
@@ -489,75 +493,66 @@
 
      <div>
           <div id="main">
-            <div class="box">
-              <div>
-                <img
-                  id="img1"
-                  src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
-                  alt=""
-                />
-              </div>
-              <div class="nice">
-                <div>INDIA</div>
-                <div>WORLD</div>
-                <div>BUSSINESS</div>
-                <div>TECHONOLOGY</div>
-                <div>SPORTS</div>
-                <div>CRICKET</div>
-                <div>ENTERTAINMENT</div>
-              </div>
-            </div>
-            <hr class="rule" />
-            <div class="box">
-              <div>
-                <div class="span"><span>FOLLOW US ON</span></div>
-                <div id="follow">
-                  <img
-                    src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-facebook.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-twitter.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://english.cdn.zeenews.com/static/apprun/dna/icons/youtube-white.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="nice">
-                <div>ABOUT DNA</div>
-                <div>CONTACT US</div>
-                <div>INVESTORS</div>
-                <div>ADVERTISE</div>
-                <div>PRIVACY-POLICY</div>
-              </div>
-            </div>
-            <hr class="rule" />
-            <div class="box">
-              <div class="span">
-                <span>PARTNER SITE</span>
-              </div>
-              <div class="nice">
-                <div>ZEE NEWS</div>
-                <div>HINDI NEWS</div>
-                <div>MARATHI NEWS</div>
-                <div>BENGALI NEWS</div>
-                <div>TAMIL NEWS</div>
-                <div>MALYALAM NEWS</div>
-                <div>ZEE NEWS</div>
-                <div>WION</div>
-              </div>
-            </div>
-            <hr class="rule" />
-            <div class="box" id="right">
-              <div>
-                @1918-2022 INDIA DOT COM PRIVATE LIMITED, ALL RIGHTS RESERVED.
-              </div>
-            </div>
+               <div class="box">
+                    <div>
+                         <img id="img1" src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
+                              alt="" />
+                    </div>
+                    <div class="nice">
+                         <div>INDIA</div>
+                         <div>WORLD</div>
+                         <div>BUSSINESS</div>
+                         <div>TECHONOLOGY</div>
+                         <div>SPORTS</div>
+                         <div>CRICKET</div>
+                         <div>ENTERTAINMENT</div>
+                    </div>
+               </div>
+               <hr class="rule" />
+               <div class="box">
+                    <div>
+                         <div class="span"><span>FOLLOW US ON</span></div>
+                         <div id="follow">
+                              <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-facebook.svg"
+                                   alt="" />
+                              <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-twitter.svg"
+                                   alt="" />
+                              <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/youtube-white.svg"
+                                   alt="" />
+                         </div>
+                    </div>
+                    <div class="nice">
+                         <div>ABOUT DNA</div>
+                         <div>CONTACT US</div>
+                         <div>INVESTORS</div>
+                         <div>ADVERTISE</div>
+                         <div>PRIVACY-POLICY</div>
+                    </div>
+               </div>
+               <hr class="rule" />
+               <div class="box">
+                    <div class="span">
+                         <span>PARTNER SITE</span>
+                    </div>
+                    <div class="nice">
+                         <div>ZEE NEWS</div>
+                         <div>HINDI NEWS</div>
+                         <div>MARATHI NEWS</div>
+                         <div>BENGALI NEWS</div>
+                         <div>TAMIL NEWS</div>
+                         <div>MALYALAM NEWS</div>
+                         <div>ZEE NEWS</div>
+                         <div>WION</div>
+                    </div>
+               </div>
+               <hr class="rule" />
+               <div class="box" id="right">
+                    <div>
+                         @1918-2022 INDIA DOT COM PRIVATE LIMITED, ALL RIGHTS RESERVED.
+                    </div>
+               </div>
           </div>
-        </div>
+     </div>
 
 </body>
 
@@ -565,8 +560,34 @@
 
 <script>
 
-document.querySelector("#btn1").addEventListener("click", function(){
-     console.log("hello")
-})
+
+     let flash = document.querySelector("#topnewsFlash>p")
+
+     let flashText = [
+          "Neeraj Chopra sets new national record with a throw of 89.30m, bags silver medal in the Paavo Nurmi Games",
+          "Assam floods: Manas, Brahmaputra rivers flowing above danger mark, 4 dead in last 24 hours",
+          "Talaq-e-Hasan: Supreme Court to hear plea against Muslim divorce practice today",
+          "PM Modi to visit Gujarat on a 2-day trip today, launch projects worth Rs 21,000 crore",
+     ];
+
+     let flashme = 0;
+     prev.addEventListener("click", function () {
+          if (flashme == 0) {
+               flashme = flashText.length - 1;
+          } else {
+               flashme--;
+          }
+
+          flash.innerText = flashText[flashme];
+     });
+
+     next.addEventListener("click", function () {
+          if (flashme == flashText.length - 1) {
+               flashme = 0;
+          } else {
+               flashme++;
+          }
+          flash.innerText = flashText[flashme];
+     });
 
 </script>
