@@ -707,6 +707,56 @@
     spotscontent.append(seemore);
   }
 
+  // -------------------------------------------------See more-------------------------------------------
+
+  let more = [
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2373482-internet-explorer.jpg",
+      newshead:
+        "Internet Explorer fan builds gravestone in its memory after Microsoft retires browser",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/18/2371041-agnipath-fake-news.jpg",
+      newshead:
+        "Agnipath scheme fake news ALERT: Beware of this YouTube video spreading false claim",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2362872-untitled-design-86.png",
+      newshead:
+        "Netizens awestruck to watch blindfolded man make Sonu Sood’s portrait in viral video",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2361108-untitled-design-83.png",
+      newshead:
+        "Netizens shocked to see clouds moving like giant tsunami waves, watch viral video",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/17/2358066-hyundai-creta-suv-goa.png",
+      newshead:
+        "Goa police arrest Delhite for driving Hyundai Creta SUV on Anjuna beach: Watch viral video",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/16/2345111-untitled-design-2022-06-16t171108.875.jpg",
+      newshead:
+        "Nagpur ATM dispensing 5 times the money, people rushing to withdraw cash",
+    },
+  ];
+  morenews.addEventListener("click", function () {
+    document
+      .getElementById("spotscontent")
+      .removeChild(document.getElementById("morenews"));
+    sportscontent(more);
+    document
+      .getElementById("spotscontent")
+      .removeChild(document.getElementById("morenews"));
+  });
+
   // --------------------------------------------change news flash----------------------------
   let flash = document.querySelector("#topnewsFlash>p");
 
