@@ -55,11 +55,22 @@
       font-weight: 15px;
     }
     #icon > #search {
-      display: block;
-      width: 30px;
-      height: 20px;
+      display: flex;
+      justify-content: space-between;
+      width: 90px;
+    }
+    #icon > #search > a > #logout {
+      padding: 3px 5px;
+      border-radius: 10px;
+      border: 1px solid;
+      background-color: #fede2f;
+    }
+    #icon > #search > a > #logout:hover {
+      background-color: #4c4c4c;
+      color: white;
+      border: 1px solid black;
+      font-weight: 15px;
       cursor: pointer;
-      margin-right: 60px;
     }
 
     #topnewsbar {
