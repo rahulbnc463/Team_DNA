@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DNA India</title>
+  <link rel="icon" type="image/x-icon" href="https://cdn.dnaindia.com/sites/all/themes/dnaindia/favicon-1016.ico">
 </head>
 
 <style>
@@ -425,13 +426,13 @@
     </div>
     <div id="topnewsFlash">
       <p>
-        National Herald case: Rahul Gandhi to appear again before ED today,
-        timeline of yesterday's events
+        Neeraj Chopra sets new national record with a throw of 89.30m, bags
+        silver medal in the Paavo Nurmi Games
       </p>
       <div>
-        <img src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg" alt="">
-        <img src="https://www.linkpicture.com/q/pause_2.png">
-        <img src="https://english.cdn.zeenews.com/static/public/next_carousel.svg">
+        <img src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg" id="prev" />
+        <img src="https://www.linkpicture.com/q/pause_2.png" />
+        <img src="https://english.cdn.zeenews.com/static/public/next_carousel.svg" id="next" />
       </div>
     </div>
   </div>
@@ -738,3 +739,37 @@
 </body>
 
 </html>
+
+<script>
+  
+  let flash = document.querySelector("#topnewsFlash>p")
+
+  let flashText = [
+  "Neeraj Chopra sets new national record with a throw of 89.30m, bags silver medal in the Paavo Nurmi Games",
+    "Assam floods: Manas, Brahmaputra rivers flowing above danger mark, 4 dead in last 24 hours",
+    "Talaq-e-Hasan: Supreme Court to hear plea against Muslim divorce practice today",
+    "PM Modi to visit Gujarat on a 2-day trip today, launch projects worth Rs 21,000 crore",
+  ];
+
+
+  let flashme = 0;
+  prev.addEventListener("click", function () {
+    if (flashme == 0) {
+      flashme = flashText.length - 1;
+    } else {
+      flashme--;
+    }
+
+    flash.innerText = flashText[flashme];
+  });
+
+  next.addEventListener("click", function () {
+    if (flashme == flashText.length - 1) {
+      flashme = 0;
+    } else {
+      flashme++;
+    }
+    flash.innerText = flashText[flashme];
+  });
+  
+</script>

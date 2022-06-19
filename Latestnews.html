@@ -1,541 +1,685 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Latest News</title>
-  </head>
 
-  <style>
-    * {
-      padding: 0%;
-      margin: 0%;
-      box-sizing: border-box;
-      font-family: "Roboto Slab", sans-serif;
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latest News</title>
+  <link rel="icon" type="image/x-icon" href="https://cdn.dnaindia.com/sites/all/themes/dnaindia/favicon-1016.ico">
+</head>
+
+<style>
+  * {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", sans-serif;
+  }
+
+  /* ----------------------------------------------------------------Head Advertise---------------------------------------------------- */
+  #headAdvertise>#headAdvertiseBrand {
+    display: block;
+    margin: 10px auto;
+  }
+
+  /* ----------------------------------------------------------------Icon Bar---------------------------------------------------------- */
+  #icon {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    height: 65px;
+    background-color: #fede2f;
+    z-index: 10;
+    position: sticky;
+    top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  #icon>#iconchild {
+    padding: 0%;
+    margin: 0%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+  }
+
+  #iconchild>a>#logo {
+    width: 90px;
+  }
+
+  #iconchild>a>#hinditext {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid;
+    margin: 30px;
+    background-color: #fede2f;
+  }
+
+  #iconchild>a>#hinditext:hover {
+    background-color: #4c4c4c;
+    color: white;
+    border: 1px solid black;
+    font-weight: 15px;
+    cursor: pointer;
+  }
+
+  #icon>#searchLogout {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+  }
+
+  #icon>#searchLogout>a>#logout {
+    padding: 3px 5px;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: #fede2f;
+  }
+
+  #icon>#searchLogout>a>#logout:hover {
+    background-color: #4c4c4c;
+    color: white;
+    border: 1px solid black;
+    font-weight: 15px;
+    cursor: pointer;
+  }
+
+  /* ---------------------------------------------------------------Top News Bar------------------------------------------------------- */
+  #topnewsbar {
+    display: flex;
+    align-items: center;
+    padding: 0%;
+    margin: 20px auto;
+    width: 98%;
+    background-color: #313131;
+  }
+
+  #topnewsbar>#topnewsText {
+    display: flex;
+    background-color: #aaaaaa;
+    padding: 0%;
+    width: 11%;
+    color: #31373c;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0% 5px 5px 0%;
+  }
+
+  #topnewsbar>#topnewsFlash {
+    display: flex;
+    margin: auto 3% auto 1%;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 87%;
+  }
+
+  #topnewsbar>#topnewsFlash>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+  }
+
+  #prev {
+    cursor: pointer;
+  }
+
+  #next {
+    cursor: pointer;
+  }
+
+  /* -----------------------------------------------------------------CONTENT----------------------------------------------------------*/
+  #pageBody {
+    margin: auto;
+    width: 98%;
+    display: grid;
+    grid-template-columns: 1fr 2.4fr 1fr;
+    grid-template-rows: auto;
+    gap: 2%;
+  }
+
+  /* ---------------------------------------------------------------NAVBAR------------------------------------------------------------ */
+  #pageBody>#navbar>div {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    display: block;
+  }
+
+  #navbar>div>a>.navbarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 35px;
+    padding-left: 7px;
+  }
+
+  #navbar>div>a>.navbarOption:hover {
+    background-color: #fede2f;
+  }
+
+  #navbar>div>a {
+    text-decoration: none;
+    color: black;
+  }
+
+  #navbar>div>a>.navbarOption>p {
+    margin-left: 4%;
+  }
+
+  /* -----------------------------------------------------------------SPORTS CONTENT---------------------------------------------------*/
+
+  #spotscontent>h6 {
+    display: inline;
+    color: #4c4c4c;
+  }
+
+  #spotscontent>h2 {
+    border-bottom: 3px solid #fede2f;
+    width: 99px;
+  }
+
+  #newsbox {
+    display: flex;
+    margin: 12px auto;
+    padding: 1.5%;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  #spotscontent>p {
+    margin: -0.4% auto;
+  }
+
+  #newsbox>img {
+    width: 27%;
+  }
+
+  #newsbox>p {
+    margin: 0.8% 1.5%;
+  }
+
+  #morenews {
+    display: block;
+    margin: 30px auto 70px auto;
+    padding: 12px 40%;
+    border: 1px solid;
+    border-radius: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  #morenews:hover {
+    color: #fede2f;
+    border: 1px solid black;
+  }
+
+  /* --------------------------------------------------------------------PAGE ADD IMAGE---------------------------------------------------*/
+  #pageBody>div:nth-child(3)>img {
+    width: 100%;
+  }
+
+  .active {
+    background-color: #fede2f;
+  }
+
+  /* ===============================  footer ===============================  */
+
+  #main {
+    color: gray;
+    background-color: #1c1c1c;
+    margin-top: 150px;
+  }
+
+  #main>.box {
+    display: flex;
+
+    align-items: center;
+    padding: 14.5px;
+  }
+
+  .box>div>a>img {
+    width: 95px;
+    margin-right: 100px;
+  }
+
+  #main>.box>.nice {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #main>.box>.nice>div {
+    margin: auto 15px;
+    white-space: nowrap;
+  }
+
+  #right {
+    justify-content: center;
+  }
+
+  #follow {
+    margin: auto 20px;
+    margin-right: 100px;
+  }
+
+  #follow>img {
+    width: 25px;
+  }
+
+  .nice>div {
+    font-size: small;
+  }
+
+  .nice>div>a {
+    color: gray;
+    text-decoration: none;
+  }
+
+  .span {
+    margin: 5px 20px;
+    margin-left: 0px;
+    font-size: large;
+  }
+
+  .rule {
+    border: 0.1px solid #3b3a3a;
+    width: 98%;
+    margin: auto;
+  }
+
+  /* ----------------------------------------------------------------RESPONSIVE MEDIUM SIZE-------------------------------------------*/
+  @media all and (max-width: 1199px) and (min-width: 1000px) {
+    #icon {
+      padding: 15px 10%;
     }
-    /* ----------------------------------------------------------------Head Advertise---------------------------------------------------- */
-    #headAdvertise > #headAdvertiseBrand {
+
+    #topnewsbar {
+      width: 80%;
+    }
+
+    #pageBody {
+      grid-template-columns: 1fr 2.4fr 1fr;
+      width: 80%;
+    }
+
+    #topnewsbar>#topnewsText {
+      border-radius: 0%;
+      font-size: 15px;
+    }
+
+    #topnewsbar>#topnewsFlash {
+      font-size: 13px;
+      align-items: center;
+    }
+
+    #navbar>div>a>.navbarOption {
+      font-size: 13px;
+    }
+
+    #newsbox>p {
+      font-size: 14px;
+    }
+  }
+
+  /* ----------------------------------------------------------------RESPONSIVE SMALL SIZE--------------------------------------------*/
+  @media all and (max-width: 999px) {
+    #headAdvertiseBrand {
+      width: 80%;
+    }
+
+    #icon {
+      padding: 15px;
+    }
+
+    #topnewsbar {
+      width: 100%;
+    }
+
+    #topnewsbar>#topnewsText {
+      border-radius: 0%;
+      font-size: 13px;
+    }
+
+    #topnewsbar>#topnewsFlash {
+      font-size: 12px;
+      align-items: center;
+    }
+
+    #topnewsbar>#topnewsFlash>div {
+      width: 40px;
+      /* border: 1px solid red; */
+    }
+
+    #topnewsbar>#topnewsFlash>div>img {
+      width: 7px;
+    }
+
+    #topnewsbar>#topnewsFlash>div>img:nth-child(2) {
+      width: 15px;
+    }
+
+    #pageBody {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #pageBody>#navbar>div {
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      position: static;
+    }
+
+    #navbar>div>a>.navbarOption {
+      margin: 5px;
+      height: 20px;
+      padding: 15px 3px;
+      padding-right: 10px;
+      font-size: 12px;
+    }
+
+    #pageBody>div:nth-child(3)>img {
       display: block;
       margin: 10px auto;
     }
-    /* ----------------------------------------------------------------Icon Bar---------------------------------------------------------- */
-    #icon {
-      padding: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      justify-content: space-between;
-      height: 65px;
-      background-color: #fede2f;
-      position: sticky;
-      top: 0px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-    #icon > #iconchild {
-      padding: 0%;
-      margin: 0%;
-      height: 65px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      justify-content: space-between;
-    }
-    #iconchild > a > #logo {
-      width: 90px;
-    }
-    #iconchild > a > #hinditext {
-      padding: 5px 10px;
-      border-radius: 20px;
-      border: 1px solid;
-      margin: 30px;
-      background-color: #fede2f;
-    }
-    #iconchild > a > #hinditext:hover {
-      background-color: #4c4c4c;
-      color: white;
-      border: 1px solid black;
-      font-weight: 15px;
-      cursor: pointer;
-    }
-    #icon > #searchLogout {
-      display: flex;
-      justify-content: space-between;
-      width: 90px;
-    }
-    #icon > #searchLogout > a > #logout {
-      padding: 3px 5px;
-      border-radius: 10px;
-      border: 1px solid;
-      background-color: #fede2f;
-    }
-    #icon > #searchLogout > a > #logout:hover {
-      background-color: #4c4c4c;
-      color: white;
-      border: 1px solid black;
-      font-weight: 15px;
-      cursor: pointer;
-    }
-    /* ---------------------------------------------------------------Top News Bar------------------------------------------------------- */
-    #topnewsbar {
-      display: flex;
-      align-items: center;
-      padding: 0%;
-      margin: 20px auto;
-      width: 98%;
-      background-color: #313131;
-    }
-    #topnewsbar > #topnewsText {
-      display: flex;
-      background-color: #aaaaaa;
-      padding: 0%;
-      width: 11%;
-      color: #31373c;
-      height: 50px;
-      justify-content: center;
-      align-items: center;
-      border-radius: 0% 5px 5px 0%;
-    }
-    #topnewsbar > #topnewsFlash {
-      display: flex;
-      margin: auto 3% auto 1%;
-      color: white;
-      align-items: center;
-      justify-content: space-between;
-      width: 87%;
-    }
-    #topnewsbar > #topnewsFlash > div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      justify-content: space-between;
-      width: 60px;
-    }
-    #prev {
-      cursor: pointer;
-    }
-    #next {
-      cursor: pointer;
-    }
-    /* -----------------------------------------------------------------CONTENT----------------------------------------------------------*/
-    #pageBody {
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 2.4fr 1fr;
-      grid-template-rows: auto;
-      gap: 2%;
-      width: 98%;
-    }
-    /* ---------------------------------------------------------------NAVBAR------------------------------------------------------------ */
-    #pageBody > #navbar > div {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 80px;
-      display: block;
-    }
-    #navbar > div > a > .navbarOption {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      height: 35px;
-      padding-left: 7px;
-    }
-    #navbar > div > a > .navbarOption:hover {
-      background-color: #fede2f;
-    }
-    #navbar > div > a {
-      text-decoration: none;
-      color: black;
-    }
-    #navbar > div > a > .navbarOption > p {
-      margin-left: 4%;
-    }
-    /* -----------------------------------------------------------------SPORTS CONTENT---------------------------------------------------*/
 
-    #spotscontent > h6 {
-      display: inline;
-      color: #4c4c4c;
+    #newsbox>p {
+      font-size: 12.5px;
     }
-    #spotscontent > h2 {
-      border-bottom: 3px solid #fede2f;
-      width: 99px;
-    }
-    #newsbox {
-      display: flex;
-      margin: 12px auto;
-      padding: 1.5%;
-      border-radius: 7px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-    #spotscontent > p {
-      margin: -0.4% auto;
-    }
-    #newsbox > img {
-      width: 27%;
-    }
-    #newsbox > p {
-      margin: 0.8% 1.5%;
-    }
-    #morenews {
-      display: block;
-      margin: 30px auto 70px auto;
-      padding: 12px 40%;
-      border: 1px solid;
-      border-radius: 20px;
-      font-weight: bolder;
-      cursor: pointer;
-    }
-    #morenews:hover {
-      color: #fede2f;
-      border: 1px solid black;
-    }
-    /* --------------------------------------------------------------------PAGE ADD IMAGE---------------------------------------------------*/
-    #pageBody > div:nth-child(3) > img {
-      width: 100%;
-    }
-    .active {
-      background-color: #fede2f;
-    }
+  }
 
-    /* ----------------------------------------------------------------RESPONSIVE MEDIUM SIZE-------------------------------------------*/
-    @media all and (max-width: 1199px) and (min-width: 1000px) {
-      #icon {
-        padding: 15px 10%;
-      }
-      #topnewsbar {
-        width: 80%;
-      }
-      #pageBody {
-        grid-template-columns: 1fr 2.4fr 1fr;
-        width: 80%;
-      }
-      #topnewsbar > #topnewsText {
-        border-radius: 0%;
-        font-size: 15px;
-      }
-      #topnewsbar > #topnewsFlash {
-        font-size: 13px;
-        align-items: center;
-      }
-      #navbar > div > a > .navbarOption {
-        font-size: 13px;
-      }
-      #newsbox > p {
-        font-size: 14px;
-      }
-    }
+  .active {
+    background-color: #fede2f;
+  }
+</style>
 
-    /* ----------------------------------------------------------------RESPONSIVE SMALL SIZE--------------------------------------------*/
-    @media all and (max-width: 999px) {
-      #headAdvertiseBrand {
-        width: 80%;
-      }
-      #icon {
-        padding: 15px;
-      }
-      #topnewsbar {
-        width: 100%;
-      }
-      #topnewsbar > #topnewsText {
-        border-radius: 0%;
-        font-size: 13px;
-      }
-      #topnewsbar > #topnewsFlash {
-        font-size: 12px;
-        align-items: center;
-      }
-      #topnewsbar > #topnewsFlash > div {
-        width: 40px;
-        /* border: 1px solid red; */
-      }
-      #topnewsbar > #topnewsFlash > div > img {
-        width: 7px;
-      }
-      #topnewsbar > #topnewsFlash > div > img:nth-child(2) {
-        width: 15px;
-      }
-      #pageBody {
-        display: flex;
-        flex-direction: column;
-      }
-      #pageBody > #navbar > div {
-        display: flex;
-        overflow: auto;
-        white-space: nowrap;
-        position: static;
-      }
-      #navbar > div > a > .navbarOption {
-        margin: 5px;
-        height: 20px;
-        padding: 15px 3px;
-        padding-right: 10px;
-        font-size: 12px;
-      }
-      #pageBody > div:nth-child(3) > img {
-        display: block;
-        margin: 10px auto;
-      }
-      #newsbox > p {
-        font-size: 12.5px;
-      }
-    }
-  </style>
-
-  <body>
-    <!-----------------------------------------------------------------Head Advertise-------------------------------------------------------->
-    <div id="headAdvertise">
-      <img
-        id="headAdvertiseBrand"
-        src="https://s0.2mdn.net/simgad/6856187729639747120"
-      />
+<body>
+  <!-----------------------------------------------------------------Head Advertise-------------------------------------------------------->
+  <div id="headAdvertise">
+    <img id="headAdvertiseBrand" src="https://s0.2mdn.net/simgad/6856187729639747120" />
+  </div>
+  <!-- --------------------------------------------------------------Icon Bar-------------------------------------------------------------->
+  <div id="icon">
+    <div id="iconchild">
+      <a href="homepage.html">
+        <img id="logo" src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png" />
+      </a>
+      <a href="https://www.dnaindia.com/hindi"><button id="hinditext">हिंदी में पढ़ें</button></a>
     </div>
-    <!-- --------------------------------------------------------------Icon Bar-------------------------------------------------------------->
-    <div id="icon">
-      <div id="iconchild">
-        <a href="homepage.html">
-          <img
-            id="logo"
-            src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
-          />
-        </a>
-        <a href="https://www.dnaindia.com/hindi"
-          ><button id="hinditext">हिंदी में पढ़ें</button></a
-        >
-      </div>
-      <div id="searchLogout">
-        <img
-          src="https://english.cdn.zeenews.com/static/public/menusearch.svg"
-          alt=""
-        />
-        <a href="index.html"><button id="logout">Logout</button></a>
-      </div>
+    <div id="searchLogout">
+      <img src="https://english.cdn.zeenews.com/static/public/menusearch.svg" alt="" />
+      <a href="index.html"><button id="logout">Logout</button></a>
     </div>
-    <!-----------------------------------------------------------------Top News Bar---------------------------------------------------------->
-    <div id="topnewsbar">
-      <div id="topnewsText"><p>Top News</p></div>
-      <div id="topnewsFlash">
-        <p>
-          Neeraj Chopra sets new national record with a throw of 89.30m, bags
-          silver medal in the Paavo Nurmi Games
-        </p>
-        <div>
-          <img
-            src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg"
-            id="prev"
-          />
-          <img src="https://www.linkpicture.com/q/pause_2.png" />
-          <img
-            src="https://english.cdn.zeenews.com/static/public/next_carousel.svg"
-            id="next"
-          />
-        </div>
-      </div>
+  </div>
+  <!-----------------------------------------------------------------Top News Bar---------------------------------------------------------->
+  <div id="topnewsbar">
+    <div id="topnewsText">
+      <p>Top News</p>
     </div>
-    <!-----------------------------------------------------------------CONTENT--------------------------------------------------------------->
-    <div id="pageBody">
-      <!-----------------------------------------------------------------NAVBAR---------------------------------------------------------------->
-      <div id="navbar">
-        <div>
-          <a href="latestnews.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-latestnews.svg"
-              />
-              <p>Latest News</p>
-            </div>
-          </a>
-          <a href="photos.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-photos.svg"
-              />
-              <p>Photos</p>
-            </div>
-          </a>
-          <a href="videos.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-videos.svg"
-              />
-              <p>Videos</p>
-            </div>
-          </a>
-          <a href="explainers.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg"
-              />
-              <p>Explainers</p>
-            </div>
-          </a>
-          <a href="india.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-india.svg"
-              />
-              <p>India</p>
-            </div>
-          </a>
-          <a href="entertainment.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-entertainment.svg"
-              />
-              <p>Entertainment</p>
-            </div>
-          </a>
-          <a href="sports.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-sports.svg"
-              />
-              <p>Sports</p>
-            </div>
-          </a>
-          <a href="viralnews.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-viralNews.svg"
-              />
-              <p>Viral News</p>
-            </div>
-          </a>
-          <a href="lifestyle.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-lifestyle.svg"
-              />
-              <p>Lifestyle</p>
-            </div>
-          </a>
-          <a href="business.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-business.svg"
-              />
-              <p>Business</p>
-            </div>
-          </a>
-          <a href="world.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/icons-world.svg"
-              />
-              <p>World</p>
-            </div>
-          </a>
-          <a href="ezmall.html">
-            <div class="navbarOption">
-              <img
-                src="https://english.cdn.zeenews.com/static/public/icons/ezmall-icon1.png"
-              />
-              <p>Ezmall</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-----------------------------------------------------------------SPORTS CONTENT-------------------------------------------------------->
-      <div id="spotscontent">
-        <h6>Home</h6>
-        <h6>>></h6>
-        <h6>latest</h6>
-        <h2>TOPNEWS</h2>
-      </div>
+    <div id="topnewsFlash">
+      <p>
+        Neeraj Chopra sets new national record with a throw of 89.30m, bags
+        silver medal in the Paavo Nurmi Games
+      </p>
       <div>
-        <img
-          src="https://tpc.googlesyndication.com/simgad/18222565089302457977?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qm5ym-FWie_Dbe_TKqtbAo7GE_MGQ"
-        />
-        <img
-          src="https://tpc.googlesyndication.com/simgad/18240297336161166099?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qkPX0rUzOQ3AjwYP3nZO4sciWayUA"
-        />
+        <img src="https://english.cdn.zeenews.com/static/public/prev_carousel.svg" id="prev" />
+        <img src="https://www.linkpicture.com/q/pause_2.png" />
+        <img src="https://english.cdn.zeenews.com/static/public/next_carousel.svg" id="next" />
       </div>
     </div>
-  </body>
+  </div>
+  <!-----------------------------------------------------------------CONTENT--------------------------------------------------------------->
+  <div id="pageBody">
+    <!-----------------------------------------------------------------NAVBAR---------------------------------------------------------------->
+    <div id="navbar">
+      <div>
+        <a href="latestnews.html">
+          <div class="navbarOption active">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-latestnews.svg" />
+            <p>Latest News</p>
+          </div>
+        </a>
+        <a href="photos.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-photos.svg" />
+            <p>Photos</p>
+          </div>
+        </a>
+        <a href="videos.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-videos.svg" />
+            <p>Videos</p>
+          </div>
+        </a>
+        <a href="explainers.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg" />
+            <p>Explainers</p>
+          </div>
+        </a>
+        <a href="india.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-india.svg" />
+            <p>India</p>
+          </div>
+        </a>
+        <a href="entertainment.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-entertainment.svg" />
+            <p>Entertainment</p>
+          </div>
+        </a>
+        <a href="sports.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-sports.svg" />
+            <p>Sports</p>
+          </div>
+        </a>
+        <a href="viralnews.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-viralNews.svg" />
+            <p>Viral News</p>
+          </div>
+        </a>
+        <a href="lifestyle.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-lifestyle.svg" />
+            <p>Lifestyle</p>
+          </div>
+        </a>
+        <a href="business.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-business.svg" />
+            <p>Business</p>
+          </div>
+        </a>
+        <a href="world.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/icons-world.svg" />
+            <p>World</p>
+          </div>
+        </a>
+        <a href="ezmall.html">
+          <div class="navbarOption">
+            <img src="https://english.cdn.zeenews.com/static/public/icons/ezmall-icon1.png" />
+            <p>Ezmall</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-----------------------------------------------------------------SPORTS CONTENT-------------------------------------------------------->
+    <div id="spotscontent">
+      <h6>Home</h6>
+      <h6>>></h6>
+      <h6>latest</h6>
+      <h2>TOPNEWS</h2>
+    </div>
+    <div>
+      <img
+        src="https://tpc.googlesyndication.com/simgad/18222565089302457977?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qm5ym-FWie_Dbe_TKqtbAo7GE_MGQ" />
+      <img
+        src="https://tpc.googlesyndication.com/simgad/18240297336161166099?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qkPX0rUzOQ3AjwYP3nZO4sciWayUA" />
+    </div>
+  </div>
+
+
+  <!-- =========================== footer ===========================  -->
+  <div>
+    <div id="main">
+      <div class="box">
+        <div>
+          <a href="homepage.html">
+            <img id="img1" src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png" alt="" />
+          </a>
+
+        </div>
+        <div class="nice">
+          <div><a href="index.html">INDIA</a></div>
+          <div><a href="world.html">WORLD</a></div>
+          <div><a href="business.html">BUSSINESS</a></div>
+          <div><a href="https://www.dnaindia.com/technology">TECHONOLOGY</a></div>
+          <div><a href="sports.html">SPORTS</a></div>
+          <div><a href="https://www.dnaindia.com/cricket">CRICKET</a></div>
+          <div><a href="Entertainment.html">ENTERTAINMENT</a></div>
+        </div>
+      </div>
+      <hr class="rule" />
+      <div class="box">
+        <div>
+          <div class="span"><span>FOLLOW US ON</span></div>
+          <div id="follow">
+            <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-facebook.svg" alt="" />
+            <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-twitter.svg" alt="" />
+            <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/youtube-white.svg" alt="" />
+          </div>
+        </div>
+        <div class="nice">
+          <div><a href="https://www.dnaindia.com/about">ABOUT DNA</a></div>
+          <div><a href="https://www.dnaindia.com/contact">CONTACT US</a></div>
+          <div><a href="https://www.dnaindia.com/investors/index.html">INVESTORS</a></div>
+          <div><a href="https://www.dnaindia.com/advertise">ADVERTISE</a></div>
+          <div><a href="https://www.dnaindia.com/privacy-policy">PRIVACY-POLICY</a></div>
+        </div>
+      </div>
+      <hr class="rule" />
+      <div class="box">
+        <div class="span">
+          <span>PARTNER SITE</span>
+        </div>
+        <div class="nice">
+          <div><a href="https://zeenews.india.com/">ZEE NEWS</a></div>
+          <div><a href="https://zeenews.india.com/hindi">HINDI NEWS</a></div>
+          <div><a href="https://zeenews.india.com/marathi">MARATHI NEWS</a></div>
+          <div><a href="https://zeenews.india.com/bengali">BENGALI NEWS</a></div>
+          <div><a href="https://zeenews.india.com/tamil">TAMIL NEWS</a></div>
+          <div><a href="https://zeenews.india.com/malayalam">MALYALAM NEWS</a></div>
+          <div><a href="https://www.zeebiz.com/">ZEE NEWS</a></div>
+          <div><a href="https://www.wionews.com/">WION</a></div>
+        </div>
+      </div>
+      <hr class="rule" />
+      <div class="box" id="right">
+        <div>
+          @1918-2022 INDIA DOT COM PRIVATE LIMITED, ALL RIGHTS RESERVED.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
 
 <script>
   // -------------------------------------------------------------------SPORTS CONTENT---------------------------------------------------------
 
   let sports = [
-{
-  ruler: "<hr>",
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2326096-oppo.jpg",
-  newshead:
-    "Presidential polls: Which parties are attending Mamata Banerjee's Opposition meet?",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2326106-untitled-design-2022-06-15t162742.709.jpg",
-  newshead:
-    "Rajya Sabha polls 2022: BJP expels Rajasthan MLA Shobha Rani Kushwaha for cross-voting",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2326054-monkeypox-virus-reuters.jpg",
-  newshead:
-    "Monkeypox virus to be given a new name, here's why",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325912-asus.png",
-  newshead:
-    "Asus ZenBook S 13 OLED, Vivobook Pro 14 OLED, Vivobook 16X laptops launched in India",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325631-2183022-result.jpg",
-  newshead:
-    "Kerala SSLC 10th Result 2022 declared, online link active now: Websites, how to check and more here",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325714-government-vacancy.jpg",
-  newshead:
-    "DNA Explainer: Here are the departments where most recruitments are likely to happen",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325701-stet.jpg",
-  newshead:
-    "STET Exam 2022: Why did Bihar cancel the recruitment exam this year?",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325532-brahmastra-srk.jpg",
-  newshead:
-    "Brahmastra: Shah Rukh Khan's cameo appearance in larger than life avatar impresses netizens",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325474-2307772-fotojet-80-1.jpg",
-  newshead:
-    "BTS: Jungkook, V, Jin, Jimin, RM, J-Hope, Suga face anger of management company after hiatus announcement",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2308250-fotojet-5.jpg",
-  newshead:
-    "Yuzvendra Chahal and Harshal Patel's match winning spells lead India to victory against South Africa in 3rd T20I",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2307651-fotojet-4.jpg",
-  newshead:
-    "Jonny Bairstow scores England's 2nd fastest Test century while chasing the target of 299 against New Zealand",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2320829-fotojet.jpg",
-  newshead:
-    "England wins the 2nd Test match against New Zealand after chasing 299 runs in 50 overs",
-},
-{
-  image:
-    "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2289475-bcci.jpg",
-  newshead: "BCCI hikes monthly pensions of former cricketers and umpires",
-},
-];
+    {
+      ruler: "<hr>",
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2326096-oppo.jpg",
+      newshead:
+        "Presidential polls: Which parties are attending Mamata Banerjee's Opposition meet?",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2326106-untitled-design-2022-06-15t162742.709.jpg",
+      newshead:
+        "Rajya Sabha polls 2022: BJP expels Rajasthan MLA Shobha Rani Kushwaha for cross-voting",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2326054-monkeypox-virus-reuters.jpg",
+      newshead:
+        "Monkeypox virus to be given a new name, here's why",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325912-asus.png",
+      newshead:
+        "Asus ZenBook S 13 OLED, Vivobook Pro 14 OLED, Vivobook 16X laptops launched in India",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325631-2183022-result.jpg",
+      newshead:
+        "Kerala SSLC 10th Result 2022 declared, online link active now: Websites, how to check and more here",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325714-government-vacancy.jpg",
+      newshead:
+        "DNA Explainer: Here are the departments where most recruitments are likely to happen",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325701-stet.jpg",
+      newshead:
+        "STET Exam 2022: Why did Bihar cancel the recruitment exam this year?",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325532-brahmastra-srk.jpg",
+      newshead:
+        "Brahmastra: Shah Rukh Khan's cameo appearance in larger than life avatar impresses netizens",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/quarter/public/2022/06/15/2325474-2307772-fotojet-80-1.jpg",
+      newshead:
+        "BTS: Jungkook, V, Jin, Jimin, RM, J-Hope, Suga face anger of management company after hiatus announcement",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2308250-fotojet-5.jpg",
+      newshead:
+        "Yuzvendra Chahal and Harshal Patel's match winning spells lead India to victory against South Africa in 3rd T20I",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2307651-fotojet-4.jpg",
+      newshead:
+        "Jonny Bairstow scores England's 2nd fastest Test century while chasing the target of 299 against New Zealand",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/15/2320829-fotojet.jpg",
+      newshead:
+        "England wins the 2nd Test match against New Zealand after chasing 299 runs in 50 overs",
+    },
+    {
+      image:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/06/14/2289475-bcci.jpg",
+      newshead: "BCCI hikes monthly pensions of former cricketers and umpires",
+    },
+  ];
 
   sportscontent(sports);
   function sportscontent(sports) {

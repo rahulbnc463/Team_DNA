@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Viral News</title>
+    <title>World</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.dnaindia.com/sites/all/themes/dnaindia/favicon-1016.ico">
   </head>
 
   <style>
@@ -277,6 +278,59 @@
         font-size: 12.5px;
       }
     }
+
+
+    /* ---------------------------- footer ----------------------------  */
+    
+   #main {
+      color: gray;
+      background-color: #1c1c1c;
+      margin-top: 150px;
+    }
+    #main > .box {
+      display: flex;
+      
+      align-items: center;
+      padding: 14.5px;
+    }
+    .box > div > img {
+      width: 95px;
+      margin-right: 100px;
+    }
+    #main > .box > .nice {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #main > .box > .nice > div {
+      margin: auto 15px;
+      white-space: nowrap;
+    }
+    #right {
+      justify-content: center;
+    }
+    #follow {
+      margin: auto 20px;
+      margin-right: 100px;
+    }
+    #follow > img {
+      width: 25px;
+    }
+    .nice > div {
+      font-size: small;
+    }
+    .span {
+      margin: 5px 20px;
+      margin-left: 0px;
+      font-size: large;
+    }
+    .rule {
+      border: 0.1px solid #3b3a3a;
+      width: 98%;
+      margin: auto;
+    }
+    .active{
+      background-color: #fede2f;
+    }
   </style>
 
   <body>
@@ -414,7 +468,7 @@
             </div>
           </a>
           <a href="world.html">
-            <div class="navbarOption">
+            <div class="navbarOption active">
               <img
                 src="https://english.cdn.zeenews.com/static/public/icons/icons-world.svg"
               />
@@ -445,6 +499,79 @@
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrL7Eno2zatoMiCZxsaoPna0YA-nse6zyrCA&usqp=CAU"
         />
+      </div>
+    </div>
+
+    <!-- ============================= footer ============================= -->
+    <div>
+      <div id="main">
+        <div class="box">
+          <div>
+            <img
+              id="img1"
+              src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png"
+              alt=""
+            />
+          </div>
+          <div class="nice">
+            <div>INDIA</div>
+            <div>WORLD</div>
+            <div>BUSSINESS</div>
+            <div>TECHONOLOGY</div>
+            <div>SPORTS</div>
+            <div>CRICKET</div>
+            <div>ENTERTAINMENT</div>
+          </div>
+        </div>
+        <hr class="rule" />
+        <div class="box">
+          <div>
+            <div class="span"><span>FOLLOW US ON</span></div>
+            <div id="follow">
+              <img
+                src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-facebook.svg"
+                alt=""
+              />
+              <img
+                src="https://english.cdn.zeenews.com/static/apprun/dna/icons/icon-twitter.svg"
+                alt=""
+              />
+              <img
+                src="https://english.cdn.zeenews.com/static/apprun/dna/icons/youtube-white.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="nice">
+            <div>ABOUT DNA</div>
+            <div>CONTACT US</div>
+            <div>INVESTORS</div>
+            <div>ADVERTISE</div>
+            <div>PRIVACY-POLICY</div>
+          </div>
+        </div>
+        <hr class="rule" />
+        <div class="box">
+          <div class="span">
+            <span>PARTNER SITE</span>
+          </div>
+          <div class="nice">
+            <div>ZEE NEWS</div>
+            <div>HINDI NEWS</div>
+            <div>MARATHI NEWS</div>
+            <div>BENGALI NEWS</div>
+            <div>TAMIL NEWS</div>
+            <div>MALYALAM NEWS</div>
+            <div>ZEE NEWS</div>
+            <div>WION</div>
+          </div>
+        </div>
+        <hr class="rule" />
+        <div class="box" id="right">
+          <div>
+            @1918-2022 INDIA DOT COM PRIVATE LIMITED, ALL RIGHTS RESERVED.
+          </div>
+        </div>
       </div>
     </div>
   </body>
