@@ -19,23 +19,41 @@
 ### Some of the glimpses of our work
 
 #### `Landing Page`
-![img](https://github.com/abhidas0810/periodic-scene-9995/blob/main/readme_docs/1.png)
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/1.png)
 <br/>
-#### `Food Page`
-![img](https://github.com/abhidas0810/periodic-scene-9995/blob/main/readme_docs/2.png)
+#### `Latest News Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/2.png)
 <br/>
-#### `Excercise Page`
-![img](https://github.com/abhidas0810/periodic-scene-9995/blob/main/readme_docs/3.png)
+#### `Photos Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/3.png)
 <br/>
-#### `Apps Page`
-![img](https://github.com/abhidas0810/periodic-scene-9995/blob/main/readme_docs/4.png)
+#### `Videos Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/4.png)
 <br/>
-#### `Community Page`
-![img](https://github.com/abhidas0810/periodic-scene-9995/blob/main/readme_docs/5.png)
+#### `Explainers Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/5.png)
 <br/>
-#### `Blog Page`
-![img](https://github.com/abhidas0810/periodic-scene-9995/blob/main/readme_docs/6.png)
+#### `India Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/6.png)
 <br/>
-#### `Premium Page`
-![img](https://github.com/abhidas0810/periodic-scene-9995/blob/main/readme_docs/7.png)
+#### `Entretainment Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/7.png)
+<br/>
+#### `Sports Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/8.png)
+<br/>
+#### `Viral News Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/9.png)
+<br/>
+#### `Lifestyle Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/10.png)
+<br/>
+#### `Business Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/11.png)
+<br/>
+#### `World Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/12.png)
+<br/>
+#### `Ezmall Page`
+![img](https://github.com/rahulbnc463/Team_DNA/blob/main/readme_docs/13.png)
 <br/>
